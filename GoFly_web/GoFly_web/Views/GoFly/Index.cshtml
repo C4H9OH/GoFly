@@ -1,0 +1,38 @@
+﻿@model ICollection<GoFly_web.Storage.Entity.Itinerary>
+
+<h1>Itineraries</h1> 
+
+<table> 
+    <tr>
+        <th>Identification number</th>
+        <th>Departure city</th>
+        <th>Arrival city</th>
+    </tr>
+    @foreach(var itinerary in Model)
+    {
+        <tr>
+            <td>@itinerary.Id</td>
+            <td>@itinerary.DepartureCity.Name</td>
+            <td>@itinerary.ArrivalCity.Name</td>
+        </tr>
+    }
+</table>
+
+<div>
+    <h1>Delete itinerary</h1>
+    @using(Html.BeginForm("DeleteItinerary", "GoFly", FormMethod.Post))
+    {
+        <textarea name ="itineraryId" id = "itineraryId"></textarea>
+        <button type = "submit">Deduct</button>
+    }
+</div>
+
+<div>
+    <h1>Create itinerary</h1>
+    @using(Html.BeginForm("CreateItinerary", "GoFly", FormMethod.Post))
+    {
+        <textarea name ="departureCity"></textarea>
+        <textarea name = "arrivalCity"></textarea>
+        <button type = "submit">Create</button>
+    }
+</div>
