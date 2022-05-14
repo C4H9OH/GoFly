@@ -24,6 +24,52 @@ header{
     position: fixed;
 }
 
+.planes{
+    box-sizing: border-box;
+    position: absolute;
+    top: 316px;
+    left: 6%;
+    text-align: center;
+    max-width: 198.89px;
+}
+
+header img{
+    width: 198.89px;
+    height: 186.89px;
+    top: 316px;   
+    background: #ffffff;
+    border: 3px solid #10FFFF;
+    border-radius: 25px; 
+    line-height: 186.89px;
+    margin-bottom: -7px;
+}
+
+header #planes{
+    font-family: 'Bebas Neue', serif;
+    text-decoration: none;
+    font-size: 25px;
+}
+
+header #trains{
+    left: 21%;
+}
+
+header #buses{
+    left: 36%;
+}
+
+header #hotels{
+    left: 51%;
+}
+
+header #TopHotels{
+    left: 66%;
+}
+
+header #TopCities{
+    left: 81%;
+}
+
 header #logo{
     color: #fff;
     cursor: pointer;
