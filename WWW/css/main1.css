@@ -1,0 +1,37 @@
+.middleBlock{
+    border: 1px;
+    border: solid;
+    margin: 1px;
+    border-color: black;
+    box-sizing: border-box;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    height: 186.89px;
+}
+
+.planes {
+    box-sizing: border-box;
+    position: absolute;
+    top: 316px;
+    left: 6%;
+    text-align: center;
+    max-width: 198.89px;
+}
+
+.planes img{
+    width: 198.89px;
+    height: 186.89px;
+    top: 316px;   
+    background: #ffffff;
+    border: 3px solid #10FFFF;
+    border-radius: 25px; 
+    line-height: 186.89px;
+    margin-bottom: -7px;
+}
+
+header #planes{
+    font-family: 'Bebas Neue', serif;
+    text-decoration: none;
+    font-size: 25px;
+}

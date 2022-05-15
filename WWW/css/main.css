@@ -33,6 +33,51 @@ header{
     max-width: 198.89px;
 }
 
+.trains{
+    box-sizing: border-box;
+    position: absolute;
+    top: 316px;
+    left: 21%;
+    text-align: center;
+    max-width: 198.89px;
+}
+
+.buses{
+    box-sizing: border-box;
+    position: absolute;
+    top: 316px;
+    left: 36%;
+    text-align: center;
+    max-width: 198.89px;
+}
+
+.hotels{
+    box-sizing: border-box;
+    position: absolute;
+    top: 316px;
+    left: 51%;
+    text-align: center;
+    max-width: 198.89px;
+}
+
+.TopHotels{
+    box-sizing: border-box;
+    position: absolute;
+    top: 316px;
+    left: 66%;
+    text-align: center;
+    max-width: 198.89px;
+}
+
+.TopCities{
+    box-sizing: border-box;
+    position: absolute;
+    top: 316px;
+    left: 81%;
+    text-align: center;
+    max-width: 198.89px;
+}
+
 header img{
     width: 198.89px;
     height: 186.89px;
@@ -51,24 +96,12 @@ header #planes{
 }
 
 header #trains{
-    left: 21%;
+    font-family: 'Bebas Neue', serif;
+    text-decoration: none;
+    font-size: 25px;
 }
 
-header #buses{
-    left: 36%;
-}
 
-header #hotels{
-    left: 51%;
-}
-
-header #TopHotels{
-    left: 66%;
-}
-
-header #TopCities{
-    left: 81%;
-}
 
 header #logo{
     color: #fff;
