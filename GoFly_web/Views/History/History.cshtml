@@ -1,0 +1,106 @@
+﻿@{
+    Layout=null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+     <link rel="stylesheet" href="~/css/History.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoFly - поиск дешёвых билетов
+    </title>
+</head>
+<body>
+    <div class="container">
+    <div class="toppanel">
+        <a asp-area="" asp-controller="Plane" asp-action="Plane"><span id="Logo">GoFly</span></a>
+        <a asp-area="" asp-controller="Favourite" asp-action="Favourite" id="Favorites">Избранное </a>
+         <a asp-area="" asp-controller="History" asp-action="History" id="History">История путешествий</a>
+        <a asp-area="" asp-controller="Registration" asp-action="Registration" id="Registration">Зарегистрироваться</a>
+        <a asp-area="" asp-controller="Feedback" asp-action="Feedback" id="Feedback">Отзывы</a>
+    </div>
+
+
+        <div class="autorizationPannel">
+            <a href="#" class="LoginMenu_btn" id="Login">Войти</a>
+            <nav class="autorizationPannelParameters">
+                <p id="autorizationTitle">Авторизация</p>
+                <input id="InputLogin" type="text" placeholder="Введите логин сюда">
+                <input id="InputPassword" type="password" placeholder="Введите пароль сюда">
+                <button id = "EnterButton">Вход</button>
+                <div class="autorizationInfo">
+                    <p>Забыли пароль?</p>
+                    <a id="AutorizationPress" href="#">Нажмите</a>
+                    <p>для восстановления <br> Нет аккаунта?</p>
+                    <a asp-area="" asp-controller="Registration" asp-action="Registration">Зарегистрируйтесь</a>
+                </div>
+            </nav>
+        </div>
+        <p id="HistoryTitle">История путешествий</p>
+                <div class="BoxPlane">
+                    <span id="PlaneHistoryLink">На самолете</span>
+                 </div>
+             <a asp-area="" asp-controller="HistoryTrain" asp-action="HistoryTrain">
+                <div class="BoxTrain">
+                    <span id="TrainHistoryLink">На поезде</span>
+                </div>
+            </a>
+            <a asp-area="" asp-controller="HistoryBus" asp-action="HistoryBus">
+                <div class="BoxBus">
+                    <span id="BusHistoryLink">На автобусе</span>
+                </div>
+            </a>
+            <a asp-area="" asp-controller="HistoryHotel" asp-action="HistoryHotel">
+            <div class="BoxHotel">
+                <span id="HotelHistoryLink">История брони отелей</span>
+            </div>
+            </a>
+        </div>
+        <div class="table">
+            <table>
+                 <tr>
+                    <th>Откуда</th>
+                    <th>Куда</th>
+                    <th>Дата вылета</th>
+                </tr>
+                
+                <tr>
+                    <td>Москва, Россия</td>
+                    <td>Ярославль, Россия</td>
+                    <td>28.05.2022</td>
+                </tr>
+
+                <tr>
+                    <td>Москва, Россия</td>
+                    <td>Минск, БелоруССИЯ</td>
+                    <td>28.05.2022</td>
+                </tr>
+
+                <tr>
+                    <td>Минск, БелоруССИЯ</td>
+                    <td>Москва, Россия</td>
+                    <td>28.05.2022</td>
+                </tr>
+
+                <tr>
+                    <td>Ярославль, Россия</td>
+                    <td>Москва, Россия</td>
+                    <td>28.05.2022</td>
+                </tr>
+                
+            </table>
+        </div>
+    <div>
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<script>
+$('.LoginMenu_btn').on('click',function(e){
+    e.preventDefault();
+    $('.autorizationPannel').toggleClass('autorizationPannel_Active')
+})
+</script>
+
+</html>

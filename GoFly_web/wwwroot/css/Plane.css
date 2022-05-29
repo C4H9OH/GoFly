@@ -1,0 +1,810 @@
+﻿/* Подключение шрифтов */
+
+/*@font-face {
+    font-family: 'Pragmatica';
+    src: local('Pragmatica'), url('../fonts/Pragmatica-LightOblique.ttf') format('truetype'), url('../fonts/Pragmatica-LightOblique.eot?#iefix') format('embedded-opentype'), url('../fonts/Pragmatica-LightOblique.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+*/
+@font-face {
+    font-family: 'Pragmatica';
+    src: local('Pragmatica'), url('../fonts/Pragmatica-Bold.ttf') format('truetype'), url('../fonts/Pragmatica-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/Pragmatica-Bold.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Bebas Neue';
+    src: local('Bebas Neue'), url('../fonts/BebasNeue Bold.ttf') format('truetype'),
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800&display=swap');
+
+/* @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap'); */
+@import url('http://fonts.cdnfonts.com/css/magneto');
+
+/* Общие настройки страницы */
+
+a {
+    text-decoration: none;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+body {
+    background-image: url(../Images/plain.jpg);
+    background-size: 100%;
+}
+
+/*.backgroung-image {*/
+/*background-size: 100%;*/
+/*width: 100%;
+    height:100%;
+}*/
+.container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+/* Верхняя плашка */
+
+.toppanel {
+    height: 3%;
+    width: 100%;
+    color: rgb(0, 0, 0);
+    background-color: transparent;
+    border-color: black;
+    box-sizing: content-box;
+    position: absolute;
+}
+
+    .toppanel a {
+        text-decoration: none;
+        font-size: 25px;
+        font-family: Bebas Neue;
+        display: inline-block;
+    }
+
+    .toppanel #Favorites::after {
+        content: "";
+        display: block;
+        height: 3px;
+        width: 0%;
+        background-color: white;
+        transition: width 0.4s ease-in-out;
+    }
+
+    .toppanel #Favorites:hover::after {
+        width: 100%;
+    }
+
+    .toppanel #History::after {
+        content: "";
+        display: block;
+        height: 3px;
+        width: 0%;
+        background-color: white;
+        transition: width 0.4s ease-in-out;
+    }
+
+    .toppanel #History:hover::after {
+        width: 100%;
+    }
+
+    .toppanel #Registration::after {
+        content: "";
+        display: block;
+        height: 3px;
+        width: 0%;
+        background-color: white;
+        transition: width 0.4s ease-in-out;
+    }
+
+    .toppanel #Registration:hover::after {
+        width: 100%;
+    }
+
+    .toppanel #Feedback::after {
+        content: "";
+        display: block;
+        height: 3px;
+        width: 0%;
+        background-color: white;
+        transition: width 0.4s ease-in-out;
+    }
+
+    .toppanel #Feedback:hover::after {
+        width: 100%;
+    }
+
+    .toppanel #Feedback {
+        color: rgb(255, 255, 255);
+        position: absolute;
+        right: 0;
+        margin-right: 60%;
+    }
+
+    .toppanel #Login::after {
+        content: "";
+        display: block;
+        height: 3px;
+        width: 0%;
+        background-color: white;
+        transition: width 0.4s ease-in-out;
+    }
+
+    .toppanel #Login:hover::after {
+        width: 100%;
+    }
+
+
+    .toppanel #Logo {
+        margin-left: 0%;
+        font-family: Magneto;
+        font-size: 50px;
+        color: rgb(36, 93, 250);
+        text-shadow: 3px 3px 1px #fff;
+    }
+
+    .toppanel #Login {
+        color: rgb(255, 255, 255);
+        position: absolute;
+        right: 0;
+        margin-right: 2%;
+    }
+
+
+
+    .toppanel #Registration {
+        color: rgb(255, 255, 255);
+        position: absolute;
+        right: 0%;
+        margin-right: 8%;
+    }
+
+    .toppanel #History {
+        color: rgb(255, 255, 255);
+        position: absolute;
+        right: 0%;
+        margin-right: 38.5%;
+    }
+
+    .toppanel #Favorites {
+        color: rgb(255, 255, 255);
+        position: absolute;
+        right: 0%;
+        margin-right: 52%;
+    }
+
+/* Меню по середине страницы */
+
+.buttons {
+    top: 200px;
+    /* border: 1cm;
+    border:dotted;
+    border-color: black; */
+    position: absolute;
+    left: 6%;
+    /* height: 50px; */
+    box-sizing: border-box;
+    right: 6%;
+}
+
+
+    .buttons p {
+        color: white;
+        font-size: 25px;
+        line-height: 32px;
+        color: #FFFFFF;
+        text-shadow: 3px 2px 2px rgb(0, 0, 0);
+        font-family: Bebas Neue;
+    }
+
+.imgBorder {
+    /* border-radius: 25px;
+    border: solid;
+    border-color: rgb(0, 0, 0);
+    background-color: black; */
+    background: #13000F;
+    border: 3px solid #10FFFF;
+    border-radius: 25px;
+    height: 150px;
+    transition: 1s;
+}
+
+    .imgBorder img {
+        left: 25%;
+        top: 25%;
+        right: 25%;
+        box-sizing: border-box;
+        position: relative;
+    }
+
+.planes {
+    position: absolute;
+    display: block;
+    width: 150px;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    opacity: 100%;
+    left: 120px;
+}
+
+    .planes img {
+        max-width: 100%;
+        max-height: 100%;
+        /* line-height: 228px; */
+        position: static;
+    }
+
+    .planes p {
+        text-align: center;
+    }
+
+.trains {
+    position: absolute;
+    display: block;
+    width: 150px;
+    max-width: 50%;
+    max-height: 50%;
+    margin-left: 26.5%;
+}
+
+    .trains .imgBorder {
+        opacity: 60%;
+    }
+
+        .trains .imgBorder:hover {
+            opacity: 100%;
+            cursor: pointer;
+            background-color: #005d5d;
+        }
+
+    .trains img {
+        position: relative;
+        max-width: 50%;
+        max-height: 50%;
+        /* line-height: 228px; */
+
+        box-sizing: border-box;
+    }
+
+    .trains p {
+        text-align: center;
+    }
+
+.buses {
+    position: absolute;
+    display: block;
+    width: 150px;
+    max-width: 100%;
+    max-height: 100%;
+    margin-left: 44%;
+}
+
+    .buses img {
+        max-width: 50%;
+        max-height: 50%;
+    }
+
+    .buses .imgBorder {
+        opacity: 60%;
+    }
+
+        .buses .imgBorder:hover {
+            opacity: 100%;
+            cursor: pointer;
+            background-color: #005d5d;
+        }
+
+    .buses p {
+        text-align: center;
+    }
+
+
+.hotels {
+    position: absolute;
+    display: block;
+    position: absolute;
+    display: block;
+    width: 150px;
+    max-width: 100%;
+    max-height: 100%;
+    margin-left: 62%;
+}
+
+    .hotels img {
+        max-width: 50%;
+        max-height: 50%;
+    }
+
+    .hotels .imgBorder {
+        opacity: 60%;
+    }
+
+        .hotels .imgBorder:hover {
+            opacity: 100%;
+            cursor: pointer;
+            background-color: #005d5d;
+        }
+
+    .hotels p {
+        text-align: center;
+    }
+
+.topCities {
+    position: absolute;
+    display: block;
+    width: 150px;
+    max-width: 50%;
+    max-height: 50%;
+    margin-left: 80%;
+}
+
+    .topCities img {
+        max-width: 50%;
+        max-height: 50%;
+    }
+
+    .topCities .imgBorder {
+        opacity: 60%;
+    }
+
+        .topCities .imgBorder:hover {
+            opacity: 100%;
+            cursor: pointer;
+            background-color: #005d5d;
+        }
+
+    .topCities p {
+        text-align: center;
+    }
+
+/* Панель поиска билетов */
+
+.searchPannel {
+    position: absolute;
+    box-sizing: border-box;
+    border: 1cm;
+    border: solid;
+    top: 500px;
+    left: 223px;
+    height: 170px;
+    width: 1096px;
+    background-color: rgba(66,25, 143, 0.6);
+    border-radius: 25px;
+    font-family: Bebas Neue;
+    font-size: 20px;
+}
+
+    .searchPannel #Departure {
+        position: absolute;
+        top: 50px;
+        left: 10px;
+        height: 50px;
+        width: 240px;
+        border: 0px 0px 0px 0px;
+        border-color: black;
+        border-width: 1px 1px 1px 0.5px;
+    }
+
+    .searchPannel #Arrival {
+        position: absolute;
+        top: 50px;
+        left: 250px;
+        height: 50px;
+        width: 240px;
+        opacity: 100%;
+        border-color: black black black black;
+        border-width: 1px 0.5px 1px 0.5px;
+    }
+
+    .searchPannel #DataDeparture {
+        position: absolute;
+        top: 50px;
+        left: 490px;
+        height: 48px;
+        width: 120px;
+        border-color: black;
+        border-width: 1px 0.5px 1px 0.5px;
+    }
+
+    .searchPannel #DataArrival {
+        position: absolute;
+        top: 50px;
+        left: 610px;
+        height: 48px;
+        width: 120px;
+        border-color: black;
+        border-width: 1px 1px 1px 0.5px;
+    }
+
+
+    .searchPannel #OneWayButton {
+        position: absolute;
+        left: 25px;
+        top: 15px;
+        cursor: pointer;
+    }
+
+    .searchPannel #OneWayTitle {
+        position: absolute;
+        left: 45px;
+        top: 10px;
+        color: white;
+    }
+
+
+
+    .searchPannel #Round-tripButton {
+        position: absolute;
+        left: 160px;
+        top: 15px;
+        cursor: pointer;
+    }
+
+    .searchPannel #Round-tripTitle {
+        position: absolute;
+        left: 180px;
+        top: 10px;
+        color: white;
+    }
+
+
+    .searchPannel .PeopleAmount {
+        position: absolute;
+        left: 750px;
+        top: 52.5px;
+    }
+
+.PeopleAmount * {
+    box-sizing: border-box;
+}
+
+.PeopleAmount {
+    display: inline-flex;
+    border-radius: 26px;
+    border: 2px solid #000000;
+    background-color: white;
+}
+
+    .PeopleAmount .bt_minus,
+    .PeopleAmount .bt_plus,
+    .PeopleAmount .quantity {
+        height: 40px;
+        width: 40px;
+        padding: 0;
+        border: 0;
+        margin: 0;
+        background: transparent;
+        cursor: pointer;
+        outline: 0;
+    }
+
+    .PeopleAmount .quantity {
+        width: 50px;
+        text-align: center;
+        font-size: 30px;
+        font-weight: bold;
+        color: #000;
+        font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
+    }
+
+    .PeopleAmount .bt_minus svg,
+    .PeopleAmount .bt_plus svg {
+        stroke: #337AB7;
+        stroke-width: 4;
+        transition: 0.5s;
+        margin: 10px;
+    }
+
+    .PeopleAmount .bt_minus:hover svg,
+    .PeopleAmount .bt_plus:hover svg {
+        stroke: #000;
+    }
+
+.card-grid {
+    position: absolute;
+    left: 25px;
+    top: 10px;
+}
+
+    .card-grid #card-radio1Label,
+    .card-grid #card-radio2Label {
+        color: white;
+        position: absolute;
+        white-space: nowrap;
+    }
+
+    .card-grid .card-radio1 {
+        left: -17 px;
+        top: 7px;
+        position: absolute;
+    }
+
+    .card-grid #card-radio1Label {
+        left: 20px;
+    }
+
+    .card-grid .card-radio2 {
+        left: 143px;
+        top: 7px;
+        position: absolute;
+    }
+
+    .card-grid #card-radio2Label {
+        left: 160px;
+    }
+
+.searchPannel #OneWayTitle,
+.searchPannel #RoundTripTitle,
+.searchPannel #AmountTitle {
+    color: white;
+    position: absolute;
+}
+
+.searchPannel #AmountTitle {
+    top: 95px;
+    left: 780px;
+    text-align: center;
+}
+
+.searchPannel #RoundTripTitle {
+    top: 101px;
+    left: 641px;
+}
+
+.searchPannel #OneWayTitle {
+    top: 101px;
+    left: 530px;
+}
+
+.searchPannel #plan-type1 {
+    position: absolute;
+    left: -10px;
+}
+
+.searchButton {
+    height: 100%;
+    display: flex;
+}
+
+    .searchButton .btn-1 {
+        text-decoration: none;
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+        padding: 20px 20px;
+        font-size: 1.25rem;
+        position: relative;
+        margin: 0;
+        border-radius: 30px;
+        overflow: hidden;
+        color: #fff;
+        box-shadow: 0 0 0 0 rgba(143, 64, 248, 0.5), 0 0 0 0 rgba(39, 200,255, 0.5);
+        transition: tranform 0.3s ease, box-shadow 1s ease;
+        left: 900px;
+        height: 50px;
+        top: 50px;
+        align-items: center;
+        justify-content: center;
+    }
+
+        .searchButton .btn-1::after {
+            content: "";
+            width: 400px;
+            height: 400px;
+            position: absolute;
+            top: -50px;
+            left: -100px;
+            /* background-color: #ff3cac; */
+            background-image: linear-gradient(225deg, #ffffff 0%, #4d3685 50%, #10ffff 100%);
+            z-index: -1;
+            transition: 8s ease;
+        }
+
+        .searchButton .btn-1:hover {
+            transform: translate(0, -1px);
+            box-shadow: 10px -10px 25px 0 rgba(143, 64, 248, 0.5), -10px 10px 25px 0 rgba(39, 200,255, 0.5);
+        }
+
+            .searchButton .btn-1:hover::after {
+                transform: rotate(150deg);
+            }
+
+.searchPannel #wishlistImg {
+    max-width: 25%;
+    max-height: 25%;
+    top: 53px;
+    left: 1042px;
+    box-sizing: border-box;
+    position: absolute;
+    transition: 0.1s;
+}
+
+    .searchPannel #wishlistImg:active {
+        max-width: 20%;
+        max-height: 20%;
+    }
+
+.button {
+    float: left;
+    width: 200px;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background .5s;
+}
+
+
+.notify {
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 0;
+    box-sizing: border-box;
+    color: white;
+    text-align: center;
+    background: rgba(0,0,0,.6);
+    box-sizing: border-box;
+    transition: height .2s;
+    border-radius: 15px;
+    border: 1.1px;
+}
+
+#notifyType:before {
+    display: block;
+    margin-top: 15px;
+}
+
+.active {
+    height: 50px;
+}
+
+.success:before {
+    Content: "Рейс успешно добавлен в избранное";
+}
+
+
+
+
+/* Нижняя плашка */
+
+.bottompanel {
+    position: absolute;
+    bottom: 0px;
+    display: block;
+    width: 100%;
+    height: 7%;
+    /* background-color: black; */
+}
+
+    .bottompanel span {
+        color: #176FFA;
+        box-sizing: content-box;
+        font-family: Pragmatica;
+        font-weight: 800;
+        font-size: 34px;
+        position: relative;
+        top: 13px;
+    }
+
+    .bottompanel p {
+        color: white;
+        font-family: Bebas Neue;
+        font-size: 15px;
+        top: 1px;
+        position: absolute;
+        letter-spacing: 2.5px;
+    }
+
+.autorizationPannel {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 30%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: blueviolet;
+    background: url('../Images/SkyBG.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    transition: 1s;
+    transform: translateX(100%);
+    font-family: Bebas Neue;
+}
+
+.autorizationPannel_Active {
+    transform: translateX(0%);
+    border-radius: 25px 0px 0px 25px;
+}
+
+.autorizationPannel #Login {
+    position: absolute;
+    left: -100px;
+    top: -0.3px;
+    color: white;
+    font-family: Bebas Neue;
+    font-size: 25px;
+    text-decoration: none;
+}
+
+    .autorizationPannel #Login::after {
+        content: "";
+        display: block;
+        height: 3px;
+        width: 0%;
+        background-color: white;
+        transition: width 0.4s ease-in-out;
+    }
+
+    .autorizationPannel #Login:hover::after {
+        width: 100%;
+    }
+
+
+.autorizationPannelParameters {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+    flex-direction: column;
+}
+
+    .autorizationPannelParameters a {
+        text-decoration: none;
+        font-weight: 400;
+    }
+
+    .autorizationPannelParameters #autorizationTitle {
+        position: absolute;
+        top: 100px;
+        color: white;
+        font-size: 32px;
+    }
+
+    .autorizationPannelParameters #InputLogin {
+        position: absolute;
+        top: 200px;
+        width: 250px;
+        height: 35px;
+        border-radius: 25px;
+    }
+
+    .autorizationPannelParameters #InputPassword {
+        position: absolute;
+        top: 250px;
+        width: 250px;
+        height: 35px;
+        border-radius: 25px;
+    }
+
+    .autorizationPannelParameters #EnterButton {
+        position: absolute;
+        top: 300px;
+        border-radius: 25px;
+        height: 35px;
+        width: 125px
+    }
+
+.autorizationInfo {
+    position: absolute;
+    top: 350px;
+    font-size: 26px;
+}

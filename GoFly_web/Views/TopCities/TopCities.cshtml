@@ -1,0 +1,383 @@
+﻿@{
+    Layout=null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="~/css/TopCities.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoFly - поиск дешёвых билетов
+    </title>
+</head>
+<body>
+    <div class="container">
+        <div class="toppanel">
+        <a asp-area="" asp-controller="Plane" asp-action="Plane"><span id="Logo">GoFly</span></a>
+        <a asp-area="" asp-controller="Favourite" asp-action="Favourite" id="Favorites">Избранное </a>
+         <a asp-area="" asp-controller="History" asp-action="History" id="History">История путешествий</a>
+        <a asp-area="" asp-controller="Registration" asp-action="Registration" id="Registration">Зарегистрироваться</a>
+        <a asp-area="" asp-controller="Feedback" asp-action="Feedback" id="Feedback">Отзывы</a>
+    </div>
+
+        <div class="autorizationPannel">
+            <a href="#" class="LoginMenu_btn" id="Login">Войти</a>
+            <nav class="autorizationPannelParameters">
+                <p id="autorizationTitle">Авторизация</p>
+                <input id="InputLogin" type="text" placeholder="Введите логин сюда">
+                <input id="InputPassword" type="password" placeholder="Введите пароль сюда">
+                <button id = "EnterButton">Вход</button>
+                <div class="autorizationInfo">
+                    <p>Забыли пароль?</p>
+                    <a id="AutorizationPress" href="#">Нажмите</a>
+                    <p>для восстановления <br> Нет аккаунта?</p>
+                    <a asp-area="" asp-controller="Registration" asp-action="Registration">Зарегистрируйтесь</a>
+                </div>
+            </nav>
+        </div>
+
+        <div class="label">
+
+        </div>
+        <div class="table">
+            <table>
+                <tr>
+                    <th>Город</th>
+                    <th>Страна</th>
+                    <th>Изображение</th>
+                    <th>Доступность</th>
+                    <th>Итог</th>
+                    <th>Узнать подробности</th> 
+                </tr>
+                
+                <tr>
+                    <td>Москва</td>
+                    <td>Россия</td>
+                    <!-- <td><img src="images/HeartEmpty.png" style="max-width:10%; max-height:10%" alt=""></td> -->
+                    <td><img src="/images/Mocow.png" alt=""></td>
+                    <td>6.4</td>
+                    <td>8</td>
+                    <td><a href="#zatemnenie">Подробнее</a></td>
+
+                </tr>
+                <tr>
+                    <td>Актобе</td>
+                    <td>Казахстан</td>
+                    <td>Изображение</td>
+                    <td>9.3</td>
+                    <td>9.5</td>
+                    <td><a href="#zatemnenie1">Подробнее</a></td>
+                </tr>
+                <tr>
+                    <td>Аланья</td>
+                    <td>Турция</td>
+                    <td>Изображение</td>
+                    <td>7.0</td>
+                    <td>7.3</td>
+                    <td><a href="#zatemnenie2">Подробнее</a></td>
+                </tr>
+                <tr>
+                    <td>Алма-ата</td>
+                    <td>Казахстан</td>
+                    <td>Изображение</td>
+                    <td>6.8</td>
+                    <td>7.1</td>
+                    <td><a href="#zatemnenie3">Подробнее</a></td>
+                </tr>
+                <tr>
+                    <td>Анапа</td>
+                    <td>Россия</td>
+                    <td>Изображение</td>
+                    <td>6.8</td>
+                    <td>7.1</td>
+                    <td><a href="#zatemnenie4">Подробнее</a></td>
+                </tr>
+                <tr>
+                    <td>Анкара</td>
+                    <td>Турция</td>
+                    <td>Изображение</td>
+                    <td>6.8</td>
+                    <td>7.1</td>
+                    <td><a href="#zatemnenie5">Подробнее</a></td>
+                </tr>
+                <tr>
+                    <td>Астана</td>
+                    <td>Казахстан</td>
+                    <td>Изображение</td>
+                    <td>6.8</td>
+                    <td>7.1</td>
+                    <td><a href="#zatemnenie6">Подробнее</a></td>
+                </tr>
+                <tr>
+                    <td>Бодрум</td>
+                    <td>Турция</td>
+                    <td>Изображение</td>
+                    <td>6.8</td>
+                    <td>7.1</td>
+                    <td><a href="#zatemnenie7">Подробнее</a></td>
+                </tr>
+                <tr>
+                    <td>Екатеринбург</td>
+                    <td>Россия</td>
+                    <td>Изображение</td>
+                    <td>6.8</td>
+                    <td>7.1</td>
+                    <td><a href="#zatemnenie8">Подробнее</a></td>
+                </tr>
+                <tr>
+                    <td>Стамбул</td>
+                    <td>Турция</td>
+                    <td>Изображение</td>
+                    <td>6.8</td>
+                    <td>7.1</td>
+                    <td><a href="#zatemnenie9">Подробнее</a></td>
+                </tr>
+                <tr>
+                    <td>Караганда</td>
+                    <td>Казахстан</td>
+                    <td>Изображение</td>
+                    <td>6.8</td>
+                    <td>7.1</td>
+                    <td><a href="#zatemnenie10">Подробнее</a></td>
+                </tr>
+                <tr>
+                    <td>Киев</td>
+                    <td>Украина</td>
+                    <td>Изображение</td>
+                    <td>6.8</td>
+                    <td>7.1</td>
+                    <td><a href="#zatemnenie11">Подробнее</a></td>
+                </tr>
+                <tr>
+                    <td>Мармарис</td>
+                    <td>Турция</td>
+                    <td>Изображение</td>
+                    <td>6.8</td>
+                    <td>7.1</td>
+                    <td><a href="#zatemnenie12">Подробнее</a></td>
+                </tr>
+                <tr>
+                    <td>Нижний Новгород</td>
+                    <td>Россия</td>
+                    <td>Изображение</td>
+                    <td>6.8</td>
+                    <td>7.1</td>
+                    <td><a href="#zatemnenie13">Подробнее</a></td>
+                </tr>
+                <tr>
+                    <td>Павлодар</td>
+                    <td>Россия</td>
+                    <td>Изображение</td>
+                    <td>6.8</td>
+                    <td>7.1</td>
+                    <td><a href="#zatemnenie14">Подробнее</a></td>
+                </tr>
+                <tr>
+                    <td>Санкт-Петербург</td>
+                    <td>Россия</td>
+                    <td>Изображение</td>
+                    <td>6.8</td>
+                    <td>7.1</td>
+                    <td><a href="#zatemnenie15">Подробнее</a></td>
+                </tr>
+                <tr>
+                    <td>Умань</td>
+                    <td>Украина</td>
+                    <td>Изображение</td>
+                    <td>6.8</td>
+                    <td>7.1</td>
+                    <td><a href="#zatemnenie16">Подробнее</a></td>
+                </tr>
+                <tr>
+                    <td>Виница</td>
+                    <td>Украина</td>
+                    <td>Изображение</td>
+                    <td>6.8</td>
+                    <td>7.1</td>
+                    <td><a href="#zatemnenie17">Подробнее</a></td>
+                </tr>
+                <tr>
+                    <td>Яремче</td>
+                    <td>Украина</td>
+                    <td>Изображение</td>
+                    <td>6.8</td>
+                    <td>7.1</td>
+                    <td><a href="#zatemnenie18">Подробнее</a></td>
+                </tr>
+                <tr>
+                    <td>Запорожье</td>
+                    <td>Украина</td>
+                    <td>Изображение</td>
+                    <td>6.8</td>
+                    <td>7.1</td>
+                    <td><a href="#zatemnenie19">Подробнее</a></td>
+                </tr>
+                <tr>
+                    <td>Лондон</td>
+                    <td>Британия</td>
+                    <td>Изображение</td>
+                    <td>6.8</td>
+                    <td>7.1</td>
+                    <td><a href="#zatemnenie20">Подробнее</a></td>
+                </tr>
+            </table>
+        </div>
+            <div class="infoBlock">
+                <div id = "zatemnenie"> 
+                    <div id="Moscow">
+                        <div id="info1">
+                        <p> Москва, город гигант, примерно как я в каточке после принятия пивка. Славится своей относительно неплохой шаурмой    , пивандрием и поющими дядями в метро <br></p>
+                            <a href="#" class = "close">Закрыть окно</a>
+                        </div>
+                    </div>
+                </div>
+                <div id = "zatemnenie1"> 
+                    <div id="Aktobe">
+                        <div id="info2">
+                        <p> Актобе, город гигант, примерно как я в каточке после принятия пивка. Славится своей относительно неплохой шаурмой    , пивандрием и поющими дядями в метро <br></p>
+                            <a href="#" class = "close">Закрыть окно</a>
+                        </div>
+                    </div>
+                </div>
+                <div id = "zatemnenie2"> 
+                    <div id="Alanya">
+                        <div id="info3">
+                        <p>Аланья - город в турции, почти как Стамбул,но Аланья<br></p>
+                            <a href="#" class = "close">Закрыть окно</a>
+                        </div>
+                    </div>
+                </div><div id = "zatemnenie3"> 
+                    <div id="Alma-Ata">
+                        <div id="info4">
+                        <p> Актобе, город гигант, примерно как я в каточке после принятия пивка. Славится своей относительно неплохой шаурмой    , пивандрием и поющими дядями в метро <br></p>
+                            <a href="#" class = "close">Закрыть окно</a>
+                        </div>
+                    </div>
+                </div><div id = "zatemnenie4"> 
+                    <div id="Anapa">
+                        <div id="info5">
+                        <p> Актобе, город гигант, примерно как я в каточке после принятия пивка. Славится своей относительно неплохой шаурмой    , пивандрием и поющими дядями в метро <br></p>
+                            <a href="#" class = "close">Закрыть окно</a>
+                        </div>
+                    </div>
+                </div><div id = "zatemnenie5"> 
+                    <div id="Ankara">
+                        <div id="info6">
+                        <p> Актобе, город гигант, примерно как я в каточке после принятия пивка. Славится своей относительно неплохой шаурмой    , пивандрием и поющими дядями в метро <br></p>
+                            <a href="#" class = "close">Закрыть окно</a>
+                        </div>
+                    </div>
+                </div><div id = "zatemnenie6"> 
+                    <div id="Astana">
+                        <div id="info7">
+                        <p> Актобе, город гигант, примерно как я в каточке после принятия пивка. Славится своей относительно неплохой шаурмой    , пивандрием и поющими дядями в метро <br></p>
+                            <a href="#" class = "close">Закрыть окно</a>
+                        </div>
+                    </div>
+                </div><div id = "zatemnenie7"> 
+                    <div id="Bodrum">
+                        <div id="info8">
+                        <p> Актобе, город гигант, примерно как я в каточке после принятия пивка. Славится своей относительно неплохой шаурмой    , пивандрием и поющими дядями в метро <br></p>
+                            <a href="#" class = "close">Закрыть окно</a>
+                        </div>
+                    </div>
+                </div><div id = "zatemnenie8"> 
+                    <div id="Ekaterinburg">
+                        <div id="info9">
+                        <p> Актобе, город гигант, примерно как я в каточке после принятия пивка. Славится своей относительно неплохой шаурмой    , пивандрием и поющими дядями в метро <br></p>
+                            <a href="#" class = "close">Закрыть окно</a>
+                        </div>
+                    </div>
+                </div><div id = "zatemnenie9"> 
+                    <div id="Istanbul">
+                        <div id="info10">
+                        <p> Актобе, город гигант, примерно как я в каточке после принятия пивка. Славится своей относительно неплохой шаурмой    , пивандрием и поющими дядями в метро <br></p>
+                            <a href="#" class = "close">Закрыть окно</a>
+                        </div>
+                    </div>
+                </div><div id = "zatemnenie10"> 
+                    <div id="Karaganda">
+                        <div id="info11">
+                        <p> Актобе, город гигант, примерно как я в каточке после принятия пивка. Славится своей относительно неплохой шаурмой    , пивандрием и поющими дядями в метро <br></p>
+                            <a href="#" class = "close">Закрыть окно</a>
+                        </div>
+                    </div>
+                </div><div id = "zatemnenie11"> 
+                    <div id="Kyiv">
+                        <div id="info12">
+                        <p> Актобе, город гигант, примерно как я в каточке после принятия пивка. Славится своей относительно неплохой шаурмой    , пивандрием и поющими дядями в метро <br></p>
+                            <a href="#" class = "close">Закрыть окно</a>
+                        </div>
+                    </div>
+                </div><div id = "zatemnenie12"> 
+                    <div id="Marmaris">
+                        <div id="info13">
+                        <p> Актобе, город гигант, примерно как я в каточке после принятия пивка. Славится своей относительно неплохой шаурмой    , пивандрием и поющими дядями в метро <br></p>
+                            <a href="#" class = "close">Закрыть окно</a>
+                        </div>
+                    </div>
+                </div><div id = "zatemnenie13"> 
+                    <div id="Nizhniy Novgorod">
+                        <div id="info14">
+                        <p> Актобе, город гигант, примерно как я в каточке после принятия пивка. Славится своей относительно неплохой шаурмой    , пивандрием и поющими дядями в метро <br></p>
+                            <a href="#" class = "close">Закрыть окно</a>
+                        </div>
+                    </div>
+                </div><div id = "zatemnenie14"> 
+                    <div id="Pavlodar">
+                        <div id="info15">
+                        <p> Актобе, город гигант, примерно как я в каточке после принятия пивка. Славится своей относительно неплохой шаурмой    , пивандрием и поющими дядями в метро <br></p>
+                            <a href="#" class = "close">Закрыть окно</a>
+                        </div>
+                    </div>
+                </div><div id = "zatemnenie15"> 
+                    <div id="Saint Petersburg">
+                        <div id="info16">
+                        <p> Актобе, город гигант, примерно как я в каточке после принятия пивка. Славится своей относительно неплохой шаурмой    , пивандрием и поющими дядями в метро <br></p>
+                            <a href="#" class = "close">Закрыть окно</a>
+                        </div>
+                    </div>
+                </div><div id = "zatemnenie16"> 
+                    <div id="Uman">
+                        <div id="info17">
+                        <p> Актобе, город гигант, примерно как я в каточке после принятия пивка. Славится своей относительно неплохой шаурмой    , пивандрием и поющими дядями в метро <br></p>
+                            <a href="#" class = "close">Закрыть окно</a>
+                        </div>
+                    </div>
+                </div><div id = "zatemnenie17"> 
+                    <div id="Vinnitsa">
+                        <div id="info18">
+                        <p> Актобе, город гигант, примерно как я в каточке после принятия пивка. Славится своей относительно неплохой шаурмой    , пивандрием и поющими дядями в метро <br></p>
+                            <a href="#" class = "close">Закрыть окно</a>
+                        </div>
+                    </div>
+                </div><div id = "zatemnenie18"> 
+                    <div id="Yaremche">
+                        <div id="info19">
+                            <p> Яремче, город гидрант<br></p>                
+                            <a href="#" class = "close">Закрыть окно</a>
+                        </div>
+                    </div>
+                </div><div id = "zatemnenie19"> 
+                    <div id="Zaporozhye">
+                        <div id="info20">
+                        <p> Запорожье, город гигант<br></p>
+                            <a href="#" class = "close">Закрыть окно</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<script>
+$('.LoginMenu_btn').on('click',function(e){
+    e.preventDefault();
+    $('.autorizationPannel').toggleClass('autorizationPannel_Active')
+})
+</script>
+
+</html>

@@ -1,0 +1,439 @@
+﻿/* Подключение шрифтов */
+
+@font-face {
+    font-family: 'Pragmatica';
+    src: local('Pragmatica'), url('../fonts/Pragmatica-LightOblique.ttf') format('truetype'), url('../fonts/Pragmatica-LightOblique.eot?#iefix') format('embedded-opentype'), url('../fonts/Pragmatica-LightOblique.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pragmatica';
+    src: local('Pragmatica'), url('../fonts/Pragmatica-Bold.ttf') format('truetype'), url('../fonts/Pragmatica-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/Pragmatica-Bold.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Bebas Neue';
+    src: local('Bebas Neue'), url('../fonts/BebasNeue Bold.ttf') format('truetype'),
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800&display=swap');
+
+/* @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap'); */
+@import url('http://fonts.cdnfonts.com/css/magneto');
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background-image: url(../Images/TopCitiesBack.jpg);
+    background-size: 100%;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+/* Верхняя плашка */
+
+.toppanel {
+    height: 3%;
+    width: 100%;
+    color: rgb(0, 0, 0);
+    background-color: transparent;
+    border-color: black;
+    box-sizing: content-box;
+    position: absolute;
+}
+
+    .toppanel a {
+        text-decoration: none;
+        font-size: 25px;
+        font-family: Bebas Neue;
+        display: inline-block;
+    }
+
+    .toppanel #Favorites::after {
+        content: "";
+        display: block;
+        height: 3px;
+        width: 0%;
+        background-color: white;
+        transition: width 0.4s ease-in-out;
+    }
+
+    .toppanel #Favorites:hover::after {
+        width: 100%;
+    }
+
+    .toppanel #History::after {
+        content: "";
+        display: block;
+        height: 3px;
+        width: 0%;
+        background-color: white;
+        transition: width 0.4s ease-in-out;
+    }
+
+    .toppanel #History:hover::after {
+        width: 100%;
+    }
+
+    .toppanel #Registration::after {
+        content: "";
+        display: block;
+        height: 3px;
+        width: 0%;
+        background-color: white;
+        transition: width 0.4s ease-in-out;
+    }
+
+    .toppanel #Registration:hover::after {
+        width: 100%;
+    }
+
+    .toppanel #Feedback::after {
+        content: "";
+        display: block;
+        height: 3px;
+        width: 0%;
+        background-color: white;
+        transition: width 0.4s ease-in-out;
+    }
+
+    .toppanel #Feedback:hover::after {
+        width: 100%;
+    }
+
+    .toppanel #Feedback {
+        color: rgb(255, 255, 255);
+        position: absolute;
+        right: 0;
+        margin-right: 60%;
+    }
+
+    .toppanel #Login::after {
+        content: "";
+        display: block;
+        height: 3px;
+        width: 0%;
+        background-color: white;
+        transition: width 0.4s ease-in-out;
+    }
+
+    .toppanel #Login:hover::after {
+        width: 100%;
+    }
+
+
+    .toppanel #Logo {
+        margin-left: 0%;
+        font-family: Magneto;
+        font-size: 50px;
+        color: rgb(36, 93, 250);
+        text-shadow: 3px 3px 1px #fff;
+    }
+
+    .toppanel #Login {
+        color: rgb(255, 255, 255);
+        position: absolute;
+        right: 0;
+        margin-right: 2%;
+    }
+
+
+
+    .toppanel #Registration {
+        color: rgb(255, 255, 255);
+        position: absolute;
+        right: 0%;
+        margin-right: 8%;
+    }
+
+    .toppanel #History {
+        color: rgb(255, 255, 255);
+        position: absolute;
+        right: 0%;
+        margin-right: 38.5%;
+    }
+
+    .toppanel #Favorites {
+        color: rgb(255, 255, 255);
+        position: absolute;
+        right: 0%;
+        margin-right: 52%;
+    }
+
+/* Панель авторизации */
+
+.autorizationPannel {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 30%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: blueviolet; */
+    background: url(../Images/SkyBG.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    transition: 1s;
+    transform: translateX(100%);
+    font-family: Bebas Neue;
+    z-index: 1;
+}
+
+.autorizationPannel_Active {
+    transform: translateX(0%);
+    border-radius: 25px 0px 0px 25px;
+    z-index: 1;
+}
+
+.autorizationPannel #Login {
+    position: absolute;
+    left: -100px;
+    top: -0.3px;
+    color: white;
+    font-family: Bebas Neue;
+    font-size: 25px;
+    text-decoration: none;
+    overflow: hidden;
+}
+
+    .autorizationPannel #Login::after {
+        content: "";
+        display: block;
+        height: 3px;
+        width: 0%;
+        background-color: white;
+        transition: width 0.4s ease-in-out;
+    }
+
+    .autorizationPannel #Login:hover::after {
+        width: 100%;
+    }
+
+
+.autorizationPannelParameters {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+    flex-direction: column;
+}
+
+    .autorizationPannelParameters a {
+        text-decoration: none;
+        font-weight: 400;
+    }
+
+
+
+    .autorizationPannelParameters #autorizationTitle {
+        position: absolute;
+        top: 100px;
+        color: white;
+        font-size: 32px;
+    }
+
+    .autorizationPannelParameters #InputLogin {
+        position: absolute;
+        top: 200px;
+        width: 250px;
+        height: 35px;
+        border-radius: 25px;
+    }
+
+    .autorizationPannelParameters #InputPassword {
+        position: absolute;
+        top: 250px;
+        width: 250px;
+        height: 35px;
+        border-radius: 25px;
+    }
+
+    .autorizationPannelParameters #EnterButton {
+        position: absolute;
+        top: 300px;
+        border-radius: 25px;
+        height: 35px;
+        width: 125px
+    }
+
+.autorizationInfo {
+    position: absolute;
+    top: 350px;
+    font-size: 26px;
+}
+
+table {
+    overflow: scroll;
+    position: absolute;
+    box-sizing: border-box;
+    top: 350px;
+    left: 200px;
+    border: 1px solid;
+    width: 1110px;
+    height: auto;
+    padding-bottom: 10px;
+    border-radius: 25px;
+    /* background-color: white; */
+    font-family: Bebas Neue;
+    text-align: center;
+    /* border-collapse: separate; */
+    border-spacing: 1px;
+    background-color: rgba(255, 255, 255, 0.6);
+    text-shadow: 1px 1px 0px rgb(255, 255, 255);
+    font-weight: 800;
+    /* border: 16px solid rgba(255, 255, 255, 0.6); */
+}
+
+    table img {
+        /* width: 100%; */
+        padding: auto;
+        display: block;
+    }
+
+th {
+    /* position: absolute; */
+    padding: 10px;
+    /* top: 0;
+    left: 50%; */
+    font-size: 18px;
+    font-weight: 800;
+}
+
+td {
+    /* background-color: orangered; */
+    width: 55px;
+    height: 25px;
+    font-size: 18px;
+    font-weight: 800;
+}
+
+#HistoryTitle {
+    position: absolute;
+    color: rgb(255, 255, 255);
+    top: 130px;
+    left: 300px;
+    font-family: Bebas Neue;
+    font-size: 30px;
+    text-shadow: 1px 1px 0px rgb(0, 0, 0);
+}
+
+.BoxPlane {
+    position: absolute;
+    box-sizing: border-box;
+    border: 1cm;
+    border: solid;
+    top: 200px;
+    left: 223px;
+    height: 35px;
+    width: 120px;
+    background-color: rgb(0, 0, 0, 0.35);
+    border-radius: 25px;
+    font-family: Bebas Neue;
+    font-size: 20px;
+}
+
+    .BoxPlane #PlaneHistoryLink {
+        position: absolute;
+        color: rgb(255, 255, 255);
+        top: 2.5px;
+        left: 20px;
+    }
+
+.BoxTrain {
+    position: absolute;
+    box-sizing: border-box;
+    border: 1cm;
+    border: solid;
+    top: 200px;
+    left: 380px;
+    height: 35px;
+    width: 120px;
+    background-color: rgba(0, 0, 0, 0.35);
+    border-radius: 25px;
+    font-family: Bebas Neue;
+    font-size: 20px;
+    opacity: 100%;
+}
+
+    .BoxTrain #TrainHistoryLink {
+        position: absolute;
+        color: rgb(255, 255, 255);
+        top: 2.5px;
+        left: 30px;
+        opacity: 100%;
+    }
+
+.BoxBus {
+    position: absolute;
+    box-sizing: border-box;
+    border: 1cm;
+    border: solid;
+    top: 200px;
+    left: 540px;
+    height: 35px;
+    width: 120px;
+    background-color: rgba(0, 0, 0, 1);
+    border-radius: 25px;
+    font-family: Bebas Neue;
+    font-size: 20px;
+    opacity: 100%;
+}
+
+    .BoxBus #BusHistoryLink {
+        position: absolute;
+        color: rgb(255, 255, 255);
+        top: 2.5px;
+        left: 20px;
+        opacity: 100%;
+    }
+
+.BoxHotel {
+    position: absolute;
+    box-sizing: border-box;
+    border: 1cm;
+    border: solid;
+    top: 200px;
+    left: 700px;
+    height: 35px;
+    width: 150px;
+    background-color: rgba(0, 0, 0, 0.35);
+    border-radius: 25px;
+    font-family: Bebas Neue;
+    font-size: 20px;
+    opacity: 100%;
+}
+
+    .BoxHotel #HotelHistoryLink {
+        position: absolute;
+        color: rgb(255, 255, 255);
+        top: 2.5px;
+        left: 15px;
+        opacity: 100%;
+    }

@@ -1,0 +1,169 @@
+﻿@{
+    Layout=null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="~/css/Hotels.css"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoFly - поиск дешёвых билетов
+    </title>
+</head>
+<body>
+   <div class="container">
+    <div class="toppanel">
+        <a asp-area="" asp-controller="Plane" asp-action="Plane"><span id="Logo">GoFly</span></a>
+        <a asp-area="" asp-controller="Favourite" asp-action="Favourite" id="Favorites">Избранное </a>
+         <a asp-area="" asp-controller="History" asp-action="History" id="History">История путешествий</a>
+        <a asp-area="" asp-controller="Registration" asp-action="Registration" id="Registration">Зарегистрироваться</a>
+        <a asp-area="" asp-controller="Feedback" asp-action="Feedback" id="Feedback">Отзывы</a>
+    </div>
+
+        <div class="buttons">
+
+            <div class="planes">
+                <a asp-area="" asp-controller="Plane" asp-action="Plane">
+                <div class="imgBorder">
+                    <img src="../Images/planes.png" alt="">
+                </div>
+                <p>Авиабилеты</p>
+                </a>
+            </div>
+            
+            <div class="trains">    
+                <a asp-area="" asp-controller="Railway" asp-action="Railway">        
+                <div class="imgBorder">
+                <img src="../Images/train.png" alt="">
+                </div>
+                <p>Ж/Д билеты</p>
+                </a>
+            </div>
+
+
+            <div class="buses">
+                <a asp-area="" asp-controller="Bus" asp-action="Bus"> 
+                <div class="imgBorder">
+                    <img src="../Images/bus.png" alt="">
+                </div>
+                    <p>Автобусы</p>
+                </a>
+            </div>
+
+            <div class="hotels">
+                <div class="imgBorder">
+                    <img src="../Images/hotel.png" alt="">
+                </div>
+                    <p>Отели</p>
+            </div>
+
+            <div class="topCities">
+                <a asp-area="" asp-controller="TopCities" asp-action="TopCities">
+                <div class="imgBorder">
+                    <img src="../Images/topCities.png" alt="">
+                </div>
+                    <p>Топ городов</p>
+                </a>
+            </div>
+
+        </div>
+
+    <div class="searchPannel">
+        <input type="search" name="Departure" id="Departure" placeholder="Страна, город, (название отеля)" list="">
+        <!-- <input type="search" name="Arrival" id="Arrival" placeholder="Куда"> -->
+        <input type="date" name="" id="DataDeparture"  >
+        <p id=OneWayTitle>Заезд</p>
+        <input type="date" name="" id="DataArrival"  >
+        <p id=RoundTripTitle>Выезд</p>
+        <div class="PeopleAmount">        
+            <button class="bt_minus">-</button>
+            <input type="text" class="quantity" value="1" data-max-count="8">
+            <button class="bt_plus">+</button>
+        </div>
+        <p id=AmountTitle>Количество <br> людей</p>
+       <div class="CheckBoxes">
+        <input type="checkbox" name="" id="CheckBox5Star"  >
+        <label id="CheckBoxLabel5" for="CheckBox5Star">5★</label>
+        <input type="checkbox" name="" id="CheckBox4Star"  >
+        <label id="CheckBoxLabel4" for="CheckBox4Star">4★</label>
+        <input type="checkbox" name="" id="CheckBox3Star"  >
+        <label id="CheckBoxLabel3" for="CheckBox3Star">3★</label>
+        <p id=HotelStarTitle>Искать отели с</p>
+        </div>
+        <div class="searchButton">
+            <a href="#" class="btn-1">Найти отель</a>
+        </div>
+        <div id="success" class="button"><img id="wishlistImg" src="../Images/heart_full.png" alt=""></div>
+        <div class="notify"><span id="notifyType" class=""></span></div>
+    </div>
+
+        <div class="bottompanel">
+            <p>Безопасные платежи с </p>
+            <span>PENKOFF</span>
+
+        </div>
+
+        <div class="autorizationPannel">
+            <a href="#" class="LoginMenu_btn" id="Login">Войти</a>
+            <nav class="autorizationPannelParameters">
+                <p id="autorizationTitle">Авторизация</p>
+                <input id="InputLogin" type="text" placeholder="Введите логин сюда">
+                <input id="InputPassword" type="password" placeholder="Введите пароль сюда">
+                <button id = "EnterButton">Вход</button>
+                <div class="autorizationInfo">
+                    <p>Забыли пароль?</p>
+                    <a href="#">Нажмите</a>
+                    <p>для восстановления <br> Нет аккаунта?</p>
+                    <a asp-area="" asp-controller="Registration" asp-action="Registration">Зарегистрируйтесь</a>
+                </div>
+            </nav>
+        </div>
+</div>
+<</body>>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>// Убавляем кол-во по клику
+        $('.PeopleAmount .bt_minus').click(function() {
+        let $input = $(this).parent().find('.quantity');
+        let count = parseInt($input.val()) - 1;
+        count = count < 1 ? 1 : count;
+        $input.val(count);
+    });
+    // Прибавляем кол-во по клику
+    $('.PeopleAmount .bt_plus').click(function() {
+        let $input = $(this).parent().find('.quantity');
+        let count = parseInt($input.val()) + 1;
+        count = count > parseInt($input.data('max-count')) ? parseInt($input.data('max-count')) : count;
+        $input.val(parseInt(count));
+    }); 
+    // Убираем все лишнее и невозможное при изменении поля
+    $('.PeopleAmount .quantity').bind("change keyup input click", function() {
+        if (this.value.match(/[^0-9]/g)) {
+            this.value = this.value.replace(/[^0-9]/g, '');
+        }
+        if (this.value == "") {
+            this.value = 1;
+        }
+        if (this.value > parseInt($(this).data('max-count'))) {
+            this.value = parseInt($(this).data('max-count'));
+        }    
+    }); 
+
+    $('.LoginMenu_btn').on('click',function(e){
+        e.preventDefault();
+        $('.autorizationPannel').toggleClass('autorizationPannel_Active')
+    })
+
+    $("#success").click(function () {
+      $(".notify").toggleClass("active");
+      $("#notifyType").toggleClass("success");
+  
+      setTimeout(function(){
+        $(".notify").removeClass("active");
+        $("#notifyType").removeClass("success");
+      },2000);
+    });
+
+    </script>
+</html>
