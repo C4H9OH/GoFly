@@ -49,8 +49,8 @@ body {
 }
 
 /*.backgroung-image {*/
-    /*background-size: 100%;*/
-    /*width: 100%;
+/*background-size: 100%;*/
+/*width: 100%;
     height:100%;
 }*/
 .container {
@@ -374,6 +374,276 @@ body {
         text-align: center;
     }
 
+/* Панель поиска билетов */
+
+.searchPannel {
+    position: absolute;
+    box-sizing: border-box;
+    border: 1cm;
+    border: solid;
+    top: 500px;
+    left: 223px;
+    height: 170px;
+    width: 1096px;
+    background-color: rgba(66,25, 143, 0.6);
+    border-radius: 25px;
+    font-family: Bebas Neue;
+    font-size: 20px;
+}
+
+    .searchPannel #Departure {
+        position: absolute;
+        top: 50px;
+        left: 10px;
+        height: 50px;
+        width: 240px;
+        border: 0px 0px 0px 0px;
+        border-color: black;
+        border-width: 1px 1px 1px 0.5px;
+    }
+
+    .searchPannel #Arrival {
+        position: absolute;
+        top: 50px;
+        left: 250px;
+        height: 50px;
+        width: 240px;
+        opacity: 100%;
+        border-color: black black black black;
+        border-width: 1px 0.5px 1px 0.5px;
+    }
+
+    .searchPannel #DataDeparture {
+        position: absolute;
+        top: 50px;
+        left: 490px;
+        height: 48px;
+        width: 120px;
+        border-color: black;
+        border-width: 1px 0.5px 1px 0.5px;
+    }
+
+    .searchPannel #DataArrival {
+        position: absolute;
+        top: 50px;
+        left: 610px;
+        height: 48px;
+        width: 120px;
+        border-color: black;
+        border-width: 1px 1px 1px 0.5px;
+    }
+
+
+    .searchPannel #OneWayButton {
+        position: absolute;
+        left: 25px;
+        top: 15px;
+        cursor: pointer;
+    }
+
+    .searchPannel #OneWayTitle {
+        position: absolute;
+        left: 45px;
+        top: 10px;
+        color: white;
+    }
+
+
+
+    .searchPannel #Round-tripButton {
+        position: absolute;
+        left: 160px;
+        top: 15px;
+        cursor: pointer;
+    }
+
+    .searchPannel #Round-tripTitle {
+        position: absolute;
+        left: 180px;
+        top: 10px;
+        color: white;
+    }
+
+
+    .searchPannel .PeopleAmount {
+        position: absolute;
+        left: 750px;
+        top: 52.5px;
+    }
+
+.PeopleAmount * {
+    box-sizing: border-box;
+}
+
+.PeopleAmount {
+    display: inline-flex;
+    border-radius: 26px;
+    border: 2px solid #000000;
+    background-color: white;
+}
+
+    .PeopleAmount .bt_minus,
+    .PeopleAmount .bt_plus,
+    .PeopleAmount .quantity {
+        height: 40px;
+        width: 40px;
+        padding: 0;
+        border: 0;
+        margin: 0;
+        background: transparent;
+        cursor: pointer;
+        outline: 0;
+    }
+
+    .PeopleAmount .quantity {
+        width: 50px;
+        text-align: center;
+        font-size: 30px;
+        font-weight: bold;
+        color: #000;
+        font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
+    }
+
+    .PeopleAmount .bt_minus svg,
+    .PeopleAmount .bt_plus svg {
+        stroke: #337AB7;
+        stroke-width: 4;
+        transition: 0.5s;
+        margin: 10px;
+    }
+
+    .PeopleAmount .bt_minus:hover svg,
+    .PeopleAmount .bt_plus:hover svg {
+        stroke: #000;
+    }
+
+.card-grid {
+    position: absolute;
+    left: 25px;
+    top: 10px;
+}
+
+    .card-grid #card-radio1Label,
+    .card-grid #card-radio2Label {
+        color: white;
+        position: absolute;
+        white-space: nowrap;
+    }
+
+    .card-grid .card-radio1 {
+        left: -17 px;
+        top: 7px;
+        position: absolute;
+    }
+
+    .card-grid #card-radio1Label {
+        left: 20px;
+    }
+
+    .card-grid .card-radio2 {
+        left: 143px;
+        top: 7px;
+        position: absolute;
+    }
+
+    .card-grid #card-radio2Label {
+        left: 160px;
+    }
+
+.searchPannel #OneWayTitle,
+.searchPannel #RoundTripTitle,
+.searchPannel #AmountTitle {
+    color: white;
+    position: absolute;
+}
+
+.searchPannel #AmountTitle {
+    top: 95px;
+    left: 780px;
+    text-align: center;
+}
+
+.searchPannel #RoundTripTitle {
+    top: 101px;
+    left: 641px;
+}
+
+.searchPannel #OneWayTitle {
+    top: 101px;
+    left: 530px;
+}
+
+.searchPannel #plan-type1 {
+    position: absolute;
+    left: -10px;
+}
+
+.searchButton {
+    height: 100%;
+    display: flex;
+}
+
+    .searchButton .btn-1 {
+        text-decoration: none;
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+        padding: 20px 20px;
+        font-size: 1.25rem;
+        position: relative;
+        margin: 0;
+        border-radius: 30px;
+        overflow: hidden;
+        color: #fff;
+        box-shadow: 0 0 0 0 rgba(143, 64, 248, 0.5), 0 0 0 0 rgba(39, 200,255, 0.5);
+        transition: tranform 0.3s ease, box-shadow 1s ease;
+        left: 900px;
+        height: 50px;
+        top: 50px;
+        align-items: center;
+        justify-content: center;
+    }
+
+        .searchButton .btn-1::after {
+            content: "";
+            width: 400px;
+            height: 400px;
+            position: absolute;
+            top: -50px;
+            left: -100px;
+            /* background-color: #ff3cac; */
+            background-image: linear-gradient(225deg, #ffffff 0%, #4d3685 50%, #10ffff 100%);
+            z-index: -1;
+            transition: 8s ease;
+        }
+
+        .searchButton .btn-1:hover {
+            transform: translate(0, -1px);
+            box-shadow: 10px -10px 25px 0 rgba(143, 64, 248, 0.5), -10px 10px 25px 0 rgba(39, 200,255, 0.5);
+        }
+
+            .searchButton .btn-1:hover::after {
+                transform: rotate(150deg);
+            }
+
+.searchPannel #wishlistImg {
+    max-width: 25%;
+    max-height: 25%;
+    top: 53px;
+    left: 1042px;
+    box-sizing: border-box;
+    position: absolute;
+    transition: 0.1s;
+}
+
+    .searchPannel #wishlistImg:active {
+        max-width: 20%;
+        max-height: 20%;
+    }
+
+
+
+
 /* Нижняя плашка */
 
 .bottompanel {
@@ -385,5 +655,22 @@ body {
     /* background-color: black; */
 }
 
+    .bottompanel span {
+        color: #176FFA;
+        box-sizing: content-box;
+        font-family: Pragmatica;
+        font-weight: 800;
+        font-size: 34px;
+        position: relative;
+        top: 13px;
+    }
 
-  
+    .bottompanel p {
+        color: white;
+        font-family: Bebas Neue;
+        font-size: 15px;
+        top: 1px;
+        position: absolute;
+        letter-spacing: 2.5px;
+    }
+
