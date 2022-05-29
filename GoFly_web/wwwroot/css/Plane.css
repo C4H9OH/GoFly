@@ -1,0 +1,389 @@
+﻿/* Подключение шрифтов */
+
+/*@font-face {
+    font-family: 'Pragmatica';
+    src: local('Pragmatica'), url('../fonts/Pragmatica-LightOblique.ttf') format('truetype'), url('../fonts/Pragmatica-LightOblique.eot?#iefix') format('embedded-opentype'), url('../fonts/Pragmatica-LightOblique.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+*/
+@font-face {
+    font-family: 'Pragmatica';
+    src: local('Pragmatica'), url('../fonts/Pragmatica-Bold.ttf') format('truetype'), url('../fonts/Pragmatica-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/Pragmatica-Bold.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Bebas Neue';
+    src: local('Bebas Neue'), url('../fonts/BebasNeue Bold.ttf') format('truetype'),
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800&display=swap');
+
+/* @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap'); */
+@import url('http://fonts.cdnfonts.com/css/magneto');
+
+/* Общие настройки страницы */
+
+a {
+    text-decoration: none;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+body {
+    background-image: url(../Images/plain.jpg);
+    background-size: 100%;
+}
+
+/*.backgroung-image {*/
+    /*background-size: 100%;*/
+    /*width: 100%;
+    height:100%;
+}*/
+.container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+/* Верхняя плашка */
+
+.toppanel {
+    height: 3%;
+    width: 100%;
+    color: rgb(0, 0, 0);
+    background-color: transparent;
+    border-color: black;
+    box-sizing: content-box;
+    position: absolute;
+}
+
+    .toppanel a {
+        text-decoration: none;
+        font-size: 25px;
+        font-family: Bebas Neue;
+        display: inline-block;
+    }
+
+    .toppanel #Favorites::after {
+        content: "";
+        display: block;
+        height: 3px;
+        width: 0%;
+        background-color: white;
+        transition: width 0.4s ease-in-out;
+    }
+
+    .toppanel #Favorites:hover::after {
+        width: 100%;
+    }
+
+    .toppanel #History::after {
+        content: "";
+        display: block;
+        height: 3px;
+        width: 0%;
+        background-color: white;
+        transition: width 0.4s ease-in-out;
+    }
+
+    .toppanel #History:hover::after {
+        width: 100%;
+    }
+
+    .toppanel #Registration::after {
+        content: "";
+        display: block;
+        height: 3px;
+        width: 0%;
+        background-color: white;
+        transition: width 0.4s ease-in-out;
+    }
+
+    .toppanel #Registration:hover::after {
+        width: 100%;
+    }
+
+    .toppanel #Feedback::after {
+        content: "";
+        display: block;
+        height: 3px;
+        width: 0%;
+        background-color: white;
+        transition: width 0.4s ease-in-out;
+    }
+
+    .toppanel #Feedback:hover::after {
+        width: 100%;
+    }
+
+    .toppanel #Feedback {
+        color: rgb(255, 255, 255);
+        position: absolute;
+        right: 0;
+        margin-right: 60%;
+    }
+
+    .toppanel #Login::after {
+        content: "";
+        display: block;
+        height: 3px;
+        width: 0%;
+        background-color: white;
+        transition: width 0.4s ease-in-out;
+    }
+
+    .toppanel #Login:hover::after {
+        width: 100%;
+    }
+
+
+    .toppanel #Logo {
+        margin-left: 0%;
+        font-family: Magneto;
+        font-size: 50px;
+        color: rgb(36, 93, 250);
+        text-shadow: 3px 3px 1px #fff;
+    }
+
+    .toppanel #Login {
+        color: rgb(255, 255, 255);
+        position: absolute;
+        right: 0;
+        margin-right: 2%;
+    }
+
+
+
+    .toppanel #Registration {
+        color: rgb(255, 255, 255);
+        position: absolute;
+        right: 0%;
+        margin-right: 8%;
+    }
+
+    .toppanel #History {
+        color: rgb(255, 255, 255);
+        position: absolute;
+        right: 0%;
+        margin-right: 38.5%;
+    }
+
+    .toppanel #Favorites {
+        color: rgb(255, 255, 255);
+        position: absolute;
+        right: 0%;
+        margin-right: 52%;
+    }
+
+/* Меню по середине страницы */
+
+.buttons {
+    top: 200px;
+    /* border: 1cm;
+    border:dotted;
+    border-color: black; */
+    position: absolute;
+    left: 6%;
+    /* height: 50px; */
+    box-sizing: border-box;
+    right: 6%;
+}
+
+
+    .buttons p {
+        color: white;
+        font-size: 25px;
+        line-height: 32px;
+        color: #FFFFFF;
+        text-shadow: 3px 2px 2px rgb(0, 0, 0);
+        font-family: Bebas Neue;
+    }
+
+.imgBorder {
+    /* border-radius: 25px;
+    border: solid;
+    border-color: rgb(0, 0, 0);
+    background-color: black; */
+    background: #13000F;
+    border: 3px solid #10FFFF;
+    border-radius: 25px;
+    height: 150px;
+    transition: 1s;
+}
+
+    .imgBorder img {
+        left: 25%;
+        top: 25%;
+        right: 25%;
+        box-sizing: border-box;
+        position: relative;
+    }
+
+.planes {
+    position: absolute;
+    display: block;
+    width: 150px;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    opacity: 100%;
+    left: 120px;
+}
+
+    .planes img {
+        max-width: 100%;
+        max-height: 100%;
+        /* line-height: 228px; */
+        position: static;
+    }
+
+    .planes p {
+        text-align: center;
+    }
+
+.trains {
+    position: absolute;
+    display: block;
+    width: 150px;
+    max-width: 50%;
+    max-height: 50%;
+    margin-left: 26.5%;
+}
+
+    .trains .imgBorder {
+        opacity: 60%;
+    }
+
+        .trains .imgBorder:hover {
+            opacity: 100%;
+            cursor: pointer;
+            background-color: #005d5d;
+        }
+
+    .trains img {
+        position: relative;
+        max-width: 50%;
+        max-height: 50%;
+        /* line-height: 228px; */
+
+        box-sizing: border-box;
+    }
+
+    .trains p {
+        text-align: center;
+    }
+
+.buses {
+    position: absolute;
+    display: block;
+    width: 150px;
+    max-width: 100%;
+    max-height: 100%;
+    margin-left: 44%;
+}
+
+    .buses img {
+        max-width: 50%;
+        max-height: 50%;
+    }
+
+    .buses .imgBorder {
+        opacity: 60%;
+    }
+
+        .buses .imgBorder:hover {
+            opacity: 100%;
+            cursor: pointer;
+            background-color: #005d5d;
+        }
+
+    .buses p {
+        text-align: center;
+    }
+
+
+.hotels {
+    position: absolute;
+    display: block;
+    position: absolute;
+    display: block;
+    width: 150px;
+    max-width: 100%;
+    max-height: 100%;
+    margin-left: 62%;
+}
+
+    .hotels img {
+        max-width: 50%;
+        max-height: 50%;
+    }
+
+    .hotels .imgBorder {
+        opacity: 60%;
+    }
+
+        .hotels .imgBorder:hover {
+            opacity: 100%;
+            cursor: pointer;
+            background-color: #005d5d;
+        }
+
+    .hotels p {
+        text-align: center;
+    }
+
+.topCities {
+    position: absolute;
+    display: block;
+    width: 150px;
+    max-width: 50%;
+    max-height: 50%;
+    margin-left: 80%;
+}
+
+    .topCities img {
+        max-width: 50%;
+        max-height: 50%;
+    }
+
+    .topCities .imgBorder {
+        opacity: 60%;
+    }
+
+        .topCities .imgBorder:hover {
+            opacity: 100%;
+            cursor: pointer;
+            background-color: #005d5d;
+        }
+
+    .topCities p {
+        text-align: center;
+    }
+
+/* Нижняя плашка */
+
+.bottompanel {
+    position: absolute;
+    bottom: 0px;
+    display: block;
+    width: 100%;
+    height: 7%;
+    /* background-color: black; */
+}
+
+
+  

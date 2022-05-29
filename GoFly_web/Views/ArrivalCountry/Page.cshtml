@@ -1,0 +1,53 @@
+﻿@model ICollection<GoFly_web.Storage.Entity.ArrivalCountry>
+
+    <h1>Arrival countries</h1> 
+
+<table> 
+    <tr>
+        <th>Identification number</th>
+        <th>Name</th>
+    </tr>
+    @foreach(var country in Model)
+    {
+        <tr>
+            <td>@country.Id</td>
+            <td>@country.Name</td>
+        </tr>
+    }
+</table>
+
+<div>
+    <h1>Delete country</h1>
+    @using(Html.BeginForm("DeleteCountry", "ArrivalCountry", FormMethod.Post))
+    {
+        <textarea name ="countryId" id = "countryId"></textarea>
+        <button type = "submit">Deduct</button>
+    }
+</div>
+
+
+<h1>string name</h1>
+
+<div>
+    <h1>Create country</h1>
+    @using(Html.BeginForm("CreateCountry", "ArrivalCountry", FormMethod.Post))
+    {
+     
+        <textarea name = "name"></textarea>
+        <button type = "submit">Create</button>
+    }
+</div>
+
+<div>
+    <h1>Message</h1>
+    @using(Html.BeginForm("SendEmailDefault", "ArrivalCountry"))
+    {
+     
+        <button type = "submit">Message</button>
+    }
+</div>
+
+@Html.ActionLink("Перейти","GoToDepCountry")
+ <h1>переход</h1>
+
+@Html.ActionLink("К домашней админа","GoToAdminHome")
