@@ -674,3 +674,99 @@ body {
         letter-spacing: 2.5px;
     }
 
+.autorizationPannel {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 30%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: blueviolet;
+    background: url('../Images/SkyBG.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    transition: 1s;
+    transform: translateX(100%);
+    font-family: Bebas Neue;
+}
+
+.autorizationPannel_Active {
+    transform: translateX(0%);
+    border-radius: 25px 0px 0px 25px;
+}
+
+.autorizationPannel #Login {
+    position: absolute;
+    left: -100px;
+    top: -0.3px;
+    color: white;
+    font-family: Bebas Neue;
+    font-size: 25px;
+    text-decoration: none;
+}
+
+    .autorizationPannel #Login::after {
+        content: "";
+        display: block;
+        height: 3px;
+        width: 0%;
+        background-color: white;
+        transition: width 0.4s ease-in-out;
+    }
+
+    .autorizationPannel #Login:hover::after {
+        width: 100%;
+    }
+
+
+.autorizationPannelParameters {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+    flex-direction: column;
+}
+
+    .autorizationPannelParameters a {
+        text-decoration: none;
+        font-weight: 400;
+    }
+
+    .autorizationPannelParameters #autorizationTitle {
+        position: absolute;
+        top: 100px;
+        color: white;
+        font-size: 32px;
+    }
+
+    .autorizationPannelParameters #InputLogin {
+        position: absolute;
+        top: 200px;
+        width: 250px;
+        height: 35px;
+        border-radius: 25px;
+    }
+
+    .autorizationPannelParameters #InputPassword {
+        position: absolute;
+        top: 250px;
+        width: 250px;
+        height: 35px;
+        border-radius: 25px;
+    }
+
+    .autorizationPannelParameters #EnterButton {
+        position: absolute;
+        top: 300px;
+        border-radius: 25px;
+        height: 35px;
+        width: 125px
+    }
+
+.autorizationInfo {
+    position: absolute;
+    top: 350px;
+    font-size: 26px;
+}

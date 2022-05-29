@@ -108,6 +108,21 @@
 
         </div>
 
+        <div class="autorizationPannel">
+            <a href="#" class="LoginMenu_btn" id="Login">Войти</a>
+            <nav class="autorizationPannelParameters">
+                <p id="autorizationTitle">Авторизация</p>
+                <input id="InputLogin" type="text" placeholder="Введите логин сюда">
+                <input id="InputPassword" type="password" placeholder="Введите пароль сюда">
+                <button id = "EnterButton">Вход</button>
+                <div class="autorizationInfo">
+                    <p>Забыли пароль?</p>
+                    <a href="#">Нажмите</a>
+                    <p>для восстановления <br> Нет аккаунта?</p>
+                    <a href="#">Зарегистрируйтесь</a>
+                </div>
+            </nav>
+        </div>
 </div>
 </body>
 
@@ -141,6 +156,21 @@
         }    
     }); 
 
+    $('.LoginMenu_btn').on('click',function(e){
+        e.preventDefault();
+        $('.autorizationPannel').toggleClass('autorizationPannel_Active')
+    })
+
+    // let menuBtn = $('.LoginMenu_btn');
+    // let panel = $('.autorizationPannel');
+
+    // $(document).mouseup(function(e){
+    //     if (!menuBtn.is(e.target) && menuBtn.has(e.target).length === 0 &&
+    //     !panel.is(e.target) && panel.has(e.target).length === 0 
+    //     ){
+    //         panel.fadeOut();
+    //     }
+    // }       );
 
     </script>
 </html>

@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Даниль\\Documents\\GitHub\\GoFly\\GoFly_web\\GoFly_web.csproj": {}
+    "C:\\Users\\Серкер\\Documents\\GitHub\\GoFly\\GoFly_web\\GoFly_web.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Даниль\\Documents\\GitHub\\GoFly\\GoFly_web\\GoFly_web.csproj": {
+    "C:\\Users\\Серкер\\Documents\\GitHub\\GoFly\\GoFly_web\\GoFly_web.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Даниль\\Documents\\GitHub\\GoFly\\GoFly_web\\GoFly_web.csproj",
+        "projectUniqueName": "C:\\Users\\Серкер\\Documents\\GitHub\\GoFly\\GoFly_web\\GoFly_web.csproj",
         "projectName": "GoFly_web",
-        "projectPath": "C:\\Users\\Даниль\\Documents\\GitHub\\GoFly\\GoFly_web\\GoFly_web.csproj",
-        "packagesPath": "C:\\Users\\Даниль\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Даниль\\Documents\\GitHub\\GoFly\\GoFly_web\\obj\\",
+        "projectPath": "C:\\Users\\Серкер\\Documents\\GitHub\\GoFly\\GoFly_web\\GoFly_web.csproj",
+        "packagesPath": "C:\\Users\\Серкер\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Серкер\\Documents\\GitHub\\GoFly\\GoFly_web\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Даниль\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Серкер\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
