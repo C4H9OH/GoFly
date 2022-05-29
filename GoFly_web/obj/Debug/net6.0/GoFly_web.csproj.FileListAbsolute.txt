@@ -1861,7 +1861,6 @@ C:\Users\Серкер\Documents\GitHub\GoFly\GoFly_web\bin\Debug\net6.0\GoFly_we
 C:\Users\Серкер\Documents\GitHub\GoFly\GoFly_web\bin\Debug\net6.0\GoFly_web.deps.json
 C:\Users\Серкер\Documents\GitHub\GoFly\GoFly_web\bin\Debug\net6.0\GoFly_web.runtimeconfig.json
 C:\Users\Серкер\Documents\GitHub\GoFly\GoFly_web\bin\Debug\net6.0\GoFly_web.dll
-C:\Users\Серкер\Documents\GitHub\GoFly\GoFly_web\bin\Debug\net6.0\ref\GoFly_web.dll
 C:\Users\Серкер\Documents\GitHub\GoFly\GoFly_web\bin\Debug\net6.0\GoFly_web.pdb
 C:\Users\Серкер\Documents\GitHub\GoFly\GoFly_web\bin\Debug\net6.0\Microsoft.Dynamic.dll
 C:\Users\Серкер\Documents\GitHub\GoFly\GoFly_web\bin\Debug\net6.0\Microsoft.Scripting.Metadata.dll
@@ -2551,3 +2550,5 @@ C:\Users\Даниль\Documents\GitHub\GoFly\GoFly_web\obj\Debug\net6.0\ref\GoFl
 C:\Users\Даниль\Documents\GitHub\GoFly\GoFly_web\obj\Debug\net6.0\GoFly_web.pdb
 C:\Users\Даниль\Documents\GitHub\GoFly\GoFly_web\obj\Debug\net6.0\GoFly_web.genruntimeconfig.cache
 C:\Users\Даниль\Documents\GitHub\GoFly\GoFly_web\bin\Debug\net6.0\wwwroot\Images\planes.png
+C:\Users\Серкер\Documents\GitHub\GoFly\GoFly_web\bin\Debug\net6.0\wwwroot\Images\planes.png
+C:\Users\Серкер\Documents\GitHub\GoFly\GoFly_web\obj\Debug\net6.0\refint\GoFly_web.dll
