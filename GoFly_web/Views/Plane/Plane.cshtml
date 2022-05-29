@@ -1,0 +1,175 @@
+﻿@{
+    Layout=null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="~/css/Plane.css"/>
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoFly - поиск дешёвых билетов
+    </title>
+</head>
+<body>
+   <div class="container">
+    <div class="toppanel">
+        <a href="plane.html"><span id="Logo">GoFly</span></a>
+        <a href="favouriteplane.html" id="Favorites">Избранное</a>
+        <a href="historyplane.html" id="History">История путешествий</a>
+        <a href="registration.html" id="Registration">Зарегистрироваться</a>
+        <a href="feedback.html" id="Feedback">Отзывы</a>
+    </div>
+
+        <div class="buttons">
+
+            <div class="planes">
+                <div class="imgBorder">
+                    <img src="~/Images/planes.png" alt="">
+                </div>
+                <p>Авиабилеты</p>
+                </div>
+            
+            <div class="trains">
+                <a class="navbar-brand" asp-area="" asp-controller="Railway" asp-action="Railway">
+                <div class="imgBorder">
+                <img src="images/train.png" alt="">
+                </div>
+              </a>
+                <p>Ж/Д билеты</p>
+            </div>
+
+
+            <div class="buses">
+                <a href="bus.html">
+                <div class="imgBorder">
+                    <img src="images/bus.png" alt="">
+                </div>
+                    <p>Автобусы</p>
+                </a>
+            </div>
+
+            <div class="hotels">
+                <a href="hotels.html">
+                <div class="imgBorder">
+                    <img src="images/hotel.png" alt="">
+                </div>
+                    <p>Отели</p>
+                </a>
+            </div>
+            <div class="topCities">
+                <a href="topCities.html">
+                <div class="imgBorder">
+                    <img src="images/topCities.png" alt="">
+                </div>
+                    <p>Топ городов</p>
+                </a>
+            </div>
+           
+            
+        </div>
+
+    <div class="searchPannel">
+        <input type="search" name="Departure" id="Departure" placeholder="Откуда" list="">
+        <input type="search" name="Arrival" id="Arrival" placeholder="Куда">
+        <input type="date" name="" id="DataDeparture"  >
+        <p id=OneWayTitle>Туда</p>
+        <input type="date" name="" id="DataArrival"  >
+        <p id=RoundTripTitle>Обратно</p>
+        <div class="PeopleAmount">        
+            <button class="bt_minus">-</button>
+            <input type="text" class="quantity" value="1" data-max-count="8">
+            <button class="bt_plus">+</button>
+        </div>
+        <p id=AmountTitle>Количество <br> людей</p>
+
+        <div class="card-grid">
+            <input checked name="plan" id="card-radio1" class="card-radio1" type="radio"/>
+            <label for="card-radio1" id="card-radio1Label">В одну сторону</label>
+            <input name="plan" id="card-radio2" class="card-radio2" type="radio" />
+            <label for="card-radio2" id="card-radio2Label">Туда-обратно</label>
+        </div>
+
+        <div class="searchButton">
+            <a href="#" class="btn-1">Найти билеты</a>
+        </div>
+
+        <div class="wishlist">
+            <img id="wishlistImg" src="images/heart_full.png" alt="">
+        </div>
+
+    </div>
+
+        <div class="bottompanel">
+            <p>Безопасные платежи с </p>
+            <span>PENKOFF</span>
+
+        </div>
+
+        <div class="autorizationPannel">
+            <a href="#" class="LoginMenu_btn" id="Login">Войти</a>
+            <nav class="autorizationPannelParameters">
+                <p id="autorizationTitle">Авторизация</p>
+                <input id="InputLogin" type="text" placeholder="Введите логин сюда">
+                <input id="InputPassword" type="password" placeholder="Введите пароль сюда">
+                <button id = "EnterButton">Вход</button>
+                <div class="autorizationInfo">
+                    <p>Забыли пароль?</p>
+                    <a href="#">Нажмите</a>
+                    <p>для восстановления <br> Нет аккаунта?</p>
+                    <a href="#">Зарегистрируйтесь</a>
+                </div>
+            </nav>
+        </div>
+</div>
+</body>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>// Убавляем кол-во по клику
+        $('.PeopleAmount .bt_minus').click(function() {
+        let $input = $(this).parent().find('.quantity');
+        let count = parseInt($input.val()) - 1;
+        count = count < 1 ? 1 : count;
+        $input.val(count);
+    });
+    // Прибавляем кол-во по клику
+    $('.PeopleAmount .bt_plus').click(function() {
+        let $input = $(this).parent().find('.quantity');
+        let count = parseInt($input.val()) + 1;
+        count = count > parseInt($input.data('max-count')) ? parseInt($input.data('max-count')) : count;
+        $input.val(parseInt(count));
+    }); 
+    // Убираем все лишнее и невозможное при изменении поля
+    $('.PeopleAmount .quantity').bind("change keyup input click", function() {
+        if (this.value.match(/[^0-9]/g)) {
+            this.value = this.value.replace(/[^0-9]/g, '');
+        }
+        if (this.value == "") {
+            this.value = 1;
+        }
+        if (this.value > parseInt($(this).data('max-count'))) {
+            this.value = parseInt($(this).data('max-count'));
+        }    
+    }); 
+
+    $('.LoginMenu_btn').on('click',function(e){
+        e.preventDefault();
+        $('.autorizationPannel').toggleClass('autorizationPannel_Active')
+    })
+
+    // let menuBtn = $('.LoginMenu_btn');
+    // let panel = $('.autorizationPannel');
+
+    // $(document).mouseup(function(e){
+    //     if (!menuBtn.is(e.target) && menuBtn.has(e.target).length === 0 &&
+    //     !panel.is(e.target) && panel.has(e.target).length === 0 
+    //     ){
+    //         panel.fadeOut();
+    //     }
+    // }       );
+
+    </script>
+</html>

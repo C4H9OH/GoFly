@@ -1,0 +1,49 @@
+﻿@model ICollection<GoFly_web.Storage.Entity.Hotel>
+
+    <h1>Hotels</h1> 
+
+<table> 
+    <tr>
+        <th>Identification number</th>
+        <th>Name</th>
+        <th>CityId</th>
+    </tr>
+    @foreach(var hotel in Model)
+    {
+        <tr>
+            <td>@hotel.Id</td>
+            <td>@hotel.Name</td>
+            <td>@hotel.ArrivalCityId</td>
+        </tr>
+    }
+</table>
+
+<div>
+    <h1>Delete hotel</h1>
+    @using(Html.BeginForm("DeleteHotel", "Hotel", FormMethod.Post))
+    {
+        <textarea name ="hotelId" id = "hotelId"></textarea>
+        <button type = "submit">Delete</button>
+    }
+</div>
+
+ <h1>double price, int stars, int placeNumber, string name, string city </h1>
+
+<div>
+    <h1>Create hotel</h1>
+    @using(Html.BeginForm("CreateHotel", "Hotel", FormMethod.Post))
+    {
+        //price, stars, placeNumber, name, city
+     
+        <textarea name = "price"></textarea>
+        <textarea name = "stars"></textarea>
+        <textarea name = "placeNumber"></textarea>
+        <textarea name = "name"></textarea>
+        <textarea name = "city"></textarea>
+        <button type = "submit">Create</button>
+    }
+</div>
+
+ <h1>переход</h1>
+
+@Html.ActionLink("К домашней админа","GoToAdminHome")
