@@ -17,8 +17,14 @@ namespace GoFly_web.Managers.GoFlys
             var _country = _context.ArrivalCountries.FirstOrDefault(c => c.Name == country);
             if (_country != null)
             {
-                var arrCity = new ArrivalCity { Name = name, ArrivalCountry = _country, Currency = currency, Language = language,
-                Description = description, Image = imageLink};
+                var arrCity = new ArrivalCity { 
+                    Name = name,
+                    ArrivalCountry = _country,
+                    Currency = currency,
+                    Language = language,
+                    Description = description,
+                    Image = imageLink,
+                    CountryName = _country.Name};
 
                 _context.ArrivalCities.Add(arrCity);
 

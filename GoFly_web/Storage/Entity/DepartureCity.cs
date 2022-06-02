@@ -20,6 +20,9 @@ namespace GoFly_web.Storage.Entity
         public string Image { get; set; }
 
         [Required]
+        public string CountryName { get; set; }
+
+        [Required]
         public int DepartureCountryId { get; set; }
 
         [ForeignKey(nameof(DepartureCountryId))]

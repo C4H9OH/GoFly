@@ -11,11 +11,11 @@ namespace GoFly_web.Controllers
 
         public ItineraryController(IItineraryManager manager)
         {
-            _manager = manager;
+            _manager = manager;         
         }
 
-
-
+     
+       
         public async Task<IActionResult> Index()
         {
             var itineraries = await _manager.GetAll();
@@ -39,12 +39,12 @@ namespace GoFly_web.Controllers
 
         [HttpPost]
         public IActionResult CreateItinerary(string departureCity, string arrivalCity,
-        string transport, string travalTime, string departureTime, string arrivalTime, double price)
+            string transport, string travalTime, string departureTime, string arrivalTime, double price)
         {
             _manager.AddItinerary(departureCity, arrivalCity, transport, travalTime, departureTime, arrivalTime, price);
             return RedirectToAction(nameof(Index));
         }
 
-
+        
     }
 }

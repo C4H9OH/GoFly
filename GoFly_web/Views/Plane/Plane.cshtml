@@ -1,4 +1,8 @@
-﻿@{
+﻿@page
+@*ViewBag.UserEmail
+  ViewBag.UserName
+*@
+@{
     Layout=null;
 }
 <!DOCTYPE html>
@@ -16,13 +20,20 @@
    <div class="container">
     <div class="toppanel">
         <a asp-area="" asp-controller="Plane" asp-action="Plane"><span id="Logo">GoFly</span></a>
-        <a asp-area="" asp-controller="Favourite" asp-action="Favourite" id="Favorites">Избранное </a>
+        @*<a asp-area="" asp-controller="Favourite" asp-action="Favourite" id="Favorites">Избранное </a>*@
          <a asp-area="" asp-controller="History" asp-action="History" id="History">История путешествий</a>
-        <a asp-area="" asp-controller="Registration" asp-action="Registration" id="Registration">Зарегистрироваться</a>
-        <a asp-area="" asp-controller="Feedback" asp-action="Feedback" id="Feedback">Отзывы</a>
+          @if(TempData.Peek("UserName") == null)
+          {
+         <a asp-area="" asp-controller="Registration" asp-action="Registration" id="Registration">Зарегистрироваться</a>
+          }
+          else
+          {
+         <a asp-area="" asp-controller="Plane" asp-action="Plane" id="Registration">@TempData.Peek("UserName")</a>
+          }
+            <a asp-area="" asp-controller="Feedback" asp-action="Feedback" id="Feedback">Отзывы</a>
     </div>
 
-        <div class="buttons">
+         <div class="buttons">
 
             <div class="planes">
                 <div class="imgBorder">
@@ -34,7 +45,7 @@
             <div class="trains">
                 <a class="navbar-brand" asp-area="" asp-controller="Railway" asp-action="Railway">
                 <div class="imgBorder">
-                <img src="images/train.png" alt="">
+                <img src="~/Images/train.png" alt="">
                 </div>
               </a>
                 <p>Ж/Д билеты</p>
@@ -44,7 +55,7 @@
             <div class="buses">
                 <a asp-area="" asp-controller="Bus" asp-action="Bus">
                 <div class="imgBorder">
-                    <img src="images/bus.png" alt="">
+                    <img src="~/Images/bus.png" alt="">
                 </div>
                     <p>Автобусы</p>
                 </a>
@@ -53,7 +64,7 @@
             <div class="hotels">
                 <a asp-area="" asp-controller="Hotels" asp-action="Hotels">
                 <div class="imgBorder">
-                    <img src="images/hotel.png" alt="">
+                    <img src="~/Images/hotel.png" alt="">
                 </div>
                     <p>Отели</p>
                 </a>
@@ -61,67 +72,78 @@
             <div class="topCities">
                 <a asp-area="" asp-controller="TopCities" asp-action="TopCities">
                 <div class="imgBorder">
-                    <img src="images/topCities.png" alt="">
+                    <img src="~/Images/topCities.png" alt="">
                 </div>
-                    <p>Топ городов</p>
+                    <p>Все города</p>
                 </a>
             </div>
            
             
         </div>
-
+      @using(Html.BeginForm("SearchPlane", "Plane", FormMethod.Post)) 
+      {
     <div class="searchPannel">
-        <input type="search" name="Departure" id="Departure" placeholder="Откуда" list="">
-        <input type="search" name="Arrival" id="Arrival" placeholder="Куда">
-        <input type="date" name="" id="DataDeparture"  >
-        <p id=OneWayTitle>Туда</p>
-        <input type="date" name="" id="DataArrival"  >
-        <p id=RoundTripTitle>Обратно</p>
+        <input required autocomplete="off" type="search" name="DepartureCity" id="Departure" placeholder="Откуда" list="">
+        <input required autocomplete="off" type="search" name="ArrivalCity" id="Arrival" placeholder="Куда">
+        <input required autocomplete="off" type="date" name="DepartureDate" id="DataDeparture"  min="2022-05-30">
+        @*<p id=OneWayTitle>Туда</p>
+        <input type="date" name="ArrivalDate" id="DataArrival"  >
+        <p id=RoundTripTitle>Обратно</p>*@
         <div class="PeopleAmount">        
-            <button class="bt_minus">-</button>
-            <input type="text" class="quantity" value="1" data-max-count="8">
-            <button class="bt_plus">+</button>
+            <button class="bt_minus" type="button">-</button>
+            <input type="text" class="quantity" name="Persons" value="1" data-max-count="8">
+            <button class="bt_plus" type="button">+</button>
         </div>
         <p id=AmountTitle>Количество <br> людей</p>
 
         <div class="card-grid">
-            <input checked name="plan" id="card-radio1" class="card-radio1" type="radio"/>
+@*            <input checked name="plan" id="card-radio1" class="card-radio1" type="radio"/>
             <label for="card-radio1" id="card-radio1Label">В одну сторону</label>
             <input name="plan" id="card-radio2" class="card-radio2" type="radio" />
-            <label for="card-radio2" id="card-radio2Label">Туда-обратно</label>
+            <label for="card-radio2" id="card-radio2Label">Туда-обратно</label>*@
         </div>
 
         <div class="searchButton">
-            <a href="#" class="btn-1">Найти билеты</a>
+            <button class="btn-1" type="submit">Найти билеты</button>
         </div>
-
-        <div id="success" class="button"><img id="wishlistImg" src="images/heart_full.png" alt=""></div>
+       @* <div id="success" class="button"><a asp-area="" asp-controller="Favourite" asp-action="Favourite"><img id="wishlistImg" src="../Images/heart_full.png" alt=""></a></div>*@
         <div class="notify"><span id="notifyType" class=""></span></div>
-
+        
     </div>
-
+    }
         <div class="bottompanel">
             <p>Безопасные платежи с </p>
             <span>PENKOFF</span>
 
         </div>
-
-        <div class="autorizationPannel">
-            <a href="#" class="LoginMenu_btn" id="Login">Войти</a>
-            <nav class="autorizationPannelParameters">
-                <p id="autorizationTitle">Авторизация</p>
-                <input id="InputLogin" type="text" placeholder="Введите логин сюда">
-                <input id="InputPassword" type="password" placeholder="Введите пароль сюда">
-                <button id = "EnterButton">Вход</button>
-                <div class="autorizationInfo">
-                    <p>Забыли пароль?</p>
-                    <a href="#">Нажмите</a>
-                    <p>для восстановления <br> Нет аккаунта?</p>
-                    <a asp-area="" asp-controller="Registration" asp-action="Registration">Зарегистрируйтесь</a>
+        @if (TempData.Peek("UserName") == null)
+        {
+                <div class="autorizationPannel">
+                    <a href="#" class="LoginMenu_btn" id="Login">Войти</a>
+                    <nav class="autorizationPannelParameters">
+                        <p id="autorizationTitle">Авторизация</p>
+                        <input requierd id="InputLogin" name="Email" type="text" placeholder="Введите логин сюда">
+                        <input required id="InputPassword" name="Password" type="password" placeholder="Введите пароль сюда">
+                        <button id = "EnterButton">Вход</button>
+                        <div class="autorizationInfo">
+                            <p>Забыли пароль?</p>
+                            <a href="#">Нажмите</a>
+                            <p>для восстановления <br> Нет аккаунта?</p>
+                            <a asp-area="" asp-controller="Registration" asp-action="Registration">Зарегистрируйтесь</a>
+                        </div>
+                    </nav>
                 </div>
-            </nav>
-        </div>
-</div>
+            
+        }
+        else
+        {
+            @using (Html.BeginForm("Login", "Registration", FormMethod.Post))
+            {
+                
+            }
+        }
+    </div>
+
 </body>
 
 
@@ -169,5 +191,19 @@
       },2000);
     });
 
+    </script>
+
+    <script>
+	$(document).ready( function() {
+    var now = new Date();
+    var month = (now.getMonth() + 1);               
+    var day = now.getDate();
+    if (month < 10) 
+        month = "0" + month;
+    if (day < 10) 
+        day = "0" + day;
+    var today = now.getFullYear() + '-' + month + '-' + day;
+    $('#DataDeparture').val(today);
+});
     </script>
 </html>

@@ -19,6 +19,10 @@
         public string Image { get; set; }
 
         [Required]
+
+        public string CountryName { get; set; }
+
+        [Required]
         public int ArrivalCountryId { get; set; }
 
         [ForeignKey(nameof(ArrivalCountryId))]

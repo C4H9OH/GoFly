@@ -60,7 +60,7 @@ namespace GoFly_web.Controllers
                 System.Net.Mail.MailMessage message = new System.Net.Mail.MailMessage();
                 message.IsBodyHtml = true; //тело сообщения в формате HTML
                 message.From = new MailAddress("wgofly@gmail.com", "Привет беброид!!!"); //отправитель сообщения
-                message.To.Add("erdogan33@mail.ru"); //адресат сообщения
+                message.To.Add("egor.shvedov.16@bk.ru"); //адресат сообщения
                 message.Subject = "Сообщение от System.Net.Mail"; //тема сообщения
                 message.Body = "<div style=\"color: red;\">Сообщение от сервиса GoFly</div>"; //тело сообщения
                // message.Attachments.Add(new Attachment("... путь к файлу ...")); //добавить вложение к письму при необходимости

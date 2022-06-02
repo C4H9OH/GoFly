@@ -7,31 +7,37 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Controllers\TopCities.cs" />
+    <Compile Remove="Controllers\AdminMessage.cs" />
+    <Compile Remove="Controllers\SendMessegeController.cs" />
   </ItemGroup>
 
   <ItemGroup>
-    <Content Remove="Views\Hotels\Hotel.cshtml" />
+    <Content Remove="Views\SendMessage\SendMessage.cshtml" />
+    <Content Remove="wwwroot\css\AdmilHotels.css" />
+    <Content Remove="wwwroot\css\AdminHotels.css" />
+    <Content Remove="wwwroot\css\Arrival" />
+    <Content Remove="wwwroot\css\ArrivalCountry" />
+    <Content Remove="wwwroot\css\Depar" />
+    <Content Remove="wwwroot\css\DepartureCity.css.txt" />
     <Content Remove="wwwroot\css\NewFile.txt" />
-    <Content Remove="wwwroot\css\TopCities.html" />
+    <Content Remove="wwwroot\css\Search" />
   </ItemGroup>
 
   <ItemGroup>
     <None Remove="Controllers\NewFile.txt" />
-    <None Remove="Views\Confidence\NewFile.txt" />
-    <None Remove="Views\Feedback\NewFile.txt" />
-    <None Remove="Views\Hotels\NewFile.txt" />
-    <None Remove="Views\Registration\NewFile.txt" />
-    <None Remove="Views\Registration\R" />
-    <None Remove="Views\Registration\Registration" />
-    <None Remove="Views\TopCities\NewFile.txt" />
-    <None Remove="Views\TopCities\TopCities" />
+    <None Remove="Controllers\SendMessege" />
+    <None Remove="Controllers\SendMessegeController.css" />
+    <None Remove="Views\AdminMessage\NewFile.txt" />
+    <None Remove="Views\EmailConfirm\NewFile.txt" />
+    <None Remove="Views\SearchResultBus\NewFile.txt" />
+    <None Remove="Views\SearchResultHotel\NewFile.txt" />
+    <None Remove="Views\SearchResultHotel\SearchResultHotel.csh" />
+    <None Remove="Views\SearchResultPlane\NewFile.txt" />
+    <None Remove="Views\SearchResultTrain\NewFile.txt" />
+    <None Remove="Views\SendMessage\NewFile.txt" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="DynamicLanguageRuntime" Version="1.3.2" />
-    <PackageReference Include="IronPython" Version="2.7.12" />
-    <PackageReference Include="IronPython.StdLib" Version="2.7.12" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.4" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.4">
       <PrivateAssets>all</PrivateAssets>
@@ -43,18 +49,12 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.5" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.3.0" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Migrations\" />
   </ItemGroup>
-
-  <ItemGroup>
-    <Content Update="wwwroot\Images\planes.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-  </ItemGroup>
-
-  <ProjectExtensions><VisualStudio><UserProperties appsettings_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>
 
 </Project>

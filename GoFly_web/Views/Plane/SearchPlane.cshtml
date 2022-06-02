@@ -1,0 +1,89 @@
+﻿@page
+@*ViewBag.PlaneTickets
+  ViewBag.PlanePersons
+*@
+@{
+    Layout=null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="~/css/SearchResultPlane.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Результаты поиска</title>
+</head>
+<body>
+    <div class="container">
+    <div class="toppanel">
+        <a asp-area="" asp-controller="Plane" asp-action="Plane"><span id="Logo">GoFly</span></a>
+        <a asp-area="" asp-controller="Favourite" asp-action="Favourite" id="Favorites">Избранное </a>
+         <a asp-area="" asp-controller="History" asp-action="History" id="History">История путешествий</a>
+        <a asp-area="" asp-controller="Registration" asp-action="Registration" id="Registration">Зарегистрироваться</a>
+        <a asp-area="" asp-controller="Feedback" asp-action="Feedback" id="Feedback">Отзывы</a>
+    </div>
+        <div class="autorizationPannel">
+            <a href="#" class="LoginMenu_btn" id="Login">Войти</a>
+            <nav class="autorizationPannelParameters">
+                <p id="autorizationTitle">Авторизация</p>
+                <input id="InputLogin" type="text" placeholder="Введите логин сюда">
+                <input id="InputPassword" type="password" placeholder="Введите пароль сюда">
+                <button id = "EnterButton">Вход</button>
+                <div class="autorizationInfo">
+                    <p>Забыли пароль?</p>
+                    <a id="AutorizationPress" href="#">Нажмите</a>
+                    <p>для восстановления <br> Нет аккаунта?</p>
+                    <a id="AutorizationRecover"href="#">Зарегистрируйтесь</a>
+                </div>
+            </nav>
+        </div>
+        
+         @if(ViewBag.PlaneTickets.Count == 0)
+        {
+           <p id="Title">Ничего не найдено</p> 
+        } else
+        {
+        <p id="Title">Результаты поиска</p>
+        }
+
+        <div class="table">
+            <table>
+                <tr>
+                    <th>Откуда</th>
+                    <th>Куда</th>
+                    <th>Время вылета</th>
+                    <th>Время посадки</th>
+                    <th>Время полёта</th>
+                    <th>Цена</th>
+                    <th></th>
+                @foreach(var _planeTicket in ViewBag.PlaneTickets)
+                {
+                <tr>
+                    <td>@_planeTicket.DeparturelCityName</td>
+                    <td>@_planeTicket.ArrivalCityName</td>
+                    <td>@_planeTicket.ArrivalTime</td>
+                    <td>@_planeTicket.DepartureTime</td>
+                    <td>@_planeTicket.TravalTime</td>
+                    <td>@(_planeTicket.Price * ViewBag.PlanePersons)</td>
+                    <td><button>Купить</button></td>
+                </tr>
+                }
+               
+                </tr>
+                
+            </table>
+    
+    </div>
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<script>
+$('.LoginMenu_btn').on('click',function(e){
+    e.preventDefault();
+    $('.autorizationPannel').toggleClass('autorizationPannel_Active')
+})
+</script>
+
+</html>

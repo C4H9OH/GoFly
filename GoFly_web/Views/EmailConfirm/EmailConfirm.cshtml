@@ -1,0 +1,62 @@
+﻿@{
+    Layout=null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="~/css/EmailConfirm.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoFly - поиск дешёвых билетов
+    </title>
+</head>
+<body>
+    <div class="container">
+        <div class="toppanel">
+        <a asp-area="" asp-controller="Plane" asp-action="Plane"><span id="Logo">GoFly</span></a>
+        <a asp-area="" asp-controller="Favourite" asp-action="Favourite" id="Favorites">Избранное </a>
+         <a asp-area="" asp-controller="History" asp-action="History" id="History">История путешествий</a>
+        <a asp-area="" asp-controller="Registration" asp-action="Registration" id="Registration">Зарегистрироваться</a>
+        <a asp-area="" asp-controller="Feedback" asp-action="Feedback" id="Feedback">Отзывы</a>
+    </div>
+
+        <div class="autorizationPannel">
+            <a href="#" class="LoginMenu_btn" id="Login">Войти</a>
+            <nav class="autorizationPannelParameters">
+                <p id="autorizationTitle">Авторизация</p>
+                <input id="InputLogin" type="text" placeholder="Введите логин сюда">
+                <input id="InputPassword" type="password" placeholder="Введите пароль сюда">
+                <button id = "EnterButton">Вход</button>
+                <div class="autorizationInfo">
+                    <p>Забыли пароль?</p>
+                    <a id="AutorizationPress" href="#">Нажмите</a>
+                    <p>для восстановления <br> Нет аккаунта?</p>
+                    <a asp-area="" asp-controller="Registration" asp-action="Registration">Зарегистрируйтесь</a>
+                </div>
+            </nav>
+        </div>
+
+</body>
+<div class="searchPannel">
+	
+    <input class="form-control" type="textbox" name="EmailConfirm" id="EmailConfirm" placeholder="Введите код" list="">
+    <p id="RegistrationTitle">Регистрация</p>
+    <div class="searchButton">
+        <a class="btn-1" asp-area="" asp-controller="Plane" asp-action="Plane">Подтвердить</a>
+    </div>
+    <input type="checkbox" name="" id="CheckBoxAcception"  >
+    <p id="Confidence">Я согласен(а) с</p>
+    <a asp-area="" asp-controller="EmailConfirm" asp-action="EmailConfirm" id="ConfidenceLink">Политикой конфиденциальности</a>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<script>
+$('.LoginMenu_btn').on('click',function(e){
+    e.preventDefault();
+    $('.autorizationPannel').toggleClass('autorizationPannel_Active')
+})
+</script>
+
+</html>

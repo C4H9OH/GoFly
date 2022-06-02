@@ -642,6 +642,7 @@ body {
 .searchButton {
     height: 100%;
     display: flex;
+
 }
 
     .searchButton .btn-1 {
@@ -663,6 +664,9 @@ body {
         top: 50px;
         align-items: center;
         justify-content: center;
+        background-color: rgba(152, 202, 117, 1);
+        font-family: 'Bebas Neue';
+        cursor: pointer;
     }
 
         .searchButton .btn-1::after {

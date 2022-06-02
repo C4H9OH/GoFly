@@ -1,6 +1,7 @@
 using GoFly_web.Managers;
 using GoFly_web.Managers.GoFlys;
 using GoFly_web.Storage;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
 
@@ -22,11 +23,32 @@ builder.Services.AddScoped<IDepartureCityManager, DepartureCityManager>();
 
 builder.Services.AddScoped<IHotelManager, HotelManager>();
 
+builder.Services.AddScoped<IAccountManager, AccountManager>();
+
+builder.Services.AddScoped<IHotelsManager, HotelsManager>();
+
+builder.Services.AddScoped<IAdminMessageManager, AdminMessageManager>();
+
+builder.Services.AddScoped<IPlaneManager, PlaneManager>();
+
+builder.Services.AddScoped<IBusManager, BusManager>();
+
+builder.Services.AddScoped<ITrainManager, TrainManager>();
+
 // Add Database Context
 //var connectionString = builder.Configuration.GetConnectionString("DbConnection");
 var connectionString = builder.Configuration.GetConnectionString("DbConnection");
 
 services.AddDbContext<GOflyContext>(param => param.UseSqlServer(connectionString));
+
+services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+    .AddCookie(options =>
+    {
+        options.LoginPath = "/Home/Login";
+        options.Cookie.Name = "AshProgHelpCookie";
+    });
+
+services.AddMvc();
 
 var app = builder.Build();
 
@@ -43,7 +65,10 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+app.UseAuthentication();
 app.UseAuthorization();
+
+app.UseCookiePolicy();
 
 app.MapControllerRoute(
     name: "default",

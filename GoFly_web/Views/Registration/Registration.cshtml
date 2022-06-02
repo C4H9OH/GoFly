@@ -39,17 +39,28 @@
         </div>
 
 </body>
+<form method="post">
 <div class="searchPannel">
-    <input type="textbox" name="LoginReg" id="LoginReg" placeholder="Введите логин" list="">
-    <input type="password" name="PasswordReg" id="PasswordReg" placeholder="Введите пароль" list="">
-    <input type="password" name="PasswordAcception" id="PasswordAcception" placeholder="Подтвердите пароль" list="">
-    <input type="textbox" name="Email" id="Email" placeholder="Введите почту" list="">
+	<input required class="form-control" type="text" name="userFirstName" id = "name" placeholder="Имя" />
+	<input required class="form-control" type="text" name="userLastName" id = "lastName" placeholder="Фамилия" />
+    @*<input type="textbox" name="LoginReg" id="LoginReg" placeholder="Введите логин" list="">*@
+    <input required class="form-control" type="textbox" name="userEmail" id="userEmail" placeholder="Почта" list="">
+	<input class="form-control" checked name="userGender" id="card-radio1" class="card-radio1" type="radio" value="Man"/>
+    <label for="card-radio1" id="card-radio1Label">Мужчина</label>
+    <p id="ConfirmTitle" style = "position:absolute;box-sizing:border-box;top: 536px;left: 167px;z-index: 2;color: white;" >Зарегистрироваться</p>
+    <input class="form-control" name="userGender" id="card-radio2" class="card-radio2" type="radio"  value="Women"/>
+    <label for="card-radio2" id="card-radio2Label">Женщина</label>
+    <input class="form-control" type="text" name="userPhoneNumber" id = "phoneNumber"placeholder="Номер телефона" />
+    <input required class="form-control" min = 1; type="number" name="userAge" id = "age" placeholder="Возраст" />
+    @*<input class="form-control" type="text" name="userLanguage" placeholder="Язык" id = "language" />*@
+    <input required class="form-control" type="password" name="userPassword" id="PasswordReg" placeholder="Пароль" list="">
     <p id="RegistrationTitle">Регистрация</p>
     <div class="searchButton">
-        <a href="#" class="btn-1">Зарегистрироваться</a>
+     <button class="btn-1" type = "submit"><a class="btn-1" asp-area="" asp-controller="EmailConfirm" asp-action="EmailConfirm">Зарегистрироваться</a></button>
     </div>
-    <input type="checkbox" name="" id="CheckBoxAcception"  >
+    <input required type="checkbox" name="" id="CheckBoxAcception" value = "true" >
     <p id="Confidence">Я согласен(а) с</p>
+        </form>
     <a asp-area="" asp-controller="Confidence" asp-action="Confidence" id="ConfidenceLink">Политикой конфиденциальности</a>
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>

@@ -1,49 +1,105 @@
-﻿@model ICollection<GoFly_web.Storage.Entity.Hotel>
+﻿@{
+    Layout=null;
+}
 
-    <h1>Hotels</h1> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="~/css/Hotel.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Панель администратора</title>
+</head>
 
+@*@model ICollection<GoFly_web.Storage.Entity.Hotel>*@
+
+@*@using GoFly_web.Storage.Entity;
+@model ICollection<Tuple<ICollection<Hotel>,ICollection<DepartureCountry>>>*@
+@using GoFly_web; @*//Project Name  *@
+@model dynamic
+
+
+
+
+
+<div class="existing">
 <table> 
     <tr>
-        <th>Identification number</th>
-        <th>Name</th>
-        <th>CityId</th>
-    </tr>
-    @foreach(var hotel in Model)
+            <th>Identification Number</th>
+            <th>Name</th>
+            <th>CityID</th>
+            <th>City</th>
+    </tr>  
+    @foreach(var hotel in Model.hotels)
     {
         <tr>
             <td>@hotel.Id</td>
             <td>@hotel.Name</td>
             <td>@hotel.ArrivalCityId</td>
+            <td>@hotel.ArrivalCityName</td>
         </tr>
+     
     }
 </table>
+</div>
 
-<div>
-    <h1>Delete hotel</h1>
+
+
+
+@*<table> 
+    <tr>
+        <th>Identification number</th>
+        <th>Name</th>
+    </tr>
+    @foreach(var country in Model.arrCountries)
+    {
+        <tr>
+            <td>@country.Id</td>
+            <td>@country.Name</td>
+        </tr>
+    }
+</table>*@
+
+
+<div class = "deleting">
+     <p>Удаление объекта</p>
     @using(Html.BeginForm("DeleteHotel", "Hotel", FormMethod.Post))
     {
-        <textarea name ="hotelId" id = "hotelId"></textarea>
-        <button type = "submit">Delete</button>
+		<input type="text" name ="hotelId" placeholder="Identification number Name CountryId">
+        @*<textarea name ="hotelId" id = "hotelId"></textarea>*@
+        <button  type = "submit">Удалить</button>
     }
 </div>
 
- <h1>double price, int stars, int placeNumber, string name, string city </h1>
 
-<div>
-    <h1>Create hotel</h1>
+
+<div class="adding">
+    <p>Добавление объекта</p>
     @using(Html.BeginForm("CreateHotel", "Hotel", FormMethod.Post))
     {
         //price, stars, placeNumber, name, city
      
-        <textarea name = "price"></textarea>
+        @*<textarea name = "price"></textarea>
         <textarea name = "stars"></textarea>
         <textarea name = "placeNumber"></textarea>
         <textarea name = "name"></textarea>
-        <textarea name = "city"></textarea>
-        <button type = "submit">Create</button>
+        <textarea name = "city"></textarea>*@
+
+		<input type="text" name= "price" placeholder="double price" class="stringName">
+        <input type="text" name = "stars" placeholder="int stars" class="stringCurrency">
+        <input type="text" name = "placeNumber" placeholder="int placeNumber" class="stringLanguage">
+        <input type="text" name = "name" placeholder="string name" class="stringDescription">
+        <input type="text" name = "city" placeholder="string city" class="stringImageLink">
+
+        <button type = "submit">Добавить</button>
     }
 </div>
 
- <h1>переход</h1>
+<a asp-area="" asp-controller = "AdminHome" asp-action = "Index">
+    <div class="returnButton">
+        <p>Вернуться на главную</p>
+    </div>
+    </a>
 
-@Html.ActionLink("К домашней админа","GoToAdminHome")
+

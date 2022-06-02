@@ -1,0 +1,43 @@
+﻿@{
+    Layout=null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="~/css/SendMessage.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Панель администратора</title>
+</head>
+
+
+    <div class="menu">
+        <p>Страны Прибытия</p>      
+    </div>
+
+
+<div class="sending">
+<div>
+    <p>НЕ НАЖИМАЙ</p>
+</div>
+</div>
+
+
+<div class = "adding">
+		<p>Добавление объекта</p>
+
+    @using(Html.BeginForm("CreateCountry", "ArrivalCountry", FormMethod.Post))
+    {
+        <input type="text" placeholder="string name" name = "name">
+        <button type = "submit">Добавить</button>
+    }
+</div>
+
+
+<a asp-area="" asp-controller = "AdminHome" asp-action = "Index">
+    <div class="returnButton">
+        <p>Вернуться на главную</p>
+    </div>
+    </a>

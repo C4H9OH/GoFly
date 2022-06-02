@@ -20,6 +20,10 @@
         public int PlacesNumber { get; set; }
 
         [Required]
+
+        public string ArrivalCityName { get; set; }    
+
+        [Required]
         public int ArrivalCityId { get; set; }
 
         [ForeignKey(nameof(ArrivalCityId))]

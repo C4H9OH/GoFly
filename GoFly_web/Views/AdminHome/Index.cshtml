@@ -1,15 +1,72 @@
-﻿@using GoFly_web.TelegramBot;
+﻿@{
+    Layout=null;
+}
 
- <h1>переход</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="~/css/AdminHome.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Панель администратора</title>
+</head>
+<body>
+    <div class="menu">
+        <p>Перейти к</p>
+        <div class="menuOptions">
+        </div>
+        
+    </div>
 
-@Html.ActionLink("К странам отправления","GoToDepCountries")
- <h1>......</h1>
-@Html.ActionLink("К городам отправления","GoToDepCities")
- <h1>......</h1>
-@Html.ActionLink("К странам прибытия","GoToArrCountries")
- <h1>......</h1>
-@Html.ActionLink("К городам прибытия","GoToArrCities")
-<h1>......</h1>
-@Html.ActionLink("К отелям","GoToHotels")
-<h1>......</h1>
-@Html.ActionLink("Сообщение!","BotStart")
+    <div class="buttons">
+            <a asp-area="" asp-controller = "DepartureCountry" asp-action = "Page">
+            <div class="DepartureCountry">
+                <div class="imgBorder">
+                    <p>К странам отправления</p>
+                </div>
+            </div>
+            </a>
+            <a asp-area="" asp-controller = "DepartureCity" asp-action = "Index">
+            <div class="DepartureCities">           
+                <div class="imgBorder">
+                   <p>К городам отправления</p>
+                </div>
+            </div>
+            </a>
+
+            <div class="ArrivalCountry">
+                <a asp-area="" asp-controller = "ArrivalCountry" asp-action = "Page">
+                <div class="imgBorder">
+                    <p>К странам прибытия</p>
+                </div>
+                </a>
+            </div>
+
+            <div class="ArrivalCities">
+               <a asp-area="" asp-controller = "ArrivalCity" asp-action = "Index">
+                <div class="imgBorder">
+                    <p>К городам прибытия</p>
+                </div>
+                </a>
+            </div>
+            <div class="Hotels">
+                <a asp-area="" asp-controller = "Hotel" asp-action = "Index">
+                <div class="imgBorder">
+                    <p>К отелям</p>
+                </div>
+                </a>
+            </div>
+
+            <div class="Message">
+                <a asp-area="" asp-controller = "AdminMessage" asp-action = "AdminMessage">
+                <div class="imgBorder">
+                    <p>К сообщению</p>
+                </div>
+                </a>
+            </div>
+           
+            
+        </div>
+</body>
+</html>

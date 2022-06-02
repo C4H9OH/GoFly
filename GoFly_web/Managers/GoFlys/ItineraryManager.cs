@@ -14,29 +14,29 @@ namespace GoFly_web.Managers
         }
 
         public async Task AddItinerary(string departureCity, string arrivalCity,
-        string transport, string travalTime, string departureTime, string arrivalTime, double price)
+            string transport, string travalTime, string departureTime, string arrivalTime, double price)
         {
-            var _departureCity = _context.DepartureCities.FirstOrDefault(c => c.Name == departureCity);
-            var _arrivalCity = _context.ArrivalCities.FirstOrDefault(c => c.Name == arrivalCity);
-            var _transport = _context.Transports.FirstOrDefault(t => t.Name == transport);
-
+            var _departureCity = _context.DepartureCities.FirstOrDefault(c=>c.Name == departureCity);
+            var _arrivalCity = _context.ArrivalCities.FirstOrDefault(c=>c.Name == arrivalCity);
+            var _transport = _context.Transports.FirstOrDefault(t=>t.Name == transport);
+                
 
             if ((_departureCity != null) & (_arrivalCity != null) & (_transport != null))
-            {
-                var itinerary = new Itinerary
-                {
-                    DepartureCity = _departureCity,
-                    ArrivalCity = _arrivalCity,
-                    Transport = _transport,
-                    TravalTime = travalTime,
-                    DepartureTime = departureTime,
-                    ArrivalTime = arrivalTime,
-                    Price = price
-                };
+                    {
+                        var itinerary = new Itinerary 
+                        {
+                            DepartureCity = _departureCity, 
+                            ArrivalCity = _arrivalCity,
+                            Transport = _transport,
+                            TravalTime = travalTime,  
+                            DepartureTime = departureTime,
+                            ArrivalTime = arrivalTime,
+                            Price = price 
+                        };
 
-                _context.Itineraries.Add(itinerary);
+                         _context.Itineraries.Add(itinerary);
 
-                await _context.SaveChangesAsync();
+                        await _context.SaveChangesAsync();
             }
         }
 
@@ -53,6 +53,6 @@ namespace GoFly_web.Managers
 
         public async Task<IList<Itinerary>> GetAll() => await _context.Itineraries.ToListAsync();
 
-
+       
     }
 }

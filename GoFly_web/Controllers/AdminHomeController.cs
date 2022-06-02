@@ -1,7 +1,4 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using IronPython.Hosting;
-using Microsoft.Scripting.Hosting;
-using System.Diagnostics;
 
 namespace GoFly_web.Controllers
 {
@@ -11,6 +8,10 @@ namespace GoFly_web.Controllers
         {
             return View();
         }
+
+
+
+
 
 
         public RedirectResult GoToDepCountries()
@@ -37,6 +38,7 @@ namespace GoFly_web.Controllers
         {
             return Redirect("/Hotel/Index");
         }
-
     }
 }
+
+

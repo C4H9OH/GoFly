@@ -66,42 +66,43 @@
                 <div class="imgBorder">
                     <img src="~/Images/topCities.png" alt="">
                 </div>
-                    <p>Топ городов</p>
+                    <p>Все города</p>
                 </a>
             </div>
 
             
         </div>
-
+      @using(Html.BeginForm("SearchBus", "Bus", FormMethod.Post)) 
+      {
     <div class="searchPannel">
-        <input type="search" name="Departure" id="Departure" placeholder="Откуда" list="">
-        <input type="search" name="Arrival" id="Arrival" placeholder="Куда">
-        <input type="date" name="" id="DataDeparture"  >
+        <input required type="search" name="DepartureCity" id="Departure" placeholder="Откуда" list="">
+        <input required type="search" name="ArrivalCity" id="Arrival" placeholder="Куда">
+        <input required type="date" name="DepartureDate" id="DataDeparture"  >
         <p id=OneWayTitle>Туда</p>
-        <input type="date" name="" id="DataArrival"  >
+        <input type="date" name="ArrivalDate" id="DataArrival"  >
         <p id=RoundTripTitle>Обратно</p>
         <div class="PeopleAmount">        
-            <button class="bt_minus">-</button>
-            <input type="text" class="quantity" value="1" data-max-count="8">
-            <button class="bt_plus">+</button>
+            <button class="bt_minus" type="button">-</button>
+            <input type="text" class="quantity" name="Persons" value="1" data-max-count="8">
+            <button class="bt_plus" type="button">+</button>
         </div>
         <p id=AmountTitle>Количество <br> людей</p>
 
-        <div class="card-grid">
+        @*<div class="card-grid">
             <input checked name="plan" id="card-radio1" class="card-radio1" type="radio" />
             <label for="card-radio1" id="card-radio1Label">В одну сторону</label>
             <input name="plan" id="card-radio2" class="card-radio2" type="radio" />
             <label for="card-radio2" id="card-radio2Label">Туда-обратно</label>
-        </div>
+        </div>*@
 
         <div class="searchButton">
-            <a href="#" class="btn-1">Найти билеты</a>
+            <button class="btn-1" type="submit">Найти билеты</button>
         </div>
-
-        <div id="success" class="button"><img id="wishlistImg" src="../Images/heart_full.png" alt=""></div>
+        <div id="success" class="button"><a asp-area="" asp-controller="FavouriteBus" asp-action="FavouriteBus"><img id="wishlistImg" src="../Images/heart_full.png" alt=""></a></div>
         <div class="notify"><span id="notifyType" class=""></span></div>
 
     </div>
+    }
 
         <div class="bottompanel">
             <p>Безопасные платежи с </p>

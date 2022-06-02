@@ -1,7 +1,22 @@
 ﻿@model ICollection<GoFly_web.Storage.Entity.DepartureCountry>
+@{
+    Layout=null;
+}
 
-    <h1>Departure countries</h1> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="~/css/DepartureCountry.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Панель администратора</title>
+</head>
+    <div class="menu">
+        <p>Страны отправления</p>      
+    </div>
 
+	 <div class="existing">
 <table> 
     <tr>
         <th>Identification number</th>
@@ -15,30 +30,40 @@
         </tr>
     }
 </table>
+</div>
 
-<div>
-    <h1>Delete country</h1>
+
+<div class = "deleting">
+    <p>Удаление объекта</p>
     @using(Html.BeginForm("DeleteCountry", "DepartureCountry", FormMethod.Post))
     {
-        <textarea name ="countryId" id = "countryId"></textarea>
-        <button type = "submit">Deduct</button>
+		<input name ="countryId" type="text" placeholder="Identification number">
+        @*<textarea name ="countryId" id = "countryId"></textarea>*@
+        <button type = "submit">Удалить</button>
     }
 </div>
 
-<h1>string name</h1>
 
-<div>
-    <h1>Create country</h1>
+<div class="adding">
+    <p>Добавление объекта</p>
     @using(Html.BeginForm("CreateCountry", "DepartureCountry", FormMethod.Post))
     {
-     
-        <textarea name = "name"></textarea>
-        <button type = "submit">Create</button>
+        <input name = "name" type="text" placeholder="string name">
+        @*<textarea name = "name"></textarea>*@
+        <button type = "submit">Добавить</button>
     }
 </div>
 
-@Html.ActionLink("Перейти","GoToDepCountry")
+
+<a asp-area="" asp-controller = "AdminHome" asp-action = "Index">
+    <div class="returnButton">
+        <p>Вернуться на главную</p>
+    </div>
+    </a>
+
+
+@*@Html.ActionLink("Перейти","GoToDepCountry")
 
  <h1>переход</h1>
 
-@Html.ActionLink("К домашней админа","GoToAdminHome")
+@Html.ActionLink("К домашней админа","GoToAdminHome")*@

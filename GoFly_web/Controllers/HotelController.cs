@@ -1,5 +1,6 @@
 ﻿using GoFly_web.Managers.GoFlys;
 using Microsoft.AspNetCore.Mvc;
+using System.Dynamic;
 
 namespace GoFly_web.Controllers
 {
@@ -14,8 +15,10 @@ namespace GoFly_web.Controllers
 
         public async Task<IActionResult> Index()
         {
+            dynamic mymodel = new ExpandoObject();
+            mymodel.hotels = await _manager.GetAll();
             var hotels = await _manager.GetAll();
-            return View(hotels);
+            return View(mymodel);
         }
 
 

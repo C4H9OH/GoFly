@@ -25,7 +25,8 @@ namespace GoFly_web.Managers.GoFlys
                     Currency = currency,
                     Language = language,
                     Description = description,
-                    Image = imageLink
+                    Image = imageLink,
+                    CountryName = _country.Name
                 };
 
                 _context.DepartureCities.Add(depCity);

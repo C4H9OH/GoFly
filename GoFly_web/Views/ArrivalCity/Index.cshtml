@@ -1,12 +1,29 @@
 ﻿@model ICollection<GoFly_web.Storage.Entity.ArrivalCity>
+@{
+    Layout=null;
+}
 
-    <h1>Arrival cities</h1> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="~/css/ArrivalCity.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Панель администратора</title>
+</head>
 
+<div class="menu">
+        <p>Города прибытия</p>      
+    </div>
+
+<div class="existing">
 <table> 
     <tr>
         <th>Identification number</th>
         <th>Name</th>
         <th>CountryId</th>
+        <th>Country</th>
     </tr>
     @foreach(var city in Model)
     {
@@ -14,38 +31,49 @@
             <td>@city.Id</td>
             <td>@city.Name</td>
             <td>@city.ArrivalCountryId</td>
+            <td>@city.CountryName</td>
         </tr>
     }
 </table>
+</div>
 
-<div>
-    <h1>Delete city</h1>
+<div class = "deleting">
+   <p>Удаление объекта</p>
     @using(Html.BeginForm("DeleteCity", "ArrivalCity", FormMethod.Post))
     {
-        <textarea name ="cityId" id = "cityId"></textarea>
-        <button type = "submit">Delete</button>
+		<input type="text" name ="cityId" placeholder="Identification number ">
+        @*<textarea name ="cityId" id = "cityId"></textarea>*@
+        <button type = "submit">Удалить</button>
     }
 </div>
 
 
-<h1>string name, string currency, string language, string description, string imageLink, string country</h1>
 
 
-<div>
-    <h1>Create city</h1>
+<div class="adding">
+    <p>Добавление объекта</p>
     @using(Html.BeginForm("CreateCity", "ArrivalCity", FormMethod.Post))
     {
+
+		<input type="text" name = "name" placeholder="string name" class="stringName">
+        <input type="text" name = "currency" placeholder="string Currency" class="stringCurrency">
+        <input type="text" name = "language" placeholder="string Language" class="stringLanguage">
+        <input type="text" name = "description" placeholder="string Description" class="stringDescription">
+        <input type="text" name = "imageLink" placeholder="string ImageLink" class="stringImageLink">
+        <input type="text" name = "country" placeholder="string Country" class="stringCountry">
      
-        <textarea name = "name"></textarea>
+        @*<textarea name = "name"></textarea>
         <textarea name = "currency"></textarea>
         <textarea name = "language"></textarea>
         <textarea name = "description"></textarea>
         <textarea name = "imageLink"></textarea>
-        <textarea name = "country"></textarea>
-        <button type = "submit">Create</button>
+        <textarea name = "country"></textarea>*@
+        <button type = "submit">Добавить</button>
     }
 </div>
 
- <h1>переход</h1>
-
-@Html.ActionLink("К домашней админа","GoToAdminHome")
+<a asp-area="" asp-controller = "AdminHome" asp-action = "Index">
+    <div class="returnButton">
+        <p>Вернуться на главную</p>
+    </div>
+    </a>

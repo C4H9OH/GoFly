@@ -1,0 +1,36 @@
+﻿@{
+    Layout=null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="~/css/AdminMessage.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Панель администратора</title>
+</head>
+
+
+    <div class="menu">
+        <p>НЕ НАЖИМАЙ</p>      
+    </div>
+
+<div class="sending">
+<div>
+     @using(Html.BeginForm("AdminMessage", "AdminMessage", FormMethod.Post))
+     {
+        <input type="text" name = "message" id="input"placeholder="СООБЩЕНИЕ">
+        <button type = "submit" id="button">Отправить</button>
+    }
+</div>
+</div>
+
+
+
+<a asp-area="" asp-controller = "AdminHome" asp-action = "Index">
+    <div class="returnButton">
+        <p>Вернуться на главную</p>
+    </div>
+    </a>

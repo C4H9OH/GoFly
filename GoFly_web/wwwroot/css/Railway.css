@@ -612,6 +612,9 @@ body {
         top: 50px;
         align-items: center;
         justify-content: center;
+        background-color: rgb(162, 39, 92, 1);
+        font-family: 'Bebas Neue';
+        cursor:pointer;
     }
 
         .searchButton .btn-1::after {

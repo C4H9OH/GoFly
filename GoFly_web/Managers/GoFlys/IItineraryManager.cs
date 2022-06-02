@@ -7,9 +7,9 @@ namespace GoFly_web.Managers
         //ICollection<Itinerary> GetAll();
         Task<IList<Itinerary>> GetAll();
 
-Task DeleteItinerary(int id);
+        Task DeleteItinerary(int id);
 
-        Task AddItinerary(string departureCity, string arrivalCity,
-        string transport, string travalTime, string departureTime, string arrivalTime, double price);
+        Task AddItinerary(string departureCity, string arrivalCity, 
+            string transport, string travalTime, string departureTime, string arrivalTime, double price);
     }
 }

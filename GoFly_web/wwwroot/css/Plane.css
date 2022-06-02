@@ -418,7 +418,7 @@ body {
         top: 50px;
         left: 490px;
         height: 48px;
-        width: 120px;
+        width: 240px;
         border-color: black;
         border-width: 1px 0.5px 1px 0.5px;
     }
@@ -439,6 +439,8 @@ body {
         left: 25px;
         top: 15px;
         cursor: pointer;
+        display: none;
+        opacity: 0%;
     }
 
     .searchPannel #OneWayTitle {
@@ -446,6 +448,8 @@ body {
         left: 45px;
         top: 10px;
         color: white;
+        display: none;
+        opacity: 0%;
     }
 
 
@@ -455,6 +459,8 @@ body {
         left: 160px;
         top: 15px;
         cursor: pointer;
+        opacity: 0%;
+        display: none;
     }
 
     .searchPannel #Round-tripTitle {
@@ -462,6 +468,8 @@ body {
         left: 180px;
         top: 10px;
         color: white;
+        display: none;
+        opacity:0%;
     }
 
 
@@ -602,6 +610,9 @@ body {
         top: 50px;
         align-items: center;
         justify-content: center;
+        background-color: rgb(77, 43, 144, 1);
+        font-family: 'Bebas Neue';
+        cursor: pointer;
     }
 
         .searchButton .btn-1::after {

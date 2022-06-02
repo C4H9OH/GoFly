@@ -25,6 +25,7 @@ namespace GoFly_web.Managers.GoFlys
                     StarRating = stars,
                     PlacesNumber = placeNumber,
                     ArrivalCity = _city,
+                    ArrivalCityName = _city.Name
                 };
 
                 _context.Hotels.Add(hotel);

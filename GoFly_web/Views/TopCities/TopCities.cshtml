@@ -1,4 +1,5 @@
-﻿@{
+﻿@model ICollection<GoFly_web.Storage.Entity.ArrivalCity>
+@{
     Layout=null;
 }
 
@@ -47,181 +48,29 @@
                     <th>Город</th>
                     <th>Страна</th>
                     <th>Изображение</th>
-                    <th>Доступность</th>
-                    <th>Итог</th>
                     <th>Узнать подробности</th> 
+                    
                 </tr>
-                
+            @foreach(var city in Model)
+            { 
                 <tr>
-                    <td>Москва</td>
-                    <td>Россия</td>
-                    <!-- <td><img src="images/HeartEmpty.png" style="max-width:10%; max-height:10%" alt=""></td> -->
-                    <td><img src="/images/Mocow.png" alt=""></td>
-                    <td>6.4</td>
-                    <td>8</td>
-                    <td><a href="#zatemnenie">Подробнее</a></td>
+                    <td>@city.Name</td>
+                    <td>@city.CountryName</td>
+                    <td><img src="/images/CitiesImages/@city.Image" alt=""></td>
+                    <td colspan = "3">@city.Description</td>
+                   @* <td><a href="#zatemnenie>Подробнее</a></td>
+                    <div class="infoBlock">
+                <div id = "zatemnenie" style = "z-index:2;"> 
+                    <div id="Moscow">
+                        <div id="info1">
+                        <p> @city.Description<br></p>
+                            <a href="#" class = "close">Закрыть окно</a>
+                        </div>
+                    </div>
+                </div>*@
 
                 </tr>
-                <tr>
-                    <td>Актобе</td>
-                    <td>Казахстан</td>
-                    <td>Изображение</td>
-                    <td>9.3</td>
-                    <td>9.5</td>
-                    <td><a href="#zatemnenie1">Подробнее</a></td>
-                </tr>
-                <tr>
-                    <td>Аланья</td>
-                    <td>Турция</td>
-                    <td>Изображение</td>
-                    <td>7.0</td>
-                    <td>7.3</td>
-                    <td><a href="#zatemnenie2">Подробнее</a></td>
-                </tr>
-                <tr>
-                    <td>Алма-ата</td>
-                    <td>Казахстан</td>
-                    <td>Изображение</td>
-                    <td>6.8</td>
-                    <td>7.1</td>
-                    <td><a href="#zatemnenie3">Подробнее</a></td>
-                </tr>
-                <tr>
-                    <td>Анапа</td>
-                    <td>Россия</td>
-                    <td>Изображение</td>
-                    <td>6.8</td>
-                    <td>7.1</td>
-                    <td><a href="#zatemnenie4">Подробнее</a></td>
-                </tr>
-                <tr>
-                    <td>Анкара</td>
-                    <td>Турция</td>
-                    <td>Изображение</td>
-                    <td>6.8</td>
-                    <td>7.1</td>
-                    <td><a href="#zatemnenie5">Подробнее</a></td>
-                </tr>
-                <tr>
-                    <td>Астана</td>
-                    <td>Казахстан</td>
-                    <td>Изображение</td>
-                    <td>6.8</td>
-                    <td>7.1</td>
-                    <td><a href="#zatemnenie6">Подробнее</a></td>
-                </tr>
-                <tr>
-                    <td>Бодрум</td>
-                    <td>Турция</td>
-                    <td>Изображение</td>
-                    <td>6.8</td>
-                    <td>7.1</td>
-                    <td><a href="#zatemnenie7">Подробнее</a></td>
-                </tr>
-                <tr>
-                    <td>Екатеринбург</td>
-                    <td>Россия</td>
-                    <td>Изображение</td>
-                    <td>6.8</td>
-                    <td>7.1</td>
-                    <td><a href="#zatemnenie8">Подробнее</a></td>
-                </tr>
-                <tr>
-                    <td>Стамбул</td>
-                    <td>Турция</td>
-                    <td>Изображение</td>
-                    <td>6.8</td>
-                    <td>7.1</td>
-                    <td><a href="#zatemnenie9">Подробнее</a></td>
-                </tr>
-                <tr>
-                    <td>Караганда</td>
-                    <td>Казахстан</td>
-                    <td>Изображение</td>
-                    <td>6.8</td>
-                    <td>7.1</td>
-                    <td><a href="#zatemnenie10">Подробнее</a></td>
-                </tr>
-                <tr>
-                    <td>Киев</td>
-                    <td>Украина</td>
-                    <td>Изображение</td>
-                    <td>6.8</td>
-                    <td>7.1</td>
-                    <td><a href="#zatemnenie11">Подробнее</a></td>
-                </tr>
-                <tr>
-                    <td>Мармарис</td>
-                    <td>Турция</td>
-                    <td>Изображение</td>
-                    <td>6.8</td>
-                    <td>7.1</td>
-                    <td><a href="#zatemnenie12">Подробнее</a></td>
-                </tr>
-                <tr>
-                    <td>Нижний Новгород</td>
-                    <td>Россия</td>
-                    <td>Изображение</td>
-                    <td>6.8</td>
-                    <td>7.1</td>
-                    <td><a href="#zatemnenie13">Подробнее</a></td>
-                </tr>
-                <tr>
-                    <td>Павлодар</td>
-                    <td>Россия</td>
-                    <td>Изображение</td>
-                    <td>6.8</td>
-                    <td>7.1</td>
-                    <td><a href="#zatemnenie14">Подробнее</a></td>
-                </tr>
-                <tr>
-                    <td>Санкт-Петербург</td>
-                    <td>Россия</td>
-                    <td>Изображение</td>
-                    <td>6.8</td>
-                    <td>7.1</td>
-                    <td><a href="#zatemnenie15">Подробнее</a></td>
-                </tr>
-                <tr>
-                    <td>Умань</td>
-                    <td>Украина</td>
-                    <td>Изображение</td>
-                    <td>6.8</td>
-                    <td>7.1</td>
-                    <td><a href="#zatemnenie16">Подробнее</a></td>
-                </tr>
-                <tr>
-                    <td>Виница</td>
-                    <td>Украина</td>
-                    <td>Изображение</td>
-                    <td>6.8</td>
-                    <td>7.1</td>
-                    <td><a href="#zatemnenie17">Подробнее</a></td>
-                </tr>
-                <tr>
-                    <td>Яремче</td>
-                    <td>Украина</td>
-                    <td>Изображение</td>
-                    <td>6.8</td>
-                    <td>7.1</td>
-                    <td><a href="#zatemnenie18">Подробнее</a></td>
-                </tr>
-                <tr>
-                    <td>Запорожье</td>
-                    <td>Украина</td>
-                    <td>Изображение</td>
-                    <td>6.8</td>
-                    <td>7.1</td>
-                    <td><a href="#zatemnenie19">Подробнее</a></td>
-                </tr>
-                <tr>
-                    <td>Лондон</td>
-                    <td>Британия</td>
-                    <td>Изображение</td>
-                    <td>6.8</td>
-                    <td>7.1</td>
-                    <td><a href="#zatemnenie20">Подробнее</a></td>
-                </tr>
+            } 
             </table>
         </div>
             <div class="infoBlock">

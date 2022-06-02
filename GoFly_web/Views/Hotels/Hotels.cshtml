@@ -64,47 +64,52 @@
                 <div class="imgBorder">
                     <img src="../Images/topCities.png" alt="">
                 </div>
-                    <p>Топ городов</p>
+                    <p>Все города</p>
                 </a>
             </div>
 
         </div>
-
+    <div>
+      @using(Html.BeginForm("SearchHotels", "Hotels", FormMethod.Post)) 
+      {
     <div class="searchPannel">
-        <input type="search" name="Departure" id="Departure" placeholder="Страна, город, (название отеля)" list="">
+        <input required type="search" name="Icity" id="Departure" placeholder="Страна, город, (название отеля)" list="">
         <!-- <input type="search" name="Arrival" id="Arrival" placeholder="Куда"> -->
         <input type="date" name="" id="DataDeparture"  >
         <p id=OneWayTitle>Заезд</p>
         <input type="date" name="" id="DataArrival"  >
         <p id=RoundTripTitle>Выезд</p>
         <div class="PeopleAmount">        
-            <button class="bt_minus">-</button>
-            <input type="text" class="quantity" value="1" data-max-count="8">
-            <button class="bt_plus">+</button>
+            <button class="bt_minus" type="button">-</button>
+            <input type="text" class="quantity" name="Persons" value="1" data-max-count="8">
+            <button class="bt_plus" type="button">+</button>
         </div>
         <p id=AmountTitle>Количество <br> людей</p>
        <div class="CheckBoxes">
-        <input type="checkbox" name="" id="CheckBox5Star"  >
+        <input type="checkbox" name="FiveStars" id="CheckBox5Star" value="5" >
         <label id="CheckBoxLabel5" for="CheckBox5Star">5★</label>
-        <input type="checkbox" name="" id="CheckBox4Star"  >
+        <input type="checkbox" name="FourStars" id="CheckBox4Star" value="4" >
         <label id="CheckBoxLabel4" for="CheckBox4Star">4★</label>
-        <input type="checkbox" name="" id="CheckBox3Star"  >
+        <input type="checkbox" name="ThreeStars" id="CheckBox3Star" value="3" >
         <label id="CheckBoxLabel3" for="CheckBox3Star">3★</label>
         <p id=HotelStarTitle>Искать отели с</p>
         </div>
+ 
         <div class="searchButton">
-            <a href="#" class="btn-1">Найти отель</a>
+            <button class="btn-1" type="submit">Найти отели</button>
         </div>
-        <div id="success" class="button"><img id="wishlistImg" src="../Images/heart_full.png" alt=""></div>
+        <div id="success" class="button"><a asp-area="" asp-controller="FavouriteHotel" asp-action="FavouriteHotel"><img id="wishlistImg" src="../Images/heart_full.png" alt=""></a></div>
         <div class="notify"><span id="notifyType" class=""></span></div>
     </div>
-
+    }
+    </div>
+    
         <div class="bottompanel">
             <p>Безопасные платежи с </p>
             <span>PENKOFF</span>
 
         </div>
-
+       
         <div class="autorizationPannel">
             <a href="#" class="LoginMenu_btn" id="Login">Войти</a>
             <nav class="autorizationPannelParameters">
