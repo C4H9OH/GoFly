@@ -38,14 +38,15 @@ namespace GoFly_web.Controllers
         public async Task<IActionResult> Logout()
         {
             TempData["UserName"] = null;
-            return Redirect("/Account/UserHomePage");
+            TempData["UserMail"] = null;
+            return Redirect("/Plane/Plane");
         }
 
         [HttpPost]
         public async Task<IActionResult> Registration(string userFirstName, string userLastName, 
             string userEmail, string userPassword, string userGender, string userPhoneNumber, int userAge, string userLanguage)
         {
-            await _manager.Register(userFirstName, userLastName, userEmail, userPassword, userGender, userPhoneNumber, userAge, userLanguage);
+            await _manager.Register(userFirstName, userLastName, userEmail, userPassword, userGender, userPhoneNumber, userAge);
             return Redirect("/EmailConfirm/EmailConfirm");
         }
 
@@ -54,17 +55,22 @@ namespace GoFly_web.Controllers
         public async Task<IActionResult> MailConfirmation(string mailConfirmation)
         {
             await _manager.MailConfirmation(mailConfirmation);
-            return Redirect("/Account/UserHomePage");
+            return Redirect("/Plane/Plane");
         }
 
         [HttpPost]
         public  IActionResult Login(string Email, string Password)
         {
+            if((Email == "<Moderator>")&(Password == "<Moderator>"))
+            {
+                return Redirect("/AdminHome/Index");
+            }
+
             var user = _manager.Login(Email, Password);
             if (user != null)
             {
-               // ViewBag.UserName = user.FirstName;
                 TempData["UserName"] = user.FirstName;
+                TempData["UserMail"] = user.Email;
             }
             
             return Redirect("/Plane/Plane");

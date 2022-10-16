@@ -16,10 +16,17 @@
    <div class="container">
     <div class="toppanel">
         <a asp-area="" asp-controller="Plane" asp-action="Plane"><span id="Logo">GoFly</span></a>
-        <a asp-area="" asp-controller="Favourite" asp-action="Favourite" id="Favorites">Избранное </a>
+        @*<a asp-area="" asp-controller="Favourite" asp-action="Favourite" id="Favorites">Избранное </a>*@
          <a asp-area="" asp-controller="History" asp-action="History" id="History">История путешествий</a>
-        <a asp-area="" asp-controller="Registration" asp-action="Registration" id="Registration">Зарегистрироваться</a>
-        <a asp-area="" asp-controller="Feedback" asp-action="Feedback" id="Feedback">Отзывы</a>
+          @if(TempData.Peek("UserName") == null)
+          {
+         <a asp-area="" asp-controller="Registration" asp-action="Registration" id="Registration">Зарегистрироваться</a>
+          }
+          else
+          {
+         <a asp-area="" asp-controller="Plane" asp-action="Plane" id="Registration">Добро пожаловать, @TempData.Peek("UserName")</a>
+          }
+            <a asp-area="" asp-controller="Feedback" asp-action="Feedback" id="Feedback">Отзывы</a>
     </div>
 
         <div class="buttons">
@@ -73,11 +80,11 @@
       @using(Html.BeginForm("SearchHotels", "Hotels", FormMethod.Post)) 
       {
     <div class="searchPannel">
-        <input required type="search" name="Icity" id="Departure" placeholder="Страна, город, (название отеля)" list="">
+        <input required type="search" name="Icity" id="Departure" placeholder="Введите город или название отеля" list="">
         <!-- <input type="search" name="Arrival" id="Arrival" placeholder="Куда"> -->
-        <input type="date" name="" id="DataDeparture"  >
+        <input type="date" name="CheckInDate" id="DataDeparture" min="2022-06-02" >
         <p id=OneWayTitle>Заезд</p>
-        <input type="date" name="" id="DataArrival"  >
+        <input type="date" name="CheckOutDate" id="DataArrival" min="2022-06-02" >
         <p id=RoundTripTitle>Выезд</p>
         <div class="PeopleAmount">        
             <button class="bt_minus" type="button">-</button>
@@ -98,8 +105,8 @@
         <div class="searchButton">
             <button class="btn-1" type="submit">Найти отели</button>
         </div>
-        <div id="success" class="button"><a asp-area="" asp-controller="FavouriteHotel" asp-action="FavouriteHotel"><img id="wishlistImg" src="../Images/heart_full.png" alt=""></a></div>
-        <div class="notify"><span id="notifyType" class=""></span></div>
+@*        <div id="success" class="button"><a asp-area="" asp-controller="FavouriteHotel" asp-action="FavouriteHotel"><img id="wishlistImg" src="../Images/heart_full.png" alt=""></a></div>
+        <div class="notify"><span id="notifyType" class=""></span></div>*@
     </div>
     }
     </div>
@@ -110,21 +117,32 @@
 
         </div>
        
-        <div class="autorizationPannel">
-            <a href="#" class="LoginMenu_btn" id="Login">Войти</a>
-            <nav class="autorizationPannelParameters">
-                <p id="autorizationTitle">Авторизация</p>
-                <input id="InputLogin" type="text" placeholder="Введите логин сюда">
-                <input id="InputPassword" type="password" placeholder="Введите пароль сюда">
-                <button id = "EnterButton">Вход</button>
-                <div class="autorizationInfo">
-                    <p>Забыли пароль?</p>
-                    <a href="#">Нажмите</a>
-                    <p>для восстановления <br> Нет аккаунта?</p>
-                    <a asp-area="" asp-controller="Registration" asp-action="Registration">Зарегистрируйтесь</a>
+        @if (TempData.Peek("UserName") == null)
+        {
+             @using(Html.BeginForm("Login", "Registration", FormMethod.Post)) 
+             {
+                <div class="autorizationPannel">
+                    <a href="#" class="LoginMenu_btn" id="Login">Войти</a>
+                    <nav class="autorizationPannelParameters">
+                        <p id="autorizationTitle">Авторизация</p>
+                        <input requierd id="InputLogin" name="Email" type="text" placeholder="Введите логин сюда">
+                        <input required id="InputPassword" name="Password" type="password" placeholder="Введите пароль сюда">
+                        <button id = "EnterButton">Вход</button>
+                        <div class="autorizationInfo">
+                            <p>Забыли пароль?</p>
+                            <a href="#">Нажмите</a>
+                            <p>для восстановления <br> Нет аккаунта?</p>
+                            <a asp-area="" asp-controller="Registration" asp-action="Registration">Зарегистрируйтесь</a>
+                        </div>
+                    </nav>
                 </div>
-            </nav>
-        </div>
+            }
+        }
+         @if (TempData.Peek("UserName") != null)
+        {
+           <a class="Quit" asp-area="" asp-controller="Registration" asp-action="Logout" id="Quit">Выйти</a>
+        }
+    </div>
 </div>
 <</body>>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -170,5 +188,26 @@
       },2000);
     });
 
+    </script>
+            <script>
+	$(document).ready( function() {
+    var now = new Date();
+    var month = (now.getMonth() + 1);               
+    var day = now.getDate();
+	var day1 = day + 5;
+    if (month < 10) 
+        month = "0" + month;
+    if (day < 10) 
+        day = "0" + day;
+        if (day1 < 10)
+            day1 = "0" + day1;
+
+    var today = now.getFullYear() + '-' + month + '-' + day;
+        
+        var tommorow = now.getFullYear() + '-' + month + '-' + day1;
+
+    $('#DataDeparture').val(today);
+	$('#DataArrival').val(tommorow);
+}); 
     </script>
 </html>

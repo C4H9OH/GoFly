@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "qhe5wNumbLCCSxhjbjKdt07udp/tI5sFBYvUMpw0j3tExAv6VgBzz38Ke7RQkCuUXRuBj735yolaKEKiExnS4Q==",
+  "dgSpecHash": "S8GiC0hPk0/M3tGSInFtKndgra6hwHX9fOTix8NOOpS6bc55p7kWWulAWKoxCROuLS0b1JxZ7+7HX2Ul3+bWtw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\taiwa\\source\\repos\\GoFly_web\\GoFly_web\\GoFly_web.csproj",
+  "projectFilePath": "C:\\Users\\taiwa\\Desktop\\АктуалОчка\\Паст!!!\\GoFly_web\\GoFly_web\\GoFly_web.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\taiwa\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\taiwa\\.nuget\\packages\\messagepack\\2.1.152\\messagepack.2.1.152.nupkg.sha512",

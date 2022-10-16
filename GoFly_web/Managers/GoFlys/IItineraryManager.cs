@@ -10,6 +10,6 @@ namespace GoFly_web.Managers
         Task DeleteItinerary(int id);
 
         Task AddItinerary(string departureCity, string arrivalCity, 
-            string transport, string travalTime, string departureTime, string arrivalTime, double price);
+            string transport, string travalTime, string departureTime, string arrivalTime, double price, string date);
     }
 }

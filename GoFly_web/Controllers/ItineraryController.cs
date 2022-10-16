@@ -39,9 +39,9 @@ namespace GoFly_web.Controllers
 
         [HttpPost]
         public IActionResult CreateItinerary(string departureCity, string arrivalCity,
-            string transport, string travalTime, string departureTime, string arrivalTime, double price)
+            string transport, string travalTime, string departureTime, string arrivalTime, double price, string date)
         {
-            _manager.AddItinerary(departureCity, arrivalCity, transport, travalTime, departureTime, arrivalTime, price);
+            _manager.AddItinerary(departureCity, arrivalCity, transport, travalTime, departureTime, arrivalTime, price, date);
             return RedirectToAction(nameof(Index));
         }
 

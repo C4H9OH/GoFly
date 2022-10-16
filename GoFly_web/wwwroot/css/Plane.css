@@ -31,6 +31,7 @@ a {
 }
 
 * {
+    font-weight: 800;
     margin: 0;
     padding: 0;
     outline: none;
@@ -76,7 +77,16 @@ body {
         font-size: 25px;
         font-family: Bebas Neue;
         display: inline-block;
+        text-shadow: 1px 0px 5px rgb(0, 0, 0),-1px 0px 5px rgb(0, 0, 0);
     }
+.Quit {
+    font-size: 24px;
+    color: rgb(255, 255, 255);
+    position: absolute;
+    right: -5%;
+    margin-right: 8%;
+    font-family: Bebas Neue;
+}
 
     .toppanel #Favorites::after {
         content: "";
@@ -134,7 +144,7 @@ body {
         color: rgb(255, 255, 255);
         position: absolute;
         right: 0;
-        margin-right: 60%;
+        margin-right: 53%;
     }
 
     .toppanel #Login::after {
@@ -168,6 +178,7 @@ body {
 
 
 
+
     .toppanel #Registration {
         color: rgb(255, 255, 255);
         position: absolute;
@@ -189,6 +200,7 @@ body {
         margin-right: 52%;
     }
 
+
 /* Меню по середине страницы */
 
 .buttons {
@@ -209,7 +221,7 @@ body {
         font-size: 25px;
         line-height: 32px;
         color: #FFFFFF;
-        text-shadow: 3px 2px 2px rgb(0, 0, 0);
+        text-shadow: 1px 0px 5px rgb(0, 0, 0),-1px 0px 5px rgb(0, 0, 0);
         font-family: Bebas Neue;
     }
 
@@ -449,7 +461,7 @@ body {
         top: 10px;
         color: white;
         display: none;
-        opacity: 0%;
+        opacity: 100%;
     }
 
 
@@ -754,8 +766,8 @@ body {
     font-family: Bebas Neue;
     font-size: 25px;
     text-decoration: none;
+    text-shadow: 3px 0px 5px rgb(0, 0, 0),-3px 0px 5px rgb(0, 0, 0);
 }
-
     .autorizationPannel #Login::after {
         content: "";
         display: block;

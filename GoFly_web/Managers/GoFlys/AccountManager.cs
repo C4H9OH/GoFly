@@ -17,8 +17,6 @@ namespace GoFly_web.Managers.GoFlys
 
         private string mailConfirmation;
 
-        private string _firstName, _lastName, _email, _password, _gender, _phoneNumber, _language;
-        private int _age;
 
         public AccountManager(GOflyContext context, ILogger<AccountManager> logger)
         {
@@ -27,18 +25,27 @@ namespace GoFly_web.Managers.GoFlys
         }
         public User Login(string email, string password)
         {
-            var _email = _context.Users.FirstOrDefault(U => U.Email == email);
-            var _password = _context.Users.FirstOrDefault(U => U.Password == password);
+            try
+            {
+                var _email = _context.Users.FirstOrDefault(U => U.Email == email);
+                var _password = _context.Users.FirstOrDefault(U => U.Password == password);
+                if ((_password != null) & (_email != null))
+                {
+                    if (password == _password.Password)
+                    {
 
-            if ((_password != null) & (_email != null) & (password == _password.Password) &(_email == _password))
-            {
-                
-                return _email;
+                        return _email;
+                    }
+                    return null;
+                }
+                else
+                {
+                    return null;
+                }
             }
-            else
-            {
-                return null;
-            }
+            catch (Exception ex) { }
+
+            return null;
 
         }
 
@@ -47,7 +54,7 @@ namespace GoFly_web.Managers.GoFlys
             throw new NotImplementedException();
         }
 
-        public async Task  Register(string firstName, string lastName, string email, string password, string gender, string phoneNumber, int age, string language)
+        public async Task  Register(string firstName, string lastName, string email, string password, string gender, string phoneNumber, int age)
         {
             var _email = _context.Users.FirstOrDefault(U => U.Email == email);
             if (_email == null)
@@ -59,7 +66,7 @@ namespace GoFly_web.Managers.GoFlys
                     mailConfirmation = Guid.NewGuid().ToString();
                     System.Net.Mail.MailMessage message = new System.Net.Mail.MailMessage();
                     message.IsBodyHtml = true; //тело сообщения в формате HTML
-                    message.From = new MailAddress("wgofly@gmail.com", "Mail Confirmation"); //отправитель сообщения
+                    message.From = new MailAddress("sardarovvadim123@gmail.com", "Mail Confirmation"); //отправитель сообщения
                     message.To.Add(email); //адресат сообщения
                     message.Subject = "Mail Confirmation"; //тема сообщения
                     message.Body = mailConfirmation; //тело сообщения
@@ -67,26 +74,14 @@ namespace GoFly_web.Managers.GoFlys
 
                     using (System.Net.Mail.SmtpClient client = new System.Net.Mail.SmtpClient("smtp.gmail.com")) //используем сервера Google
                     {
-                        client.Credentials = new NetworkCredential("wgofly@gmail.com", "WeWant100"); //логин-пароль от аккаунта
+                        client.Credentials = new NetworkCredential("sardarovvadim123@gmail.com", "Vadimchik2002"); //логин-пароль от аккаунта
                         client.Port = 587; //порт 587 либо 465
                         client.EnableSsl = true; //SSL обязательно
 
                         client.Send(message);
                         _logger.LogInformation("Сообщение отправлено успешно!");
                     }
-                    var user = new User
-                    {
-                        FirstName = firstName,
-                        LastName = lastName,
-                        Email = email,
-                        Password = password,
-                        Gender = gender,
-                        PhoneNumber = phoneNumber,
-                        Age = age,
-                        Language = language
-                    };
-                    _context.Users.Add(user);
-                    await _context.SaveChangesAsync();
+                   
 
 
                 }
@@ -95,7 +90,23 @@ namespace GoFly_web.Managers.GoFlys
                     _logger.LogError(e.GetBaseException().Message);
                 }
 
-               
+
+                finally {
+                    var user = new User
+                    {
+                        FirstName = firstName,
+                        LastName = lastName,
+                        Email = email,
+                        Password = password,
+                        Gender = gender,
+                        OrdersCount = 0,
+                        PhoneNumber = phoneNumber,
+                        Age = age,
+                        RegCode = mailConfirmation
+                    };
+                    _context.Users.Add(user);
+                    await _context.SaveChangesAsync();
+                }
             }
             else
             {
@@ -105,13 +116,13 @@ namespace GoFly_web.Managers.GoFlys
 
         public async Task MailConfirmation(string mailConfirmation)
         {
-            var user = _context.Users.FirstOrDefault(U => U.Email == mailConfirmation);
+            var user = _context.Users.FirstOrDefault(U => U.RegCode == mailConfirmation);
 
-            if (mailConfirmation != this.mailConfirmation)
-            {
-                _context.Users.Remove(user);
-                await _context.SaveChangesAsync();
-            }
+            //if (user == null)
+            //{
+            //    _context.Users.Remove(user);
+            //    await _context.SaveChangesAsync();
+            //}
         }
     }
 }

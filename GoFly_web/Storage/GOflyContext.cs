@@ -36,6 +36,8 @@ namespace GoFly_web.Storage
 
         public DbSet<Wishlist> Wishlists { get; set; }
 
+        public DbSet<Feedback> Feedbacks { get; set; }
+
 
 
     }

@@ -10,14 +10,12 @@ namespace GoFly_web.Controllers
 
         private readonly IArrivalCountryManager _manager;
 
-        private readonly ILogger<ArrivalCountryController> logger;
 
 
 
-        public ArrivalCountryController(IArrivalCountryManager manager, ILogger<ArrivalCountryController> logger)
+        public ArrivalCountryController(IArrivalCountryManager manager)
         {
             _manager = manager;
-            this.logger = logger;
         }
 
         public async Task<IActionResult> Page()
@@ -51,36 +49,6 @@ namespace GoFly_web.Controllers
             return RedirectToAction(nameof(Page));
         }
 
-
-
-        public IActionResult SendEmailDefault()
-        {
-            try
-            {
-                System.Net.Mail.MailMessage message = new System.Net.Mail.MailMessage();
-                message.IsBodyHtml = true; //тело сообщения в формате HTML
-                message.From = new MailAddress("wgofly@gmail.com", "Привет беброид!!!"); //отправитель сообщения
-                message.To.Add("egor.shvedov.16@bk.ru"); //адресат сообщения
-                message.Subject = "Сообщение от System.Net.Mail"; //тема сообщения
-                message.Body = "<div style=\"color: red;\">Сообщение от сервиса GoFly</div>"; //тело сообщения
-               // message.Attachments.Add(new Attachment("... путь к файлу ...")); //добавить вложение к письму при необходимости
-
-                using (System.Net.Mail.SmtpClient client = new System.Net.Mail.SmtpClient("smtp.gmail.com")) //используем сервера Google
-                {
-                    client.Credentials = new NetworkCredential("wgofly@gmail.com", "WeWant100"); //логин-пароль от аккаунта
-                    client.Port = 587; //порт 587 либо 465
-                    client.EnableSsl = true; //SSL обязательно
-
-                    client.Send(message);
-                    logger.LogInformation("Сообщение отправлено успешно!");
-                }
-            }
-            catch (Exception e)
-            {
-                logger.LogError(e.GetBaseException().Message);
-            }
-
-            return RedirectToAction(nameof(Page));
-        }
+     
     }
 }

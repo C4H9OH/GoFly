@@ -27,15 +27,15 @@
 /* Общие настройки страницы */
 
 
+a {
+    text-decoration: none;
+}
 
 * {
+    font-weight: 800;
     margin: 0;
     padding: 0;
     outline: none;
-}
-
-a {
-    text-decoration: none;
 }
 
 body, html {
@@ -44,11 +44,17 @@ body, html {
 }
 
 
+
 body {
-    background: url(../Images/HotelsBack.jpg);
+    background-image: url(../Images/HotelsBack.jpg);
     background-size: 100%;
 }
 
+/*.backgroung-image {*/
+/*background-size: 100%;*/
+/*width: 100%;
+    height:100%;
+}*/
 .container {
     position: relative;
     width: 100%;
@@ -72,117 +78,129 @@ body {
         font-size: 25px;
         font-family: Bebas Neue;
         display: inline-block;
+        text-shadow: 1px 0px 5px rgb(0, 0, 0),-1px 0px 5px rgb(0, 0, 0);
     }
 
-    .toppanel #Favorites::after {
-        content: "";
-        display: block;
-        height: 3px;
-        width: 0%;
-        background-color: white;
-        transition: width 0.4s ease-in-out;
-    }
+.Quit {
+    font-size: 24px;
+    color: rgb(255, 255, 255);
+    position: absolute;
+    right: -5%;
+    margin-right: 8%;
+    font-family: Bebas Neue;
+}
 
-    .toppanel #Favorites:hover::after {
-        width: 100%;
-    }
+.toppanel #Favorites::after {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 0%;
+    background-color: white;
+    transition: width 0.4s ease-in-out;
+}
 
-    .toppanel #History::after {
-        content: "";
-        display: block;
-        height: 3px;
-        width: 0%;
-        background-color: white;
-        transition: width 0.4s ease-in-out;
-    }
+.toppanel #Favorites:hover::after {
+    width: 100%;
+}
 
-    .toppanel #History:hover::after {
-        width: 100%;
-    }
+.toppanel #History::after {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 0%;
+    background-color: white;
+    transition: width 0.4s ease-in-out;
+}
 
-    .toppanel #Registration::after {
-        content: "";
-        display: block;
-        height: 3px;
-        width: 0%;
-        background-color: white;
-        transition: width 0.4s ease-in-out;
-    }
+.toppanel #History:hover::after {
+    width: 100%;
+}
 
-    .toppanel #Registration:hover::after {
-        width: 100%;
-    }
+.toppanel #Registration::after {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 0%;
+    background-color: white;
+    transition: width 0.4s ease-in-out;
+}
 
-    .toppanel #Login::after {
-        content: "";
-        display: block;
-        height: 3px;
-        width: 0%;
-        background-color: white;
-        transition: width 0.4s ease-in-out;
-    }
+.toppanel #Registration:hover::after {
+    width: 100%;
+}
 
-    .toppanel #Login:hover::after {
-        width: 100%;
-    }
+.toppanel #Feedback::after {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 0%;
+    background-color: white;
+    transition: width 0.4s ease-in-out;
+}
 
-    .toppanel #Logo {
-        margin-left: 0%;
-        font-family: Magneto;
-        font-size: 50px;
-        color: rgb(36, 93, 250);
-        text-shadow: 3px 3px 1px #fff;
-    }
+.toppanel #Feedback:hover::after {
+    width: 100%;
+}
 
-    .toppanel #Login {
-        color: rgb(255, 255, 255);
-        position: fixed;
-        right: 0;
-        margin-right: 2%;
-    }
+.toppanel #Feedback {
+    color: rgb(255, 255, 255);
+    position: absolute;
+    right: 0;
+    margin-right: 53%;
+}
 
-    .toppanel #Feedback::after {
-        content: "";
-        display: block;
-        height: 3px;
-        width: 0%;
-        background-color: white;
-        transition: width 0.4s ease-in-out;
-    }
+.toppanel #Login::after {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 0%;
+    background-color: white;
+    transition: width 0.4s ease-in-out;
+}
 
-    .toppanel #Feedback:hover::after {
-        width: 100%;
-    }
-
-    .toppanel #Feedback {
-        color: rgb(255, 255, 255);
-        position: absolute;
-        right: 0;
-        margin-right: 60%;
-    }
+.toppanel #Login:hover::after {
+    width: 100%;
+}
 
 
+.toppanel #Logo {
+    margin-left: 0%;
+    font-family: Magneto;
+    font-size: 50px;
+    color: rgb(36, 93, 250);
+    text-shadow: 3px 3px 1px #fff;
+}
 
-    .toppanel #Registration {
-        color: rgb(255, 255, 255);
-        position: absolute;
-        right: 0%;
-        margin-right: 8%;
-    }
+.toppanel #Login {
+    color: rgb(255, 255, 255);
+    position: absolute;
+    right: 0;
+    margin-right: 2%;
+}
 
-    .toppanel #History {
-        color: rgb(255, 255, 255);
-        position: absolute;
-        right: 0%;
-        margin-right: 38.5%;
-    }
 
-    .toppanel #Favorites {
-        color: rgb(255, 255, 255);
-        position: absolute;
-        right: 0%;
-        margin-right: 52%;
-    }
+
+
+.toppanel #Registration {
+    color: rgb(255, 255, 255);
+    position: absolute;
+    right: 0%;
+    margin-right: 8%;
+}
+
+.toppanel #History {
+    color: rgb(255, 255, 255);
+    position: absolute;
+    right: 0%;
+    margin-right: 38.5%;
+}
+
+.toppanel #Favorites {
+    color: rgb(255, 255, 255);
+    position: absolute;
+    right: 0%;
+    margin-right: 52%;
+}
 
 /* Меню по середине страницы */
 
@@ -205,7 +223,8 @@ body {
         line-height: 32px;
         color: #FFFFFF;
         text-shadow: 3px 2px 2px rgb(0, 0, 0);
-        font-family: Bebas Neue;
+        font-family: 'Bebas Neue';
+        text-shadow: 3px 0px 5px rgb(0, 0, 0),-3px 0px 5px rgb(0, 0, 0);
     }
 
 .imgBorder {
@@ -235,7 +254,6 @@ body {
     height: 100%;
     max-width: 100%;
     max-height: 100%;
-    opacity: 60%;
     left: 120px;
 }
 
@@ -248,6 +266,10 @@ body {
 
     .planes p {
         text-align: center;
+    }
+
+    .planes .imgBorder {
+        opacity: 60%;
     }
 
 .trains {
@@ -816,6 +838,7 @@ body {
     font-family: Bebas Neue;
     font-size: 25px;
     text-decoration: none;
+    text-shadow: 1px 0px 5px rgb(0, 0, 0),-1px 0px 5px rgb(0, 0, 0);
 }
 
     .autorizationPannel #Login::after {

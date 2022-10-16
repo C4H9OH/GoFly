@@ -19,25 +19,43 @@
         <a asp-area="" asp-controller="Plane" asp-action="Plane"><span id="Logo">GoFly</span></a>
         <a asp-area="" asp-controller="Favourite" asp-action="Favourite" id="Favorites">Избранное </a>
          <a asp-area="" asp-controller="History" asp-action="History" id="History">История путешествий</a>
-        <a asp-area="" asp-controller="Registration" asp-action="Registration" id="Registration">Зарегистрироваться</a>
+        @*<a asp-area="" asp-controller="Registration" asp-action="Registration" id="Registration">Зарегистрироваться</a>*@
+        @if(TempData.Peek("UserName") == null)
+          {
+         <a asp-area="" asp-controller="Registration" asp-action="Registration" id="Registration">Зарегистрироваться</a>
+          }
+          else
+          {
+         <a asp-area="" asp-controller="Plane" asp-action="Plane" id="Registration">Добро пожаловать, @TempData.Peek("UserName")</a>
+          }
         <a asp-area="" asp-controller="Feedback" asp-action="Feedback" id="Feedback">Отзывы</a>
     </div>
 
-        <div class="autorizationPannel">
-            <a href="#" class="LoginMenu_btn" id="Login">Войти</a>
-            <nav class="autorizationPannelParameters">
-                <p id="autorizationTitle">Авторизация</p>
-                <input id="InputLogin" type="text" placeholder="Введите логин сюда">
-                <input id="InputPassword" type="password" placeholder="Введите пароль сюда">
-                <button id = "EnterButton">Вход</button>
-                <div class="autorizationInfo">
-                    <p>Забыли пароль?</p>
-                    <a id="AutorizationPress" href="#">Нажмите</a>
-                    <p>для восстановления <br> Нет аккаунта?</p>
-                    <a asp-area="" asp-controller="Registration" asp-action="Registration">Зарегистрируйтесь</a>
+        @if (TempData.Peek("UserName") == null)
+        {
+             @using(Html.BeginForm("Login", "Registration", FormMethod.Post)) 
+             {
+                <div class="autorizationPannel">
+                    <a href="#" class="LoginMenu_btn" id="Login">Войти</a>
+                    <nav class="autorizationPannelParameters">
+                        <p id="autorizationTitle">Авторизация</p>
+                        <input requierd id="InputLogin" name="Email" type="text" placeholder="Введите логин сюда">
+                        <input required id="InputPassword" name="Password" type="password" placeholder="Введите пароль сюда">
+                        <button id = "EnterButton">Вход</button>
+                        <div class="autorizationInfo">
+                            <p>Забыли пароль?</p>
+                            <a href="#">Нажмите</a>
+                            <p>для восстановления <br> Нет аккаунта?</p>
+                            <a asp-area="" asp-controller="Registration" asp-action="Login">Зарегистрируйтесь</a>
+                        </div>
+                    </nav>
                 </div>
-            </nav>
-        </div>
+            }
+        }
+         @if (TempData.Peek("UserName") != null)
+        {
+           <a class="Quit" asp-area="" asp-controller="Registration" asp-action="Logout" id="Quit">Выйти</a>
+        }
 
         <div class="label">
 
@@ -49,7 +67,6 @@
                     <th>Страна</th>
                     <th>Изображение</th>
                     <th>Узнать подробности</th> 
-                    
                 </tr>
             @foreach(var city in Model)
             { 

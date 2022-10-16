@@ -1,6 +1,4 @@
-﻿
-
-namespace GoFly_web.Storage.Entity
+﻿namespace GoFly_web.Storage.Entity
 {
     public class Itinerary
     {
@@ -44,11 +42,14 @@ namespace GoFly_web.Storage.Entity
 
         [Required]
 
-        public string DeparturelCityName { get; set; }
+        public string DepartureCityName { get; set; }
 
         [Required]
 
         public string TransportName { get; set; }
+
+        [Required]
+        public string Date { get; set; }
 
 
 

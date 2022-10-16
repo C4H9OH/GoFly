@@ -35,6 +35,7 @@ builder.Services.AddScoped<IBusManager, BusManager>();
 
 builder.Services.AddScoped<ITrainManager, TrainManager>();
 
+builder.Services.AddScoped<IFeedbackManager, FeedbackManager>();
 // Add Database Context
 //var connectionString = builder.Configuration.GetConnectionString("DbConnection");
 var connectionString = builder.Configuration.GetConnectionString("DbConnection");

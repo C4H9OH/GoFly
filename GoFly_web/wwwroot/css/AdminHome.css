@@ -1,27 +1,20 @@
 ﻿@font-face {
     font-family: 'Pragmatica';
-    src: local('Pragmatica'),
-         url('../fonts/Pragmatica-LightOblique.ttf') format('truetype'),
-         url('../fonts/Pragmatica-LightOblique.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/Pragmatica-LightOblique.woff') format('woff'); 
+    src: local('Pragmatica'), url('../fonts/Pragmatica-LightOblique.ttf') format('truetype'), url('../fonts/Pragmatica-LightOblique.eot?#iefix') format('embedded-opentype'), url('../fonts/Pragmatica-LightOblique.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Pragmatica';
-    src: local('Pragmatica'),
-         url('../fonts/Pragmatica-Bold.ttf') format('truetype'),
-         url('../fonts/Pragmatica-Bold.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/Pragmatica-Bold.woff') format('woff'); 
+    src: local('Pragmatica'), url('../fonts/Pragmatica-Bold.ttf') format('truetype'), url('../fonts/Pragmatica-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/Pragmatica-Bold.woff') format('woff');
     font-weight: 800;
     font-style: normal;
 }
 
-@font-face{
+@font-face {
     font-family: 'Bebas Neue';
-    src: local('Bebas Neue'),
-         url('../fonts/BebasNeue Bold.ttf') format('truetype'),  
+    src: local('Bebas Neue'), url('../fonts/BebasNeue Bold.ttf') format('truetype'),
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800&display=swap');
@@ -33,27 +26,27 @@
 
 
 
-*{
+* {
     margin: 0;
     padding: 0;
     outline: none;
 }
 
-a{
+a {
     text-decoration: none;
     color: white;
 }
 
-body,html{
+body, html {
     width: 100%;
     height: 100%;
 }
 
 
-body{
-   background-color: black;
-   background-size: 100%;
-   color: white;
+body {
+    background-color: black;
+    background-size: 100%;
+    color: white;
 }
 
 
@@ -62,7 +55,6 @@ body{
     box-sizing: border-box;
     top: 20px;
     left: 700px;
-    font-family: Bebas Neue;
     font-size: 64px;
 }
 
@@ -75,8 +67,23 @@ body{
     right: -352px;
 } */
 
+.returnButton {
+    position: absolute;
+    box-sizing: border-box;
+    left: 20px;
+    top: 20px;
+    font-size: 32px;
+    color: white;
+    border: 3px white solid;
+    border-radius: 25px;
+    height: 100px;
+    width: 200px;
+    padding: 2px;
+    text-align: center;
+}
 
-.buttons{
+
+.buttons {
     top: 200px;
     /* border: 1cm;
     border:dotted;
@@ -86,20 +93,19 @@ body{
     /* height: 50px; */
     box-sizing: border-box;
     right: 6%;
-    font-family: Bebas Neue;
 }
 
 
-.buttons p {
-    color: white;
-    font-size: 25px;
-    line-height: 32px;
-    color: #FFFFFF;
-    text-shadow: 3px 2px 2px rgb(0, 0, 0);
-    font-family: Bebas Neue;
-}
+    .buttons p {
+        color: white;
+        font-size: 25px;
+        line-height: 32px;
+        color: #FFFFFF;
+        text-shadow: 3px 2px 2px rgb(0, 0, 0);
+        font-family: Bebas Neue;
+    }
 
-.imgBorder{
+.imgBorder {
     /* border-radius: 25px;
     border: solid;
     border-color: rgb(0, 0, 0);
@@ -114,7 +120,7 @@ body{
 }
 
 
-.DepartureCountry{
+.DepartureCountry {
     position: absolute;
     display: block;
     width: 150px;
@@ -123,15 +129,15 @@ body{
     left: 10px;
 }
 
-.DepartureCountry .imgBorder{
-    background: rgba(rgb(0, 0, 0), rgb(0, rgb(0, 0, 0)), blue, 0.6);
-}
+    .DepartureCountry .imgBorder {
+        background: rgba(rgb(0, 0, 0), rgb(0, rgb(0, 0, 0)), blue, 0.6);
+    }
 
-.DepartureCountry .imgBorder:hover{
-    opacity: 100%;
-    cursor: pointer;
-    background-color: #005d5d;
-}
+        .DepartureCountry .imgBorder:hover {
+            opacity: 100%;
+            cursor: pointer;
+            background-color: #005d5d;
+        }
 
 
 .buttons p {
@@ -139,7 +145,7 @@ body{
     top: 40px;
 }
 
-.Hotels p{
+.Hotels p {
     position: absolute;
     top: 50px;
     left: 35px;
@@ -147,28 +153,27 @@ body{
 
 
 
-.DepartureCities{
+.DepartureCities {
     position: absolute;
     display: block;
     width: 150px;
     max-width: 50%;
     max-height: 50%;
     margin-left: 18%;
-    
 }
 
-.DepartureCities .imgBorder{
-    background: rgba(rgb(0, 0, 0), rgb(0, rgb(0, 0, 0)), blue, 0.6);
-}
+    .DepartureCities .imgBorder {
+        background: rgba(rgb(0, 0, 0), rgb(0, rgb(0, 0, 0)), blue, 0.6);
+    }
 
-.DepartureCities .imgBorder:hover{
-    opacity: 100%;
-    cursor: pointer;
-    background-color: #005d5d;
-}
+        .DepartureCities .imgBorder:hover {
+            opacity: 100%;
+            cursor: pointer;
+            background-color: #005d5d;
+        }
 
 
-.ArrivalCountry{
+.ArrivalCountry {
     position: absolute;
     display: block;
     width: 150px;
@@ -178,20 +183,20 @@ body{
 }
 
 
-.ArrivalCountry .imgBorder{
-    background: rgba(rgb(0, 0, 0), rgb(0, rgb(0, 0, 0)), blue, 0.6);
-}
+    .ArrivalCountry .imgBorder {
+        background: rgba(rgb(0, 0, 0), rgb(0, rgb(0, 0, 0)), blue, 0.6);
+    }
 
-.ArrivalCountry .imgBorder:hover{
-    opacity: 100%;
-    cursor: pointer;
-    background-color: #005d5d;
-}
-
-
+        .ArrivalCountry .imgBorder:hover {
+            opacity: 100%;
+            cursor: pointer;
+            background-color: #005d5d;
+        }
 
 
-.ArrivalCities{
+
+
+.ArrivalCities {
     position: absolute;
     display: block;
     position: absolute;
@@ -204,18 +209,18 @@ body{
 
 
 
-.ArrivalCities .imgBorder{
-    background: rgba(rgb(0, 0, 0), rgb(0, rgb(0, 0, 0)), blue, 0.6);
-}
+    .ArrivalCities .imgBorder {
+        background: rgba(rgb(0, 0, 0), rgb(0, rgb(0, 0, 0)), blue, 0.6);
+    }
 
-.ArrivalCities .imgBorder:hover{
-    opacity: 100%;
-    cursor: pointer;
-    background-color: #005d5d;
-}
+        .ArrivalCities .imgBorder:hover {
+            opacity: 100%;
+            cursor: pointer;
+            background-color: #005d5d;
+        }
 
 
-.Hotels{
+.Hotels {
     position: absolute;
     display: block;
     width: 150px;
@@ -225,18 +230,18 @@ body{
 }
 
 
-.Hotels .imgBorder{
-    background: rgba(rgb(0, 0, 0), rgb(0, rgb(0, 0, 0)), blue, 0.6);
-}
+    .Hotels .imgBorder {
+        background: rgba(rgb(0, 0, 0), rgb(0, rgb(0, 0, 0)), blue, 0.6);
+    }
 
-.Hotels .imgBorder:hover{
-    opacity: 100%;
-    cursor: pointer;
-    background-color: #005d5d;
-}
+        .Hotels .imgBorder:hover {
+            opacity: 100%;
+            cursor: pointer;
+            background-color: #005d5d;
+        }
 
 
-.Message{
+.Message {
     position: absolute;
     display: block;
     width: 150px;
@@ -246,18 +251,18 @@ body{
 }
 
 
-.Message .imgBorder{
-    background: rgba(rgb(0, 0, 0), rgb(0, rgb(0, 0, 0)), blue, 0.6);
-}
+    .Message .imgBorder {
+        background: rgba(rgb(0, 0, 0), rgb(0, rgb(0, 0, 0)), blue, 0.6);
+    }
 
-.Message .imgBorder:hover{
-    opacity: 100%;
-    cursor: pointer;
-    background-color: #005d5d;
-}
+        .Message .imgBorder:hover {
+            opacity: 100%;
+            cursor: pointer;
+            background-color: #005d5d;
+        }
 
-.Message p{
-    position: absolute;
-    top: 50px;
-    left: 20px;
-}
+    .Message p {
+        position: absolute;
+        top: 50px;
+        left: 20px;
+    }

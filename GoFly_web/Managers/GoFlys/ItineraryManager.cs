@@ -14,7 +14,7 @@ namespace GoFly_web.Managers
         }
 
         public async Task AddItinerary(string departureCity, string arrivalCity,
-            string transport, string travalTime, string departureTime, string arrivalTime, double price)
+            string transport, string travalTime, string departureTime, string arrivalTime, double price, string date)
         {
             var _departureCity = _context.DepartureCities.FirstOrDefault(c=>c.Name == departureCity);
             var _arrivalCity = _context.ArrivalCities.FirstOrDefault(c=>c.Name == arrivalCity);
@@ -23,15 +23,16 @@ namespace GoFly_web.Managers
 
             if ((_departureCity != null) & (_arrivalCity != null) & (_transport != null))
                     {
-                        var itinerary = new Itinerary 
-                        {
-                            DepartureCity = _departureCity, 
-                            ArrivalCity = _arrivalCity,
-                            Transport = _transport,
-                            TravalTime = travalTime,  
-                            DepartureTime = departureTime,
-                            ArrivalTime = arrivalTime,
-                            Price = price 
+                var itinerary = new Itinerary
+                {
+                    DepartureCity = _departureCity,
+                    ArrivalCity = _arrivalCity,
+                    Transport = _transport,
+                    TravalTime = travalTime,
+                    DepartureTime = departureTime,
+                    ArrivalTime = arrivalTime,
+                    Price = price,
+                    Date = date
                         };
 
                          _context.Itineraries.Add(itinerary);

@@ -48,6 +48,7 @@ body, html {
 body {
     background-image: url(../Images/TopCitiesBack.jpg);
     background-size: 100%;
+    font-weight: 800;
 }
 
 .container {
@@ -357,4 +358,12 @@ p {
     border-radius: 25px;
     padding: 10px;
     text-shadow: 2px 2px 0px rgb(0, 0, 0);
+}
+.Quit {
+    font-size: 24px;
+    color: rgb(255, 255, 255);
+    position: absolute;
+    right: -5%;
+    margin-right: 8%;
+    font-family: Bebas Neue;
 }

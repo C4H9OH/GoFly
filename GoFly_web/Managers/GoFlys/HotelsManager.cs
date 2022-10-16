@@ -79,7 +79,74 @@ namespace GoFly_web.Managers.GoFlys
                 }
             }
             catch (Exception ex) {  }
-            return _hotels;
+
+            if (_hotels.Count == 0)
+            {
+                foreach (var _hotel in _context.Hotels)
+                {
+                    if (_hotel.Name == city)
+                    {
+                        if ((threeStar == 3) & (_hotel.StarRating == 3))
+                        {
+                            _hotels.Add(_hotel);
+
+                        }
+                        if ((fourStar == 4) & (_hotel.StarRating == 4))
+                        {
+                            _hotels.Add(_hotel);
+                        }
+                        if ((fiveStar == 5) & (_hotel.StarRating == 5))
+                        {
+                            _hotels.Add(_hotel);
+                        }
+
+                        if ((fiveStar == 0) & (fourStar == 0) & (threeStar == 0))
+                        {
+                            _hotels.Add(_hotel);
+                        }
+
+
+                    }
+
+
+
+                }
+                try
+                {
+                    if (_hotels.Count == 0)
+                    {
+                        foreach (var _hotel in _context.Hotels)
+                        {
+                            if (_hotel.Name == city.Replace(" ", ""))
+                            {
+                                if ((threeStar == 3) & (_hotel.StarRating == 3))
+                                {
+                                    _hotels.Add(_hotel);
+
+                                }
+                                if ((fourStar == 4) & (_hotel.StarRating == 4))
+                                {
+                                    _hotels.Add(_hotel);
+                                }
+                                if ((fiveStar == 5) & (_hotel.StarRating == 5))
+                                {
+                                    _hotels.Add(_hotel);
+                                }
+
+                                if ((fiveStar == 0) & (fourStar == 0) & (threeStar == 0))
+                                {
+                                    _hotels.Add(_hotel);
+                                }
+
+
+                            }
+                        }
+                    }
+                }
+                catch (Exception ex) { }
+            }
+
+                return _hotels;
         }
        
 

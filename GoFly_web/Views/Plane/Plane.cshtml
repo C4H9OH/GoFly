@@ -28,7 +28,7 @@
           }
           else
           {
-         <a asp-area="" asp-controller="Plane" asp-action="Plane" id="Registration">@TempData.Peek("UserName")</a>
+         <a asp-area="" asp-controller="Plane" asp-action="Plane" id="Registration">Добро пожаловать, @TempData.Peek("UserName")</a>
           }
             <a asp-area="" asp-controller="Feedback" asp-action="Feedback" id="Feedback">Отзывы</a>
     </div>
@@ -85,9 +85,9 @@
     <div class="searchPannel">
         <input required autocomplete="off" type="search" name="DepartureCity" id="Departure" placeholder="Откуда" list="">
         <input required autocomplete="off" type="search" name="ArrivalCity" id="Arrival" placeholder="Куда">
-        <input required autocomplete="off" type="date" name="DepartureDate" id="DataDeparture"  min="2022-05-30">
-        @*<p id=OneWayTitle>Туда</p>
-        <input type="date" name="ArrivalDate" id="DataArrival"  >
+        <input required autocomplete="off" type="date" name="DepartureDate" id="DataDeparture" min="2022-06-02">
+        <p id=OneWayTitle>Туда</p>
+@*        <input type="date" name="ArrivalDate" id="DataArrival"  >
         <p id=RoundTripTitle>Обратно</p>*@
         <div class="PeopleAmount">        
             <button class="bt_minus" type="button">-</button>
@@ -118,6 +118,8 @@
         </div>
         @if (TempData.Peek("UserName") == null)
         {
+             @using(Html.BeginForm("Login", "Registration", FormMethod.Post)) 
+             {
                 <div class="autorizationPannel">
                     <a href="#" class="LoginMenu_btn" id="Login">Войти</a>
                     <nav class="autorizationPannelParameters">
@@ -129,18 +131,15 @@
                             <p>Забыли пароль?</p>
                             <a href="#">Нажмите</a>
                             <p>для восстановления <br> Нет аккаунта?</p>
-                            <a asp-area="" asp-controller="Registration" asp-action="Registration">Зарегистрируйтесь</a>
+                            <a asp-area="" asp-controller="Registration" asp-action="Login">Зарегистрируйтесь</a>
                         </div>
                     </nav>
                 </div>
-            
-        }
-        else
-        {
-            @using (Html.BeginForm("Login", "Registration", FormMethod.Post))
-            {
-                
             }
+        }
+         @if (TempData.Peek("UserName") != null)
+        {
+           <a class="Quit" asp-area="" asp-controller="Registration" asp-action="Logout" id="Quit">Выйти</a>
         }
     </div>
 

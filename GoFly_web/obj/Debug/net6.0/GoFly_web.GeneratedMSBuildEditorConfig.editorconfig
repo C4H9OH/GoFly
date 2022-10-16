@@ -8,265 +8,265 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = GoFly_web
 build_property.RootNamespace = GoFly_web
-build_property.ProjectDir = C:\Users\taiwa\source\repos\GoFly_web\GoFly_web\
+build_property.ProjectDir = C:\Users\taiwa\Desktop\АктуалОчка\Паст!!!\GoFly_web\GoFly_web\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\taiwa\source\repos\GoFly_web\GoFly_web
+build_property.MSBuildProjectDirectory = C:\Users\taiwa\Desktop\АктуалОчка\Паст!!!\GoFly_web\GoFly_web
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/taiwa/source/repos/GoFly_web/GoFly_web/Pages/Account/AccessDenied.cshtml]
+[C:/Users/taiwa/Desktop/АктуалОчка/Паст\!\!\!/GoFly_web/GoFly_web/Pages/Account/AccessDenied.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNjb3VudFxBY2Nlc3NEZW5pZWQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/taiwa/source/repos/GoFly_web/GoFly_web/Pages/Account/Login.cshtml]
+[C:/Users/taiwa/Desktop/АктуалОчка/Паст\!\!\!/GoFly_web/GoFly_web/Pages/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/taiwa/source/repos/GoFly_web/GoFly_web/Pages/Account/SignedOut.cshtml]
+[C:/Users/taiwa/Desktop/АктуалОчка/Паст\!\!\!/GoFly_web/GoFly_web/Pages/Account/SignedOut.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNjb3VudFxTaWduZWRPdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/taiwa/source/repos/GoFly_web/GoFly_web/Pages/Account/_ViewImports.cshtml]
+[C:/Users/taiwa/Desktop/АктуалОчка/Паст\!\!\!/GoFly_web/GoFly_web/Pages/Account/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNjb3VudFxfVmlld0ltcG9ydHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/taiwa/source/repos/GoFly_web/GoFly_web/Pages/Contact.cshtml]
+[C:/Users/taiwa/Desktop/АктуалОчка/Паст\!\!\!/GoFly_web/GoFly_web/Pages/Contact.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29udGFjdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/taiwa/source/repos/GoFly_web/GoFly_web/Pages/Error.cshtml]
+[C:/Users/taiwa/Desktop/АктуалОчка/Паст\!\!\!/GoFly_web/GoFly_web/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/taiwa/source/repos/GoFly_web/GoFly_web/Pages/Forbidden.cshtml]
+[C:/Users/taiwa/Desktop/АктуалОчка/Паст\!\!\!/GoFly_web/GoFly_web/Pages/Forbidden.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRm9yYmlkZGVuLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/taiwa/source/repos/GoFly_web/GoFly_web/Pages/Index.cshtml]
+[C:/Users/taiwa/Desktop/АктуалОчка/Паст\!\!\!/GoFly_web/GoFly_web/Pages/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/taiwa/source/repos/GoFly_web/GoFly_web/Pages/Privacy.cshtml]
+[C:/Users/taiwa/Desktop/АктуалОчка/Паст\!\!\!/GoFly_web/GoFly_web/Pages/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/taiwa/source/repos/GoFly_web/GoFly_web/Pages/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/taiwa/Desktop/АктуалОчка/Паст\!\!\!/GoFly_web/GoFly_web/Pages/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/taiwa/source/repos/GoFly_web/GoFly_web/Pages/_LoginPartial.cshtml]
+[C:/Users/taiwa/Desktop/АктуалОчка/Паст\!\!\!/GoFly_web/GoFly_web/Pages/_LoginPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX0xvZ2luUGFydGlhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/taiwa/source/repos/GoFly_web/GoFly_web/Pages/_ValidationScriptsPartial.cshtml]
+[C:/Users/taiwa/Desktop/АктуалОчка/Паст\!\!\!/GoFly_web/GoFly_web/Pages/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZhbGlkYXRpb25TY3JpcHRzUGFydGlhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/taiwa/source/repos/GoFly_web/GoFly_web/Pages/_ViewImports.cshtml]
+[C:/Users/taiwa/Desktop/АктуалОчка/Паст\!\!\!/GoFly_web/GoFly_web/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/taiwa/source/repos/GoFly_web/GoFly_web/Pages/_ViewStart.cshtml]
+[C:/Users/taiwa/Desktop/АктуалОчка/Паст\!\!\!/GoFly_web/GoFly_web/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/taiwa/source/repos/GoFly_web/GoFly_web/Views/Account/Login.cshtml]
+[C:/Users/taiwa/Desktop/АктуалОчка/Паст\!\!\!/GoFly_web/GoFly_web/Views/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/taiwa/source/repos/GoFly_web/GoFly_web/Views/Account/MailConfirmation.cshtml]
+[C:/Users/taiwa/Desktop/АктуалОчка/Паст\!\!\!/GoFly_web/GoFly_web/Views/Account/MailConfirmation.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxNYWlsQ29uZmlybWF0aW9uLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/taiwa/source/repos/GoFly_web/GoFly_web/Views/Account/Register.cshtml]
+[C:/Users/taiwa/Desktop/АктуалОчка/Паст\!\!\!/GoFly_web/GoFly_web/Views/Account/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/taiwa/source/repos/GoFly_web/GoFly_web/Views/Account/UserHomePage.cshtml]
+[C:/Users/taiwa/Desktop/АктуалОчка/Паст\!\!\!/GoFly_web/GoFly_web/Views/Account/UserHomePage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxVc2VySG9tZVBhZ2UuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/taiwa/source/repos/GoFly_web/GoFly_web/Views/AdminHome/Index.cshtml]
+[C:/Users/taiwa/Desktop/АктуалОчка/Паст\!\!\!/GoFly_web/GoFly_web/Views/AdminHome/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5Ib21lXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/taiwa/source/repos/GoFly_web/GoFly_web/Views/AdminMessage/AdminMessage.cshtml]
+[C:/Users/taiwa/Desktop/АктуалОчка/Паст\!\!\!/GoFly_web/GoFly_web/Views/AdminMessage/AdminMessage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5NZXNzYWdlXEFkbWluTWVzc2FnZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/taiwa/source/repos/GoFly_web/GoFly_web/Views/ArrivalCity/Index.cshtml]
+[C:/Users/taiwa/Desktop/АктуалОчка/Паст\!\!\!/GoFly_web/GoFly_web/Views/ArrivalCity/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXJyaXZhbENpdHlcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/taiwa/source/repos/GoFly_web/GoFly_web/Views/ArrivalCountry/Page.cshtml]
+[C:/Users/taiwa/Desktop/АктуалОчка/Паст\!\!\!/GoFly_web/GoFly_web/Views/ArrivalCountry/Page.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXJyaXZhbENvdW50cnlcUGFnZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/taiwa/source/repos/GoFly_web/GoFly_web/Views/Bus/Bus.cshtml]
+[C:/Users/taiwa/Desktop/АктуалОчка/Паст\!\!\!/GoFly_web/GoFly_web/Views/Bus/Bus.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnVzXEJ1cy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/taiwa/source/repos/GoFly_web/GoFly_web/Views/Bus/SearchBus.cshtml]
+[C:/Users/taiwa/Desktop/АктуалОчка/Паст\!\!\!/GoFly_web/GoFly_web/Views/Bus/SearchBus.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnVzXFNlYXJjaEJ1cy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/taiwa/source/repos/GoFly_web/GoFly_web/Views/Confidence/Confidence.cshtml]
+[C:/Users/taiwa/Desktop/АктуалОчка/Паст\!\!\!/GoFly_web/GoFly_web/Views/Confidence/Confidence.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uZmlkZW5jZVxDb25maWRlbmNlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/taiwa/source/repos/GoFly_web/GoFly_web/Views/DepartureCity/Index.cshtml]
+[C:/Users/taiwa/Desktop/АктуалОчка/Паст\!\!\!/GoFly_web/GoFly_web/Views/DepartureCity/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0dXJlQ2l0eVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/taiwa/source/repos/GoFly_web/GoFly_web/Views/DepartureCountry/Page.cshtml]
+[C:/Users/taiwa/Desktop/АктуалОчка/Паст\!\!\!/GoFly_web/GoFly_web/Views/DepartureCountry/Page.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0dXJlQ291bnRyeVxQYWdlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/taiwa/source/repos/GoFly_web/GoFly_web/Views/EmailConfirm/EmailConfirm.cshtml]
+[C:/Users/taiwa/Desktop/АктуалОчка/Паст\!\!\!/GoFly_web/GoFly_web/Views/EmailConfirm/EmailConfirm.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1haWxDb25maXJtXEVtYWlsQ29uZmlybS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/taiwa/source/repos/GoFly_web/GoFly_web/Views/Employee/Index.cshtml]
+[C:/Users/taiwa/Desktop/АктуалОчка/Паст\!\!\!/GoFly_web/GoFly_web/Views/Employee/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbG95ZWVcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/taiwa/source/repos/GoFly_web/GoFly_web/Views/FavouriteBus/FavouriteBus.cshtml]
+[C:/Users/taiwa/Desktop/АктуалОчка/Паст\!\!\!/GoFly_web/GoFly_web/Views/FavouriteBus/FavouriteBus.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmF2b3VyaXRlQnVzXEZhdm91cml0ZUJ1cy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/taiwa/source/repos/GoFly_web/GoFly_web/Views/FavouriteHotel/FavouriteHotel.cshtml]
+[C:/Users/taiwa/Desktop/АктуалОчка/Паст\!\!\!/GoFly_web/GoFly_web/Views/FavouriteHotel/FavouriteHotel.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmF2b3VyaXRlSG90ZWxcRmF2b3VyaXRlSG90ZWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/taiwa/source/repos/GoFly_web/GoFly_web/Views/FavouriteTrain/FavouriteTrain.cshtml]
+[C:/Users/taiwa/Desktop/АктуалОчка/Паст\!\!\!/GoFly_web/GoFly_web/Views/FavouriteTrain/FavouriteTrain.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmF2b3VyaXRlVHJhaW5cRmF2b3VyaXRlVHJhaW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/taiwa/source/repos/GoFly_web/GoFly_web/Views/Favourite/Favourite.cshtml]
+[C:/Users/taiwa/Desktop/АктуалОчка/Паст\!\!\!/GoFly_web/GoFly_web/Views/Favourite/Favourite.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmF2b3VyaXRlXEZhdm91cml0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/taiwa/source/repos/GoFly_web/GoFly_web/Views/Feedback/Feedback.cshtml]
+[C:/Users/taiwa/Desktop/АктуалОчка/Паст\!\!\!/GoFly_web/GoFly_web/Views/Feedback/Feedback.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmVlZGJhY2tcRmVlZGJhY2suY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/taiwa/source/repos/GoFly_web/GoFly_web/Views/HistoryBus/HistoryBus.cshtml]
+[C:/Users/taiwa/Desktop/АктуалОчка/Паст\!\!\!/GoFly_web/GoFly_web/Views/HistoryBus/HistoryBus.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGlzdG9yeUJ1c1xIaXN0b3J5QnVzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/taiwa/source/repos/GoFly_web/GoFly_web/Views/HistoryHotel/HistoryHotel.cshtml]
+[C:/Users/taiwa/Desktop/АктуалОчка/Паст\!\!\!/GoFly_web/GoFly_web/Views/HistoryHotel/HistoryHotel.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGlzdG9yeUhvdGVsXEhpc3RvcnlIb3RlbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/taiwa/source/repos/GoFly_web/GoFly_web/Views/HistoryTrain/HistoryTrain.cshtml]
+[C:/Users/taiwa/Desktop/АктуалОчка/Паст\!\!\!/GoFly_web/GoFly_web/Views/HistoryTrain/HistoryTrain.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGlzdG9yeVRyYWluXEhpc3RvcnlUcmFpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/taiwa/source/repos/GoFly_web/GoFly_web/Views/History/History.cshtml]
+[C:/Users/taiwa/Desktop/АктуалОчка/Паст\!\!\!/GoFly_web/GoFly_web/Views/History/History.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGlzdG9yeVxIaXN0b3J5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/taiwa/source/repos/GoFly_web/GoFly_web/Views/Home/Index.cshtml]
+[C:/Users/taiwa/Desktop/АктуалОчка/Паст\!\!\!/GoFly_web/GoFly_web/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/taiwa/source/repos/GoFly_web/GoFly_web/Views/Home/Login.cshtml]
+[C:/Users/taiwa/Desktop/АктуалОчка/Паст\!\!\!/GoFly_web/GoFly_web/Views/Home/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/taiwa/source/repos/GoFly_web/GoFly_web/Views/Home/Priority.cshtml]
+[C:/Users/taiwa/Desktop/АктуалОчка/Паст\!\!\!/GoFly_web/GoFly_web/Views/Home/Priority.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcmlvcml0eS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/taiwa/source/repos/GoFly_web/GoFly_web/Views/Home/Privacy.cshtml]
+[C:/Users/taiwa/Desktop/АктуалОчка/Паст\!\!\!/GoFly_web/GoFly_web/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/taiwa/source/repos/GoFly_web/GoFly_web/Views/Hotels/Hotels.cshtml]
+[C:/Users/taiwa/Desktop/АктуалОчка/Паст\!\!\!/GoFly_web/GoFly_web/Views/Hotels/Hotels.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG90ZWxzXEhvdGVscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/taiwa/source/repos/GoFly_web/GoFly_web/Views/Hotels/SearchHotels.cshtml]
+[C:/Users/taiwa/Desktop/АктуалОчка/Паст\!\!\!/GoFly_web/GoFly_web/Views/Hotels/SearchHotels.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG90ZWxzXFNlYXJjaEhvdGVscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/taiwa/source/repos/GoFly_web/GoFly_web/Views/Hotel/Index.cshtml]
+[C:/Users/taiwa/Desktop/АктуалОчка/Паст\!\!\!/GoFly_web/GoFly_web/Views/Hotel/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG90ZWxcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/taiwa/source/repos/GoFly_web/GoFly_web/Views/Itinerary/Hot.cshtml]
+[C:/Users/taiwa/Desktop/АктуалОчка/Паст\!\!\!/GoFly_web/GoFly_web/Views/Itinerary/Hot.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSXRpbmVyYXJ5XEhvdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/taiwa/source/repos/GoFly_web/GoFly_web/Views/Itinerary/Index.cshtml]
+[C:/Users/taiwa/Desktop/АктуалОчка/Паст\!\!\!/GoFly_web/GoFly_web/Views/Itinerary/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSXRpbmVyYXJ5XEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/taiwa/source/repos/GoFly_web/GoFly_web/Views/Plane/Plane.cshtml]
+[C:/Users/taiwa/Desktop/АктуалОчка/Паст\!\!\!/GoFly_web/GoFly_web/Views/Plane/Plane.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxhbmVcUGxhbmUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/taiwa/source/repos/GoFly_web/GoFly_web/Views/Plane/SearchPlane.cshtml]
+[C:/Users/taiwa/Desktop/АктуалОчка/Паст\!\!\!/GoFly_web/GoFly_web/Views/Plane/SearchPlane.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxhbmVcU2VhcmNoUGxhbmUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/taiwa/source/repos/GoFly_web/GoFly_web/Views/Railway/Railway.cshtml]
+[C:/Users/taiwa/Desktop/АктуалОчка/Паст\!\!\!/GoFly_web/GoFly_web/Views/Railway/Railway.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmFpbHdheVxSYWlsd2F5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/taiwa/source/repos/GoFly_web/GoFly_web/Views/Railway/SearchTrain.cshtml]
+[C:/Users/taiwa/Desktop/АктуалОчка/Паст\!\!\!/GoFly_web/GoFly_web/Views/Railway/SearchTrain.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmFpbHdheVxTZWFyY2hUcmFpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/taiwa/source/repos/GoFly_web/GoFly_web/Views/Registration/Registration.cshtml]
+[C:/Users/taiwa/Desktop/АктуалОчка/Паст\!\!\!/GoFly_web/GoFly_web/Views/Registration/Registration.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVnaXN0cmF0aW9uXFJlZ2lzdHJhdGlvbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/taiwa/source/repos/GoFly_web/GoFly_web/Views/SearchResultBus/SearchResultBus.cshtml]
+[C:/Users/taiwa/Desktop/АктуалОчка/Паст\!\!\!/GoFly_web/GoFly_web/Views/SearchResultBus/SearchResultBus.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VhcmNoUmVzdWx0QnVzXFNlYXJjaFJlc3VsdEJ1cy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/taiwa/source/repos/GoFly_web/GoFly_web/Views/SearchResultHotel/SearchResultHotel.cshtml]
+[C:/Users/taiwa/Desktop/АктуалОчка/Паст\!\!\!/GoFly_web/GoFly_web/Views/SearchResultHotel/SearchResultHotel.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VhcmNoUmVzdWx0SG90ZWxcU2VhcmNoUmVzdWx0SG90ZWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/taiwa/source/repos/GoFly_web/GoFly_web/Views/SearchResultPlane/SearchResultPlane.cshtml]
+[C:/Users/taiwa/Desktop/АктуалОчка/Паст\!\!\!/GoFly_web/GoFly_web/Views/SearchResultPlane/SearchResultPlane.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VhcmNoUmVzdWx0UGxhbmVcU2VhcmNoUmVzdWx0UGxhbmUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/taiwa/source/repos/GoFly_web/GoFly_web/Views/SearchResultTrain/SearchResultTrain.cshtml]
+[C:/Users/taiwa/Desktop/АктуалОчка/Паст\!\!\!/GoFly_web/GoFly_web/Views/SearchResultTrain/SearchResultTrain.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VhcmNoUmVzdWx0VHJhaW5cU2VhcmNoUmVzdWx0VHJhaW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/taiwa/source/repos/GoFly_web/GoFly_web/Views/SendMessage/Index.cshtml]
+[C:/Users/taiwa/Desktop/АктуалОчка/Паст\!\!\!/GoFly_web/GoFly_web/Views/SendMessage/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VuZE1lc3NhZ2VcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/taiwa/source/repos/GoFly_web/GoFly_web/Views/Shared/Error.cshtml]
+[C:/Users/taiwa/Desktop/АктуалОчка/Паст\!\!\!/GoFly_web/GoFly_web/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/taiwa/source/repos/GoFly_web/GoFly_web/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/taiwa/Desktop/АктуалОчка/Паст\!\!\!/GoFly_web/GoFly_web/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/taiwa/source/repos/GoFly_web/GoFly_web/Views/TopCities/TopCities.cshtml]
+[C:/Users/taiwa/Desktop/АктуалОчка/Паст\!\!\!/GoFly_web/GoFly_web/Views/TopCities/TopCities.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVG9wQ2l0aWVzXFRvcENpdGllcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/taiwa/source/repos/GoFly_web/GoFly_web/Views/_ViewImports.cshtml]
+[C:/Users/taiwa/Desktop/АктуалОчка/Паст\!\!\!/GoFly_web/GoFly_web/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/taiwa/source/repos/GoFly_web/GoFly_web/Views/_ViewStart.cshtml]
+[C:/Users/taiwa/Desktop/АктуалОчка/Паст\!\!\!/GoFly_web/GoFly_web/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/taiwa/source/repos/GoFly_web/GoFly_web/Pages/Shared/_Layout.cshtml]
+[C:/Users/taiwa/Desktop/АктуалОчка/Паст\!\!\!/GoFly_web/GoFly_web/Pages/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-cxcgg0woud
 
-[C:/Users/taiwa/source/repos/GoFly_web/GoFly_web/Views/Shared/_Layout.cshtml]
+[C:/Users/taiwa/Desktop/АктуалОчка/Паст\!\!\!/GoFly_web/GoFly_web/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-qly14qmubv

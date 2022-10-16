@@ -1,6 +1,7 @@
 ﻿@page
 @*ViewBag.Hotel
   ViewBag.Persons
+  ViewBag.Days
   ViewBag.starThree
   ViewBag.starFour
   ViewBag.starFive
@@ -64,7 +65,7 @@
                     <td>@_hotel.ArrivalCityName</td>
                     <td>@_hotel.Name</td>
                     <td>@_hotel.PlacesNumber</td>
-                    <td>@(_hotel.Price * ViewBag.Persons)</td>
+                    <td>@(_hotel.Price * ViewBag.Persons * ViewBag.Days)</td>
                     <td>@_hotel.StarRating</td>
                     <td><button>Купить</button></td>
                 </tr>

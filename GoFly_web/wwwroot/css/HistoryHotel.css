@@ -48,6 +48,7 @@ body, html {
 body {
     background-image: url(../Images/TopCitiesBack.jpg);
     background-size: 100%;
+    font-weight: 800;
 }
 
 .container {
@@ -130,7 +131,7 @@ body {
         color: rgb(255, 255, 255);
         position: absolute;
         right: 0;
-        margin-right: 60%;
+        margin-right: 53%;
     }
 
     .toppanel #Login::after {
@@ -435,3 +436,11 @@ td {
         left: 15px;
         opacity: 100%;
     }
+.Quit {
+    font-size: 24px;
+    color: rgb(255, 255, 255);
+    position: absolute;
+    right: -5%;
+    margin-right: 8%;
+    font-family: Bebas Neue;
+}

@@ -9,7 +9,7 @@ namespace GoFly_web.Managers.GoFlys
         Task Logout();
 
         Task Register(string firstName, string lastName, string email, string password, string gender,
-            string phoneNumber, int age,string language);
+            string phoneNumber, int age);
 
         Task MailConfirmation(string mailConfirmation);
     }

@@ -1,4 +1,6 @@
-﻿@{
+﻿@model ICollection<GoFly_web.Storage.Entity.Feedback>
+
+@{
     Layout=null;
 }
 
@@ -15,45 +17,100 @@
 </head>
 <body>
     <div class="container">
-        <div class="toppanel">
+    <div class="toppanel">
         <a asp-area="" asp-controller="Plane" asp-action="Plane"><span id="Logo">GoFly</span></a>
-        <a asp-area="" asp-controller="Favourite" asp-action="Favourite" id="Favorites">Избранное </a>
+        @*<a asp-area="" asp-controller="Favourite" asp-action="Favourite" id="Favorites">Избранное </a>*@
          <a asp-area="" asp-controller="History" asp-action="History" id="History">История путешествий</a>
-        <a asp-area="" asp-controller="Registration" asp-action="Registration" id="Registration">Зарегистрироваться</a>
-        <a asp-area="" asp-controller="Feedback" asp-action="Feedback" id="Feedback">Отзывы</a>
+          @if(TempData.Peek("UserName") == null)
+          {
+         <a asp-area="" asp-controller="Registration" asp-action="Registration" id="Registration">Зарегистрироваться</a>
+          }
+          else
+          {
+         <a asp-area="" asp-controller="Plane" asp-action="Plane" id="Registration">Добро пожаловать, @TempData.Peek("UserName")</a>
+          }
+            <a asp-area="" asp-controller="Feedback" asp-action="Feedback" id="Feedback">Отзывы</a>
     </div>
 
-        <div class="autorizationPannel">
-            <a href="#" class="LoginMenu_btn" id="Login">Войти</a>
-            <nav class="autorizationPannelParameters">
-                <p id="autorizationTitle">Авторизация</p>
-                <input id="InputLogin" type="text" placeholder="Введите логин сюда">
-                <input id="InputPassword" type="password" placeholder="Введите пароль сюда">
-                <button id = "EnterButton">Вход</button>
-                <div class="autorizationInfo">
-                    <p>Забыли пароль?</p>
-                    <a id="AutorizationPress" href="#">Нажмите</a>
-                    <p>для восстановления <br> Нет аккаунта?</p>
-                    <a asp-area="" asp-controller="Registration" asp-action="Registration">Зарегистрируйтесь</a>
-                </div>
-            </nav>
-        </div>
 
-        <div class="feedbackBlock">
-            <span id="reviewAdding">Добавить отзыв</span>
-            <div class="reviewInfo">
-                <input type="text" name="nameAuthor" id="nameAuthor" placeholder="Ваше имя">
-                <textarea name="textAuthor" id="textAuthor"  placeholder="Ваш отзыв"></textarea>
-                <div class="searchButton">
-                    <a href="#" class="btn-1">Отправить</a>
+   
+
+ </div>
+        @if (TempData.Peek("UserName") == null)
+        {
+             @using(Html.BeginForm("Login", "Registration", FormMethod.Post)) 
+             {
+                <div class="autorizationPannel">
+                    <a href="#" class="LoginMenu_btn" id="Login">Войти</a>
+                    <nav class="autorizationPannelParameters">
+                        <p id="autorizationTitle">Авторизация</p>
+                        <input requierd id="InputLogin" name="Email" type="text" placeholder="Введите логин сюда">
+                        <input required id="InputPassword" name="Password" type="password" placeholder="Введите пароль сюда">
+                        <button id = "EnterButton">Вход</button>
+                        <div class="autorizationInfo">
+                            <p>Забыли пароль?</p>
+                            <a href="#">Нажмите</a>
+                            <p>для восстановления <br> Нет аккаунта?</p>
+                            <a asp-area="" asp-controller="Registration" asp-action="Registration">Зарегистрируйтесь</a>
+                        </div>
+                    </nav>
                 </div>
-            </div>
-        </div>
+            }
+        }
+         @if (TempData.Peek("UserName") != null)
+        {
+           <a class="Quit" asp-area="" asp-controller="Registration" asp-action="Logout" id="Quit">Выйти</a>
+        }
+    </div>
+         @if (TempData.Peek("UserName") != null)
+        {
+            @using (Html.BeginForm("CreateFeedback", "Feedback", FormMethod.Post))
+            {
+                <div class="feedbackBlock">
+                    <span id="reviewAdding">Добавить отзыв</span>
+                    <div class="reviewInfo">
+                        @*<input type="text" name="nameAuthor" id="nameAuthor" placeholder="Ваше имя">*@
+                        <textarea name="description" id="textAuthor"  placeholder="Ваш отзыв"></textarea>
+                        <div class="searchButton">
+                            <button type = 'submit' class="btn-1">Отправить</button>
+                        </div>
+                    </div>
+                </div>
+            }
+
+        } 
+        @if (TempData.Peek("UserName") == null)
+        {
+            <div class="feedbackBlock">
+                <div class="notify"><span id="notifyType" class=""></span></div>
+                    <span id="reviewAdding">Добавить отзыв</span>
+                    <div class="reviewInfo">
+                        @*<input type="text" name="nameAuthor" id="nameAuthor" placeholder="Ваше имя">*@
+                        <textarea disabled name="feedback" id="textAuthor"  placeholder="Вы не можете оставить отзыв. Сначала авторизируйтесь."></textarea>
+                        <div  class="searchButton">
+                            <button id = "success" type = 'submit' class="btn-1">Отправить</button>
+                        </div>
+                    </div>
+                </div>
+        }
 
         <div class="otherFeedbacks">
             <div class="title">Все отзывы</div>
                 <div class="allFeedbacks">
-                    <div class="FeedbackContainer">
+                    <table>
+                        <tr>
+                            <th colspan = "3"></th>
+                            <th></th>
+                        </tr>
+                       @foreach(var feedback in Model)
+                        {
+                            <tr>
+                                <td>@feedback.Id</td>
+                                <td>@feedback.Description</td>
+                            </tr>
+                        }
+                    </table>
+                    @*<div class="FeedbackContainer">
                         <span class="name">Виталий</span>
                         <span class="text">Всё отлично</span>
                     </div>
@@ -80,7 +137,7 @@
                     <div class="FeedbackContainer">
                         <span class="name">Дениз</span>
                         <span class="text">Поставьте 35 <3</span>
-                    </div>
+                    </div>*@
                 </div>
         </div>
 
@@ -93,4 +150,16 @@ $('.LoginMenu_btn').on('click',function(e){
     $('.autorizationPannel').toggleClass('autorizationPannel_Active')
 })
 </script>
+<script>
+$("#success").click(function () {
+      $(".notify").toggleClass("active");
+      $("#notifyType").toggleClass("success");
+  
+      setTimeout(function(){
+        $(".notify").removeClass("active");
+        $("#notifyType").removeClass("success");
+      },8000);
+    });
+</script>
+
 </html>

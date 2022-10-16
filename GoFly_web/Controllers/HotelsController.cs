@@ -22,11 +22,15 @@ namespace GoFly_web.Controllers
 
         [HttpPost]
         public async Task<IActionResult> SearchHotels(string Icity, int Persons,
-            int ThreeStars, int FourStars, int FiveStars)
+            int ThreeStars, int FourStars, int FiveStars, string CheckInDate, string CheckOutDate)
         {
             var _hotels = await _manager.Search(Icity,ThreeStars, FourStars, FiveStars);
             ViewBag.Hotel = _hotels;
             ViewBag.Persons = Persons;
+            var checkInDate = DateTime.Parse(CheckInDate);
+            var checkOutDate = DateTime.Parse(CheckOutDate);
+            ViewBag.Days = ((checkOutDate - checkInDate).Days);
+            if(ViewBag.Days < 1) { ViewBag.Days = 1; }
             ViewBag.starThree = ThreeStars;
             ViewBag.starFour = FourStars;
             ViewBag.starFive = FiveStars;

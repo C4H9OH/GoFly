@@ -14,57 +14,81 @@
 </head>
 <body>
     <div class="container">
-        <div class="toppanel">
+    <div class="toppanel">
         <a asp-area="" asp-controller="Plane" asp-action="Plane"><span id="Logo">GoFly</span></a>
-        <a asp-area="" asp-controller="Favourite" asp-action="Favourite" id="Favorites">Избранное </a>
+        @*<a asp-area="" asp-controller="Favourite" asp-action="Favourite" id="Favorites">Избранное </a>*@
          <a asp-area="" asp-controller="History" asp-action="History" id="History">История путешествий</a>
-        <a asp-area="" asp-controller="Registration" asp-action="Registration" id="Registration">Зарегистрироваться</a>
-        <a asp-area="" asp-controller="Feedback" asp-action="Feedback" id="Feedback">Отзывы</a>
+          @if(TempData.Peek("UserName") == null)
+          {
+         <a asp-area="" asp-controller="Registration" asp-action="Registration" id="Registration">Зарегистрироваться</a>
+          }
+          else
+          {
+         <a asp-area="" asp-controller="Plane" asp-action="Plane" id="Registration">Добро пожаловать, @TempData.Peek("UserName")</a>
+          }
+            <a asp-area="" asp-controller="Feedback" asp-action="Feedback" id="Feedback">Отзывы</a>
     </div>
 
-        <div class="autorizationPannel">
-            <a href="#" class="LoginMenu_btn" id="Login">Войти</a>
-            <nav class="autorizationPannelParameters">
-                <p id="autorizationTitle">Авторизация</p>
-                <input id="InputLogin" type="text" placeholder="Введите логин сюда">
-                <input id="InputPassword" type="password" placeholder="Введите пароль сюда">
-                <button id = "EnterButton">Вход</button>
-                <div class="autorizationInfo">
-                    <p>Забыли пароль?</p>
-                    <a id="AutorizationPress" href="#">Нажмите</a>
-                    <p>для восстановления <br> Нет аккаунта?</p>
-                    <a asp-area="" asp-controller="Registration" asp-action="Registration">Зарегистрируйтесь</a>
-                </div>
-            </nav>
-        </div>
 
-</body>
-<form method="post">
+        </div>
+        @if (TempData.Peek("UserName") == null)
+        {
+             @using(Html.BeginForm("Login", "Registration", FormMethod.Post)) 
+             {
+                <div class="autorizationPannel">
+                    <a href="#" class="LoginMenu_btn" id="Login">Войти</a>
+                    <nav class="autorizationPannelParameters">
+                        <p id="autorizationTitle">Авторизация</p>
+                        <input requierd id="InputLogin" name="Email" type="text" placeholder="Введите логин сюда">
+                        <input required id="InputPassword" name="Password" type="password" placeholder="Введите пароль сюда">
+                        <button id = "EnterButton">Вход</button>
+                        <div class="autorizationInfo">
+                            <p>Забыли пароль?</p>
+                            <a href="#">Нажмите</a>
+                            <p>для восстановления <br> Нет аккаунта?</p>
+                            <a asp-area="" asp-controller="Registration" asp-action="Registration">Зарегистрируйтесь</a>
+                        </div>
+                    </nav>
+                </div>
+            }
+        }
+         @if (TempData.Peek("UserName") != null)
+        {
+           <a class="Quit" asp-area="" asp-controller="Registration" asp-action="Logout" id="Quit">Выйти</a>
+        }
+    </div>
+
+        <form method="post">
 <div class="searchPannel">
 	<input required class="form-control" type="text" name="userFirstName" id = "name" placeholder="Имя" />
 	<input required class="form-control" type="text" name="userLastName" id = "lastName" placeholder="Фамилия" />
-    @*<input type="textbox" name="LoginReg" id="LoginReg" placeholder="Введите логин" list="">*@
     <input required class="form-control" type="textbox" name="userEmail" id="userEmail" placeholder="Почта" list="">
 	<input class="form-control" checked name="userGender" id="card-radio1" class="card-radio1" type="radio" value="Man"/>
     <label for="card-radio1" id="card-radio1Label">Мужчина</label>
-    <p id="ConfirmTitle" style = "position:absolute;box-sizing:border-box;top: 536px;left: 167px;z-index: 2;color: white;" >Зарегистрироваться</p>
+    @*<p id="ConfirmTitle" style = "position:absolute;box-sizing:border-box;top: 536px;left: 167px;z-index: 2;color: white;" >Зарегистрироваться</p>*@
     <input class="form-control" name="userGender" id="card-radio2" class="card-radio2" type="radio"  value="Women"/>
     <label for="card-radio2" id="card-radio2Label">Женщина</label>
     <input class="form-control" type="text" name="userPhoneNumber" id = "phoneNumber"placeholder="Номер телефона" />
     <input required class="form-control" min = 1; type="number" name="userAge" id = "age" placeholder="Возраст" />
-    @*<input class="form-control" type="text" name="userLanguage" placeholder="Язык" id = "language" />*@
     <input required class="form-control" type="password" name="userPassword" id="PasswordReg" placeholder="Пароль" list="">
     <p id="RegistrationTitle">Регистрация</p>
+
     <div class="searchButton">
-     <button class="btn-1" type = "submit"><a class="btn-1" asp-area="" asp-controller="EmailConfirm" asp-action="EmailConfirm">Зарегистрироваться</a></button>
+     <button class="btn-1" type = "submit">Зарегистрироваться</button>
     </div>
+
     <input required type="checkbox" name="" id="CheckBoxAcception" value = "true" >
     <p id="Confidence">Я согласен(а) с</p>
         </form>
     <a asp-area="" asp-controller="Confidence" asp-action="Confidence" id="ConfidenceLink">Политикой конфиденциальности</a>
 </div>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
+
+</body>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script>
 $('.LoginMenu_btn').on('click',function(e){
     e.preventDefault();

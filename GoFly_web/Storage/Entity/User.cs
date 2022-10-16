@@ -28,10 +28,8 @@
        
         [Required]
         public int Age { get; set; }
-       
-        [Required]
 
-        public string Language { get; set; }
+        public string? RegCode { get; set; }
 
 
     }

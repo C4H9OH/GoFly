@@ -28,6 +28,7 @@
     margin: 0;
     padding: 0;
     outline: none;
+    font-weight: 800;
 }
 
 a {
@@ -71,122 +72,130 @@ body {
         font-size: 25px;
         font-family: Bebas Neue;
         display: inline-block;
+        text-shadow: 1px 0px 5px rgb(0, 0, 0),-1px 0px 5px rgb(0, 0, 0);
     }
 
-    .toppanel #Favorites::after {
-        content: "";
-        display: block;
-        height: 3px;
-        width: 0%;
-        background-color: white;
-        transition: width 0.4s ease-in-out;
-    }
+.Quit {
+    font-size: 24px;
+    color: rgb(255, 255, 255);
+    position: absolute;
+    right: -5%;
+    margin-right: 8%;
+    font-family: Bebas Neue;
+}
 
-    .toppanel #Favorites:hover::after {
-        width: 100%;
-    }
+.toppanel #Favorites::after {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 0%;
+    background-color: white;
+    transition: width 0.4s ease-in-out;
+}
 
-    .toppanel #History::after {
-        content: "";
-        display: block;
-        height: 3px;
-        width: 0%;
-        background-color: white;
-        transition: width 0.4s ease-in-out;
-    }
+.toppanel #Favorites:hover::after {
+    width: 100%;
+}
 
-    .toppanel #History:hover::after {
-        width: 100%;
-    }
+.toppanel #History::after {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 0%;
+    background-color: white;
+    transition: width 0.4s ease-in-out;
+}
 
-    .toppanel #Registration::after {
-        content: "";
-        display: block;
-        height: 3px;
-        width: 0%;
-        background-color: white;
-        transition: width 0.4s ease-in-out;
-    }
+.toppanel #History:hover::after {
+    width: 100%;
+}
 
-    .toppanel #Registration:hover::after {
-        width: 100%;
-    }
+.toppanel #Registration::after {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 0%;
+    background-color: white;
+    transition: width 0.4s ease-in-out;
+}
 
-    .toppanel #Feedback::after {
-        content: "";
-        display: block;
-        height: 3px;
-        width: 0%;
-        background-color: white;
-        transition: width 0.4s ease-in-out;
-    }
+.toppanel #Registration:hover::after {
+    width: 100%;
+}
 
-    .toppanel #Feedback:hover::after {
-        width: 100%;
-    }
+.toppanel #Feedback::after {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 0%;
+    background-color: white;
+    transition: width 0.4s ease-in-out;
+}
 
-    .toppanel #Feedback {
-        color: rgb(255, 255, 255);
-        position: absolute;
-        right: 0;
-        margin-right: 60%;
-        text-shadow: 1px 1px 0px rgb(0, 0, 0);
-    }
+.toppanel #Feedback:hover::after {
+    width: 100%;
+}
 
-    .toppanel #Login::after {
-        content: "";
-        display: block;
-        height: 3px;
-        width: 0%;
-        background-color: white;
-        transition: width 0.4s ease-in-out;
-    }
+.toppanel #Feedback {
+    color: rgb(255, 255, 255);
+    position: absolute;
+    right: 0;
+    margin-right: 53%;
+}
 
-    .toppanel #Login:hover::after {
-        width: 100%;
-    }
+.toppanel #Login::after {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 0%;
+    background-color: white;
+    transition: width 0.4s ease-in-out;
+}
 
-
-    .toppanel #Logo {
-        margin-left: 0%;
-        font-family: Magneto;
-        font-size: 50px;
-        color: rgb(36, 93, 250);
-        text-shadow: 3px 3px 1px #fff;
-    }
-
-    .toppanel #Login {
-        color: rgb(255, 255, 255);
-        position: absolute;
-        right: 0;
-        margin-right: 2%;
-    }
+.toppanel #Login:hover::after {
+    width: 100%;
+}
 
 
+.toppanel #Logo {
+    margin-left: 0%;
+    font-family: Magneto;
+    font-size: 50px;
+    color: rgb(36, 93, 250);
+    text-shadow: 3px 3px 1px #fff;
+}
 
-    .toppanel #Registration {
-        color: rgb(255, 255, 255);
-        position: absolute;
-        right: 0%;
-        margin-right: 8%;
-        text-shadow: 1px 1px 0px rgb(0, 0, 0);
-    }
+.toppanel #Login {
+    color: rgb(255, 255, 255);
+    position: absolute;
+    right: 0;
+    margin-right: 2%;
+}
 
-    .toppanel #History {
-        color: rgb(255, 255, 255);
-        position: absolute;
-        right: 0%;
-        margin-right: 38.5%;
-        text-shadow: 1px 1px 0px rgb(0, 0, 0);
-    }
 
-    .toppanel #Favorites {
-        color: rgb(255, 255, 255);
-        position: absolute;
-        right: 0%;
-        margin-right: 52%;
-        text-shadow: 1px 1px 0px rgb(0, 0, 0);
-    }
+
+
+.toppanel #Registration {
+    color: rgb(255, 255, 255);
+    position: absolute;
+    right: 0%;
+    margin-right: 8%;
+}
+
+.toppanel #History {
+    color: rgb(255, 255, 255);
+    position: absolute;
+    right: 0%;
+    margin-right: 38.5%;
+}
+
+.toppanel #Favorites {
+    color: rgb(255, 255, 255);
+    position: absolute;
+    right: 0%;
+    margin-right: 52%;
+}
+
 
 /* Панель авторизации */
 
@@ -224,7 +233,7 @@ body {
     font-size: 25px;
     text-decoration: none;
     overflow: hidden;
-    text-shadow: 1px 1px 0px rgb(0, 0, 0);
+    text-shadow: 3px 0px 5px rgb(0, 0, 0),-3px 0px 5px rgb(0, 0, 0);
 }
 
     .autorizationPannel #Login::after {

@@ -22,7 +22,7 @@ namespace GoFly_web.Managers.GoFlys
 
             foreach (var _tTicket in _context.Itineraries)
             {
-                if ((_tTicket.DeparturelCityName == departureCity) & (_tTicket.ArrivalCityName == arrivalCity) & (_tTicket.TransportName == "Поезд"))
+                if ((_tTicket.DepartureCityName == departureCity) & (_tTicket.ArrivalCityName == arrivalCity) & (_tTicket.Date == departureTime) & (_tTicket.TransportName == "Поезд"))
                 {
                     _trainTickets.Add(_tTicket);
                 }
@@ -35,7 +35,7 @@ namespace GoFly_web.Managers.GoFlys
                 {
                     foreach (var _tTicket in _context.Itineraries)
                     {
-                        if ((_tTicket.DeparturelCityName == departureCity.Replace(" ", "")) & (_tTicket.ArrivalCityName == arrivalCity.Replace(" ", "")) & (_tTicket.TransportName == "Поезд"))
+                        if ((_tTicket.DepartureCityName == departureCity.Replace(" ", "")) & (_tTicket.ArrivalCityName == arrivalCity.Replace(" ", "")) & (_tTicket.Date == departureTime) & (_tTicket.TransportName == "Поезд"))
                         {
                             _trainTickets.Add(_tTicket);
                         }

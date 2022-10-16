@@ -9669,11 +9669,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\taiwa\\source\\repos\\GoFly_web\\GoFly_web\\GoFly_web.csproj",
+      "projectUniqueName": "C:\\Users\\taiwa\\Desktop\\АктуалОчка\\Паст!!!\\GoFly_web\\GoFly_web\\GoFly_web.csproj",
       "projectName": "GoFly_web",
-      "projectPath": "C:\\Users\\taiwa\\source\\repos\\GoFly_web\\GoFly_web\\GoFly_web.csproj",
+      "projectPath": "C:\\Users\\taiwa\\Desktop\\АктуалОчка\\Паст!!!\\GoFly_web\\GoFly_web\\GoFly_web.csproj",
       "packagesPath": "C:\\Users\\taiwa\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\taiwa\\source\\repos\\GoFly_web\\GoFly_web\\obj\\",
+      "outputPath": "C:\\Users\\taiwa\\Desktop\\АктуалОчка\\Паст!!!\\GoFly_web\\GoFly_web\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
